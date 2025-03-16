@@ -1,0 +1,28 @@
+.TitleForm{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    border-style: ridge;
+    border-width: 11px;
+    margin: 15px;
+    border-color: #03011bc9;
+    text-shadow: 2px 2px 4px rgba(56, 49, 135, 0.879);
+}
+.ContainerFormBooks{
+    border-style: ridge;
+    border-color: #03011bc9;
+    color: rgb(47, 42, 96);
+    border-width: 12px;
+    padding: 15px;
+    margin: 25px;
+}
+.BTNPost{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(11, 6, 28);
+    background-color: rgb(61, 62, 93);
+    border-color: rgb(8, 7, 66);
+}
+.BTNPost:hover{
+    color: rgb(235, 255, 11);
+    background-color: rgb(49, 3, 95);
+}

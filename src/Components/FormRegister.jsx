@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import llamadoServicios from '../Services/llamados'
+import '../Styles/StyleFormReg.css'
 
 function FormRegister() {
 
-   // Programacion Logica JS
+   const [Username, setUsername]=useState()
+   const [Email, setEmail]=useState()
+   const [Password, setPassword]=useState()
+   const [Location, setLocation]=useState()
+   const navigate = useNavigate ()
+
+    function username(e) {
+        setUsername(e.target.value)
+    }
+    function email(e) {
+        setEmail(e.target.value)
+    }
+    function password(e) {
+        setPassword(e.target.value)
+    }
+    function location(e) {
+        setLocation(e.target.value)
+    }
+
+    function registerUser(e) {
+        llamadoServicios.postUsers(Username, Email, Password, Location)
+    navigate ('/LogIn')
+    }   
+
 
   return (
 
@@ -10,38 +36,45 @@ function FormRegister() {
 
     <div>
 
-        <h1>Register</h1>
+        <h1 className='TituloForm'>Register</h1>
      <div className='FormContainer'>
         <div>
             <label htmlFor="">Username:</label><br />
-            <input type="text" />
+            <input value={Username} onChange={username} type="text" />
         </div>
 
         <div>
             <label htmlFor="">Email:</label><br />
-            <input type="email" name="email" id="email" />
+            <input type="email" onChange={email} name="Email" id="Email" />
         </div>
 
         <div>
             <label htmlFor="">Password:</label><br />
-            <input type="password" name="password" id="password" />
+            <input type="password" onChange={password} name="Password" id="Password" />
         </div>
         
         <div>
             <label htmlFor="">Location:</label><br />
-            <input type="text" />
+            <input value={Location} onChange={location} type="text" />
         </div><br />
         
         <div>
-            <label htmlFor="">Terminos y Condiciones</label>
+            <label htmlFor="">Terms and Conditions</label>
             <input type="checkbox" name="checkbox" id="checkbox" />
         </div><br />
 
-        <input type="button" value="Register" />
      </div>
+     <div>
+     <input className='BTNRegister' type="button" value="Register" onClick={registerUser} /> 
+     </div><br />
+
+<div className='LinkLogIn'>
+    <p>Are you already registered?<br /> <Link to= '/LogIn'>Log In</Link></p>
+</div>
 
     </div>
   )
 }
+
 
 export default FormRegister

@@ -1,0 +1,13 @@
+.containerHeader{
+    
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(56, 25, 150, 0.781);   
+  
+}
+.TituloBarra{
+    border-style: outset;
+    border-width: 3px;
+    border-color:  rgb(12, 2, 46);
+    
+}

@@ -1,0 +1,35 @@
+.TituloForm{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    border-style: ridge;
+    border-width: 11px;
+    padding: 13px;
+    border-color: rgb(5, 4, 31);
+    text-shadow: 2px 2px 4px rgba(32, 6, 146, 0.991);
+    background-color: rgba(21, 0, 34, 0.146);
+
+}
+.FormContainer{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(61, 50, 135);
+    border-style: ridge;
+    margin: 10px;
+    border-width: 7px;
+    border-color: rgb(5, 4, 31);
+}
+.BTNRegister{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(11, 6, 28);
+    background-color: rgb(61, 62, 93);
+    border-color: rgb(8, 7, 66);
+}
+.BTNRegister:hover{
+    color: rgb(235, 255, 11);
+    background-color: rgb(49, 3, 95);
+}
+.LinkLogIn{
+    color: rgb(47, 49, 110);
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

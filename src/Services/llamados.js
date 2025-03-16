@@ -23,13 +23,14 @@ export { getUsers };
 
 //////////LLAMADO POST//////////
 
-async function postUsers(nombre,email,password) {
+async function postUsers(nombre,email,password,location) {
     try {
      
         const userData = { 
             nombre,
             email,
-            password 
+            password,
+            location
         
         };
 

@@ -1,5 +1,25 @@
 {
-    "users": [
-        
-    ]
+  "users": [
+    {
+      "id": "7180",
+      "nombre": "JDiego",
+      "email": "JD2324@gmail.com",
+      "password": "444",
+      "location": "Desampakistan"
+    },
+    {
+      "id": "a7cd",
+      "nombre": "Student",
+      "email": "Student7@gmail.com",
+      "password": "111",
+      "location": "San Jose"
+    },
+    {
+      "id": "4249",
+      "nombre": "User",
+      "email": "Student7@gmail.com",
+      "password": "000",
+      "location": "Desampa"
+    }
+  ]
 }

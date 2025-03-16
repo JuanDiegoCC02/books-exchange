@@ -1,0 +1,15 @@
+.LinksHeader{
+    padding: 10px;
+    margin: 11px;
+    background-color: rgba(11, 3, 63, 0.525);
+    border-radius: 5px;
+    border-style: ridge;
+    border-width: 2px;
+    color: rgb(2, 99, 99);
+    border-color: black;
+}
+
+.LinksHeader:hover{
+    color: rgba(188, 255, 4, 0.947);
+    border-color: rgb(141, 1, 1);
+} 
