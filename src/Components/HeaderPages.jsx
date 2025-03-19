@@ -9,15 +9,17 @@ function HeaderPages() {
 
             <div className='containerHeader'>
 
-                <h1>Shared Reading</h1>
+                <h1 className='titleHeader'>Shared Reading</h1>
                 
 
                 <div>
-                    <Link className='LinksHeader' to='/LogIn'> Contact us </Link>
-                    <Link className='LinksHeader' to='/LogIn'> Services </Link>
-                    <Link className='LinksHeader' to='/LogIn'> Home </Link>
-                    <Link className='LinksHeader' to='/LogIn'> Profiles </Link>
-                    <Link className='LinksHeader' to='/LogIn'> Chats </Link>
+                    <Link className='LinksHeader' to='/Register'> Register </Link>
+                    <Link className='LinksHeader' to='/LogIn'> Log In </Link>
+                    <Link className='LinksHeader' to='/HomeAdm'> Form Books </Link>
+                    <Link className='LinksHeader' to='/Saved'> Saved </Link>
+                    <Link className='LinksHeader' to='/ContactUs'> Contatc Us </Link>
+                    <Link className='LinksHeader' to='/Front'> Close </Link>
+
                
                 </div><br />
                 

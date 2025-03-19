@@ -1,35 +1,47 @@
 .TituloForm{
     color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 37px;
     border-style: ridge;
     border-width: 11px;
     padding: 13px;
-    border-color: rgb(5, 4, 31);
-    text-shadow: 2px 2px 4px rgba(32, 6, 146, 0.991);
-    background-color: rgba(21, 0, 34, 0.146);
-
+    border-color: #010114ea;
+    text-shadow: 2px 2px 4px rgba(39, 22, 226, 0.884);
+    background-color: rgba(6, 17, 53, 0.63);
+    display: grid;
+    justify-content: center;
 }
 .FormContainer{
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(61, 50, 135);
+    color: rgba(234, 236, 240, 0.742);
     border-style: ridge;
     margin: 10px;
-    border-width: 7px;
-    border-color: rgb(5, 4, 31);
+    padding: 15px;
+    border-width: 8px;
+    border-color: #010114ea;
+    background-color: rgba(6, 17, 53, 0.63);
+    display: grid;
+    justify-content: center;
 }
 .BTNRegister{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(11, 6, 28);
-    background-color: rgb(61, 62, 93);
-    border-color: rgb(8, 7, 66);
+    color: rgba(255, 255, 255, 0.779);
+    background-color: rgb(64, 137, 196);
+    border-color: rgba(0, 0, 0, 0.829);
+    border-width: 3px;
+    margin: 15px;
+   
 }
 .BTNRegister:hover{
     color: rgb(235, 255, 11);
-    background-color: rgb(49, 3, 95);
+    background-color: rgba(35, 88, 76, 0.854);
 }
 .LinkLogIn{
-    color: rgb(47, 49, 110);
+  
+    display: grid;
+    justify-content: center;
+
+    color: rgba(45, 0, 227, 0.724);
     font-size: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }

@@ -45,21 +45,22 @@ function FormLogIn() {
     <h1 className='TituloForm'>Log In</h1>
     <div className='FormContainer'>
         <div>
-            <label htmlFor="">Username:</label><br />
+            <label htmlFor="">Username</label><br />
             <input value={Username} onChange={usrname} type="text" />
         </div>
 
         <div>
-            <label htmlFor="">Password:</label><br />
+            <label htmlFor="">Password</label><br />
             <input value={Password} onChange={password} type="password" name=""/>
         </div><br />
 
-       
-    </div>
+        <div>
+         <input className='BTNRegister' onClick={enter} type="button" value="Log In" />
+        </div> 
 
-<div>
-    <input className='BTNRegister' onClick={enter} type="button" value="Log In" />
-</div> <br />
+    </div> <br />
+
+
 
 <div className='LinkLogIn'>
     <p>Not registered?<br /> <Link to= '/Register'>Register</Link></p>

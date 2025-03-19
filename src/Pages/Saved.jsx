@@ -1,18 +1,18 @@
 import React from 'react'
-import FormRegister from '../Components/FormRegister' 
+import SavedR from '../Components/SavedR'
 import HeaderPages from '../Components/HeaderPages'
 
-function Register() {
+function Saved() {
   return (
     <div>
-      <header>
+         <header>
         <HeaderPages/>
         </header>
         <main>
-        <FormRegister/>
+        <SavedR/>
         </main>
     </div>
   )
 }
 
-export default Register
+export default Saved

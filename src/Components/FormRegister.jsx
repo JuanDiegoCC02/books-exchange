@@ -39,22 +39,22 @@ function FormRegister() {
         <h1 className='TituloForm'>Register</h1>
      <div className='FormContainer'>
         <div>
-            <label htmlFor="">Username:</label><br />
+            <label htmlFor="">Username</label><br />
             <input value={Username} onChange={username} type="text" />
         </div>
 
         <div>
-            <label htmlFor="">Email:</label><br />
+            <label htmlFor="">Email</label><br />
             <input type="email" onChange={email} name="Email" id="Email" />
         </div>
 
         <div>
-            <label htmlFor="">Password:</label><br />
+            <label htmlFor="">Password</label><br />
             <input type="password" onChange={password} name="Password" id="Password" />
         </div>
         
         <div>
-            <label htmlFor="">Location:</label><br />
+            <label htmlFor="">Location</label><br />
             <input value={Location} onChange={location} type="text" />
         </div><br />
         
@@ -63,10 +63,12 @@ function FormRegister() {
             <input type="checkbox" name="checkbox" id="checkbox" />
         </div><br />
 
-     </div>
-     <div>
+        <div>
      <input className='BTNRegister' type="button" value="Register" onClick={registerUser} /> 
+     </div>
+
      </div><br />
+     
 
 <div className='LinkLogIn'>
     <p>Are you already registered?<br /> <Link to= '/LogIn'>Log In</Link></p>

@@ -21,5 +21,23 @@
       "password": "000",
       "location": "Desampa"
     }
+  ],
+  "books": [
+    {
+      "id": "1449",
+      "namebook": "Juego de Gerald",
+      "authorbook": "Stephen King",
+      "categbook": "Terror",
+      "infobook": "Bad Status",
+      "borrowBook": true
+    },
+    {
+      "id": "9a01",
+      "namebook": "Saco de Huesos",
+      "authorbook": "Stephen King ",
+      "categbook": "Terror",
+      "infobook": "Good Status",
+      "borrowBook": false
+    }
   ]
 }

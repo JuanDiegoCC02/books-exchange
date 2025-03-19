@@ -1,0 +1,28 @@
+.TitleContactUs{
+    border-style: ridge;
+    border-width: 9px;
+    border-color: rgba(0, 2, 35, 0.648);
+    color: rgb(0, 0, 0);
+    background-color: rgba(87, 121, 172, 0.758);
+    text-shadow: 2px 2px 4px rgba(56, 49, 135, 0.879);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    justify-content: center;
+}
+.ContainerContactUs{
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(0, 1, 51, 0.699);
+}
+.ContainerData{
+    border-style: groove;
+    border-width: 7px;
+    border-color: rgba(2, 3, 7, 0.708);
+    background-color: rgba(32, 227, 227, 0.838);
+    font-family: 'Times New Roman';
+    color: rgba(2, 62, 89, 0.879);
+
+    padding: 15px;
+    margin: 35px;
+    
+}
