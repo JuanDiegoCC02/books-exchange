@@ -1,4 +1,5 @@
 .TituloForm{
+    width: 60%;
     color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
     font-size: 37px;
@@ -7,21 +8,25 @@
     padding: 13px;
     border-color: #010114ea;
     text-shadow: 2px 2px 4px rgba(39, 22, 226, 0.884);
-    background-color: rgba(6, 17, 53, 0.63);
+    background-color: rgba(87, 144, 172, 0.795);
     display: grid;
     justify-content: center;
+    position: relative; left: 16%;
+
 }
 .FormContainer{
+    width: 35%;
     font-family: 'Times New Roman', Times, serif;
-    color: rgba(234, 236, 240, 0.742);
+    color: rgba(10, 1, 43, 0.925);
     border-style: ridge;
     margin: 10px;
     padding: 15px;
     border-width: 8px;
     border-color: #010114ea;
-    background-color: rgba(6, 17, 53, 0.63);
+    background-color: rgba(87, 144, 172, 0.795);
     display: grid;
     justify-content: center;
+    position: relative; left: 27%;
 }
 .BTNRegister{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -40,6 +45,7 @@
   
     display: grid;
     justify-content: center;
+    position: relative; right: 2%;
 
     color: rgba(45, 0, 227, 0.724);
     font-size: 13px;

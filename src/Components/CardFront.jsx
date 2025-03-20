@@ -1,17 +1,15 @@
-import { useState, useEffect } from 'react'
-import '../Styles/SavedStyle.css'
+import {useEffect, useState} from 'react'
+import '../Styles/CardFront.css'
 import llamadosBooks from '../Services/llamadosBooks'
 
 
-function SavedR() {
-
-const [mostrar, setMostrar]=useState(false)
-const [books, setBooks]=useState([])
+function CardFront() {
+    const [mostrar, setMostrar]=useState(false)
+const [books, setBooks]=useState([])    
 
 const [editName, setEditName]=useState("")
 const [editAuthor, setEditAuthor]=useState("")
 const [editCateg, setEditCateg]=useState("")
-const [editInfo, setEditInfo]=useState("")
 
 const [reload, setReload]=useState(false)
 
@@ -25,9 +23,7 @@ const [reload, setReload]=useState(false)
     function newCateg(e) {
         setEditCateg(e.target.value)
     }
-    function newInfo(e) {
-        setEditInfo(e.target.value)
-    }
+   
     
     //Funcion Delete
     function delet(id) {
@@ -58,40 +54,36 @@ const [reload, setReload]=useState(false)
         }
         list()
     },[reload])
-
   return (
     <div>
-        <div className='searchAllDiv'>
-            <input className='barraSearch' type="search" name="buscador" id="" />  <input className='BTNEnviar' type="submit" />
-        </div>
-
+       
+        <div className='TitleCardFront'><h3>Books Exchanges <br />  Your Welcome</h3></div>
+        
         <div>
 
 
- <div className='AllContainer'>
-      <div className='TitleNewsBooks'> <h2>News Books</h2> </div>
-
-     <ul className='containerNewsBooks'>
-       
-        
-        {books.map ((libro,index)=>(
-        
-        <li className='containerBook'>
+        <div className='AllContainer'>
+        <ul className='containerNewsBooks'>
+        {books
+        .filter((libro)=> libro.statusFront===true)
+        .map ((libro,index)=>(
+        <li className='containerFront'>
+            <img className='imgBookFront' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrNEUasjK2NNpHXdedwhubaD1Ei-PgX9dgXVeD7enjugUbPIJGdVuA3owQml5GoPlOIc&usqp=CAU" width={190} height={160} alt="imgLibro"/> <br />
            <strong>Name</strong><br /> {libro.namebook} <br />
            <strong>Author</strong><br /> {libro.authorbook} <br />
            <strong>Category</strong><br /> {libro.categbook} <br />
-           <strong>Information</strong><br /> {libro.infobook} <br />
-
                 <div>
-                    <input type="checkbox" name="StateChange" id="StateChange" />
-                    <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button>
+                    <div>
+                <input type="checkbox" name="StateChange" id="StateChange" /> <br />
+                    </div>
+                    
+                    <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button> <br />
                     <button className='btnEdit' onClick={()=>setMostrar(!mostrar)}>Edit</button> <br />
                     {mostrar &&
                     <>
                     <input onChange={newName} type="text" placeholder='Name' />
                     <input onChange={newAuthor} type="text" placeholder='Author' />
                     <input onChange={newCateg} type="text" placeholder='Category' />
-                    <input onChange={newInfo} type="text" placeholder='Information' />
                     <button onClick={()=>edit(libro.id)} >Complete</button>
                     </>
                     }
@@ -102,9 +94,11 @@ const [reload, setReload]=useState(false)
      </div>
 
 
+        </div>
+
+
     </div>
-</div>
   )
 }
 
-export default SavedR
+export default CardFront

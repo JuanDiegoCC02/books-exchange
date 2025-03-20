@@ -19,7 +19,7 @@ function Routing() {
         <Routes>
             <Route path='/register' element={<Register/>}/>
             <Route path='/login' element={<LogIn/>}/>
-            <Route path='/' element={<LogIn/>}/>
+            <Route path='/' element={<Front/>}/>
             <Route path='/homeadm' element={<HomeAdm/>}/>
             <Route path='/front' element={<Front/>}/>
             <Route path='/saved' element={<Saved/>}/>

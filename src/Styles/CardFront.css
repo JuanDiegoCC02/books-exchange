@@ -1,0 +1,23 @@
+.containerFront{
+display: flex;
+justify-content: space-between;
+height: auto;
+padding: 25px;
+margin: 60px;
+background-color: #fff;
+border: 1px solid #ffffff;
+box-shadow: 5px 5px 15px rgba(32, 0, 82, 0.945);
+}
+
+.TitleCardFront{
+    margin: 50px;
+    border-style: ridge;
+    border-width: 9px;
+    border-color: rgba(0, 2, 35, 0.648);
+    color: rgb(0, 0, 0);
+    background-color: rgba(87, 121, 172, 0.758);
+    text-shadow: 2px 2px 4px rgba(19, 7, 152, 0.934);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    justify-content: center;
+}

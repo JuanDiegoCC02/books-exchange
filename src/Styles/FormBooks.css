@@ -1,4 +1,5 @@
 .TitleForm{
+    width: 85%;
     background-color: rgba(87, 144, 172, 0.795);
     color: rgba(0, 0, 0, 0.751);
     font-family: 'Times New Roman', Times, serif;
@@ -10,8 +11,11 @@
     text-shadow: 2px 2px 4px rgba(176, 0, 229, 0.918);
     display: grid;
     justify-content: center;
+    position: relative; left: 4%;
+
 }
 .ContainerFormBooks{
+    width: 55%;
     border-style: ridge;
     border-color: #03011bc9;
     color: rgb(47, 42, 96);
@@ -21,6 +25,8 @@
     margin: 25px;
     display: grid;
     justify-content: center;
+    position: relative; left: 17%;
+
 }
 .BTNPost{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -33,7 +39,7 @@
     background-color: rgb(49, 3, 95);
 }
 .AllContainer{
-    transform: translateY(150px);
+margin: 55px;
 }
 .TitleNewsBooks{
 border-style: ridge;
@@ -43,6 +49,8 @@ color: rgb(0, 0, 0);
 background-color: rgba(87, 121, 172, 0.758);
 text-shadow: 2px 2px 4px rgba(56, 49, 135, 0.879);
 font-family: Georgia, 'Times New Roman', Times, serif;
+display: grid;
+justify-content: center;
 
 }
 .containerNewsBooks{

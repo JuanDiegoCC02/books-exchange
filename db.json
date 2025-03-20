@@ -24,20 +24,28 @@
   ],
   "books": [
     {
-      "id": "1449",
-      "namebook": "Juego de Gerald",
-      "authorbook": "Stephen King",
-      "categbook": "Terror",
-      "infobook": "Bad Status",
-      "borrowBook": true
-    },
-    {
-      "id": "9a01",
+      "id": "0eb9",
       "namebook": "Saco de Huesos",
       "authorbook": "Stephen King ",
       "categbook": "Terror",
-      "infobook": "Good Status",
-      "borrowBook": false
+      "infobook": "Very Good",
+      "statusFront": true
+    },
+    {
+      "id": "ee9e",
+      "namebook": "El Cuervo",
+      "authorbook": "Allan Poe",
+      "categbook": "Terror",
+      "infobook": "Good",
+      "statusFront": false
+    },
+    {
+      "id": "16ae",
+      "namebook": "La Ciudad de Papel",
+      "authorbook": "Jhon Green",
+      "categbook": "Drama",
+      "infobook": "Good",
+      "statusFront": true
     }
   ]
 }
