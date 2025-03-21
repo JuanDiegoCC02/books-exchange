@@ -2,14 +2,15 @@ import React, {useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import '../Styles/StyleFormLogIn.css'
 import llamadoServicios from '../Services/llamados'
+import ModalError from './Modals/ModalError';
 
 
 
 function FormLogIn() {
-
-    const [Username, setUsername]=useState()
-    const [Password, setPassword]=useState()
-    const [Profiles, setProfiles]=useState()
+    const [mostrarError,setMostrarError] = useState(false)
+    const [Username, setUsername]=useState("")
+    const [Password, setPassword]=useState("")
+    const [Profiles, setProfiles]=useState("")
     const Navigate = useNavigate ()
 
 
@@ -30,8 +31,8 @@ function FormLogIn() {
     function enter() {
         const found = Profiles.filter(Profiler => Profiler.usrname===Username && Profiler.password===Password)
         
-        if (found.leght === 0) {
-        alert ("Username or Password invalid")            
+        if (found.length === 0) {
+        setMostrarError(true)
         } else {
             Navigate('/HomeAdm')
         }
@@ -60,8 +61,9 @@ function FormLogIn() {
 
     </div> <br />
 
-
-
+    {mostrarError &&
+    <ModalError Error={"Username or Password Invalid"}/>
+    }
 <div className='LinkLogIn'>
     <p>Not registered?<br /> <Link to= '/Register'>Register</Link></p>
 </div>

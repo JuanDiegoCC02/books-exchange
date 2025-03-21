@@ -1,6 +1,6 @@
 .TitleForm{
     width: 85%;
-    background-color: rgba(87, 144, 172, 0.795);
+    background-color: rgba(93, 170, 206, 0.482);
     color: rgba(0, 0, 0, 0.751);
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
@@ -8,7 +8,7 @@
     border-width: 11px;
     margin: 15px;
     border-color: #03011bc9;
-    text-shadow: 2px 2px 4px rgba(176, 0, 229, 0.918);
+    text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
     display: grid;
     justify-content: center;
     position: relative; left: 4%;
@@ -19,7 +19,7 @@
     border-style: ridge;
     border-color: #03011bc9;
     color: rgb(47, 42, 96);
-    background-color: rgba(4, 184, 184, 0.932);
+    background-color: rgba(91, 223, 230, 0.642);
     border-width: 12px;
     padding: 15px;
     margin: 25px;
@@ -46,7 +46,6 @@ border-style: ridge;
 border-width: 9px;
 border-color: rgba(0, 2, 35, 0.648);
 color: rgb(0, 0, 0);
-background-color: rgba(87, 121, 172, 0.758);
 text-shadow: 2px 2px 4px rgba(56, 49, 135, 0.879);
 font-family: Georgia, 'Times New Roman', Times, serif;
 display: grid;

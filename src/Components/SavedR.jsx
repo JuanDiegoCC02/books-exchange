@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../Styles/SavedStyle.css'
-import llamadosBooks from '../Services/llamadosBooks'
+import llamadosBooks, { updateBooks } from '../Services/llamadosBooks'
 
 
 function SavedR() {
@@ -14,6 +14,14 @@ const [editCateg, setEditCateg]=useState("")
 const [editInfo, setEditInfo]=useState("")
 
 const [reload, setReload]=useState(false)
+
+const handleBookCheck = async (id,index)=> {
+    const updatedBooks = [...books]
+    updatedBooks[index].statusFront = !updatedBooks[index].statusFront
+    await updateBooks(
+        {"statusFront": updatedBooks[index].statusFront}, id)
+        setBooks(updatedBooks)
+}
 
 
     function newName(e) {
@@ -45,6 +53,7 @@ const [reload, setReload]=useState(false)
         llamadosBooks.updateBooks(bookEdit,id)
         setReload(!reload);
     }
+
     
     function post() {
         llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false)
@@ -83,7 +92,14 @@ const [reload, setReload]=useState(false)
            <strong>Information</strong><br /> {libro.infobook} <br />
 
                 <div>
-                    <input type="checkbox" name="StateChange" id="StateChange" />
+                    <input className='inpChangeState'
+                     type="checkbox" 
+                     name="StateChange"
+                     id="StateChange" 
+                     checked={libro.statusFront}
+                     onChange={()=>handleBookCheck(libro.id,index)}
+                     />
+                    <button className='btnExchange' >Exchanges</button>
                     <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button>
                     <button className='btnEdit' onClick={()=>setMostrar(!mostrar)}>Edit</button> <br />
                     {mostrar &&

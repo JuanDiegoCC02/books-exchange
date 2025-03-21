@@ -7,8 +7,8 @@
     border-width: 11px;
     padding: 13px;
     border-color: #010114ea;
-    text-shadow: 2px 2px 4px rgba(39, 22, 226, 0.884);
-    background-color: rgba(87, 144, 172, 0.795);
+    text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
+    background-color: rgba(93, 170, 206, 0.482);
     display: grid;
     justify-content: center;
     position: relative; left: 16%;
@@ -23,7 +23,7 @@
     padding: 15px;
     border-width: 8px;
     border-color: #010114ea;
-    background-color: rgba(87, 144, 172, 0.795);
+    background-color: rgba(91, 223, 230, 0.642);
     display: grid;
     justify-content: center;
     position: relative; left: 27%;

@@ -7,7 +7,7 @@ function ContactMain() {
 
 <main>
     <div className='TitleContactUs'>
-        <h1>Welcome Contact Us</h1>
+        <h1>Contact Us</h1>
     </div><br />
     <div className='DescriptionContacUs'>
         <p className='ContainerData'>Esta Pagina de Intercambio de Libros que fomenta la lectura y busca darle una segunda vida a los Libros </p>
