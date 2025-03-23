@@ -1,4 +1,24 @@
 body{
-    background-color: rgba(145, 194, 206, 0.822);
+    background-color: rgb(255, 255, 255);
     
+}
+.inpLogIn{
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+}
+.BTNLogIn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    background-color: rgba(112, 181, 237, 0.845);
+    border-color: rgb(2, 24, 73);
+    border-width: 3px;
+    margin: 5px auto;
+    padding: 2px;
+    border-radius: 5px;
+    position: relative; left: 34%;
+}
+.BTNLogIn:hover{
+    color: rgb(255, 251, 14);
+    background-color: rgb(17, 8, 139);
 }

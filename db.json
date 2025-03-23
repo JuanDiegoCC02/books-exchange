@@ -37,7 +37,7 @@
       "authorbook": "Allan Poe",
       "categbook": "Terror",
       "infobook": "Good",
-      "statusFront": false
+      "statusFront": true
     },
     {
       "id": "16ae",

@@ -18,7 +18,7 @@ function HeaderPages() {
                     <Link className='LinksHeader' to='/HomeAdm'> Form Books </Link>
                     <Link className='LinksHeader' to='/Saved'> Saved </Link>
                     <Link className='LinksHeader' to='/ContactUs'> Contatc Us </Link>
-                    <Link className='LinksHeader' to='/Front'> Close </Link>
+                    <Link className='LinksHeader' to='/Front'> Home </Link>
 
                
                 </div><br />

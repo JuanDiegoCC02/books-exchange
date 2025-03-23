@@ -65,7 +65,10 @@ const handleBookCheck = async (id,index)=> {
   return (
     <div>
        
-        <div className='TitleCardFront'><h3>Books Exchanges <br />  Your Welcome</h3></div>
+        <div className='TitleCardFront'> <h3 className='SubtitleCardFront'> Welcome</h3>
+            <h3>Books Exchanges </h3>
+       
+        </div>
         
         <div>
 
@@ -77,9 +80,9 @@ const handleBookCheck = async (id,index)=> {
         .map ((libro,index)=>(
         <li className='containerFront'>
             <img className='imgBookFront' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrNEUasjK2NNpHXdedwhubaD1Ei-PgX9dgXVeD7enjugUbPIJGdVuA3owQml5GoPlOIc&usqp=CAU" width={190} height={160} alt="imgLibro"/> <br />
-           <strong>Name</strong><br /> {libro.namebook} <br />
-           <strong>Author</strong><br /> {libro.authorbook} <br />
-           <strong>Category</strong><br /> {libro.categbook} <br />
+           <strong>Name</strong> {libro.namebook} <br /> <br />
+           <strong>Author</strong> {libro.authorbook} <br /><br />
+           <strong>Category</strong> {libro.categbook} <br /><br />
                 <div>
                     <div>
                     <input className='inpChangeState'
@@ -90,8 +93,8 @@ const handleBookCheck = async (id,index)=> {
                      onChange={()=>handleBookCheck(libro.id,index)}
                      />                    </div>
                     
-                    <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button> <br />
-                    <button className='btnEdit' onClick={()=>setMostrar(!mostrar)}>Edit</button> <br />
+                    <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button> 
+                    <button className='btnEdit' onClick={()=>setMostrar(!mostrar)}>Edit</button>
                     {mostrar &&
                     <>
                     <input onChange={newName} type="text" placeholder='Name' />

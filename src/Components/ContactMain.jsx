@@ -3,14 +3,14 @@ import '../Styles/ContactUs.css'
 
 function ContactMain() {
   return (
-    <div>
+    <div><br />
 
 <main>
     <div className='TitleContactUs'>
         <h1>Contact Us</h1>
     </div><br />
     <div className='DescriptionContacUs'>
-        <p className='ContainerData'>Esta Pagina de Intercambio de Libros que fomenta la lectura y busca darle una segunda vida a los Libros </p>
+        <p className='ContainerData'>Está es una Pagina de Intercambio de Libros que fomenta la lectura y busca darle una segunda vida a los Libros. </p>
     </div><br />
 
 <div className='ContainerContactUs'>

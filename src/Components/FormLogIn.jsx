@@ -44,26 +44,27 @@ function FormLogIn() {
 <div>
 
     <h1 className='TituloForm'>Log In</h1>
+    {mostrarError &&
+    <ModalError Error={" Username or Password Invalid "}/>
+    }
     <div className='FormContainer'>
-        <div>
+        <div className='inpLogIn'>
             <label htmlFor="">Username</label><br />
             <input value={Username} onChange={usrname} type="text" />
         </div>
 
-        <div>
+        <div className='inpLogIn'>
             <label htmlFor="">Password</label><br />
             <input value={Password} onChange={password} type="password" name=""/>
         </div><br />
 
         <div>
-         <input className='BTNRegister' onClick={enter} type="button" value="Log In" />
+         <input className='BTNLogIn' onClick={enter} type="button" value="Log In" />
         </div> 
 
-    </div> <br />
+    </div> 
 
-    {mostrarError &&
-    <ModalError Error={"Username or Password Invalid"}/>
-    }
+ 
 <div className='LinkLogIn'>
     <p>Not registered?<br /> <Link to= '/Register'>Register</Link></p>
 </div>

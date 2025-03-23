@@ -1,4 +1,4 @@
-.cont-modal-error{
+.Term-Cond-Modal{
     position: relative;
     text-align: center;
     font-family: monospace;
@@ -11,8 +11,9 @@
     box-shadow: inset 5px 5px 15px rgba(88, 2, 13, 0.945);
 
 }
-.cont-modal-error:hover{
-background-color: rgb(197, 1, 1);
-border: 1px solid rgba(0, 0, 0, 0.945);
-box-shadow: 5px 5px 15px rgb(79, 0, 0);
+.Term-Cond-Modal:hover{
+background-color: rgb(211, 14, 14);
+border-style: groove;
+border: 3px solid rgb(72, 2, 2);
+box-shadow: 5px 5px 15px rgb(129, 0, 0);
 }

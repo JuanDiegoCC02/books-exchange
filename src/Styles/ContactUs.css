@@ -1,26 +1,35 @@
 .TitleContactUs{
-    border-style: ridge;
-    border-width: 9px;
+
     border-color: rgba(0, 2, 35, 0.648);
-    color: rgb(0, 0, 0);
-    background-color: rgba(93, 170, 206, 0.482);
+    box-shadow: 5px 5px 15px rgba(59, 0, 152, 0.984);
+    color: rgba(0, 0, 0, 0.932);
+    background-color: rgb(190, 231, 250);
     text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: grid;
     justify-content: center;
+    font-size: 15px;
+    
 }
 .ContainerContactUs{
-    border-style: ridge;
-    border-width: 7px;
-    border-color: rgba(0, 1, 51, 0.699);
-}
-.ContainerData{
     border-style: groove;
     border-width: 7px;
-    border-color: rgba(2, 3, 7, 0.708);
-    background-color: rgba(32, 227, 227, 0.838);
+    border-color: rgba(0, 1, 51, 0.699);
+    background-color: rgb(190, 231, 250);
+    box-shadow: inset 5px 5px 15px rgba(59, 0, 152, 0.984);
+
+
+}
+.ContainerData{
+    border-width: 7px;
+    background-color: rgb(255, 255, 255);
     font-family: 'Times New Roman';
     color: rgba(2, 62, 89, 0.879);
+    box-shadow: inset 5px 5px 15px rgba(59, 0, 152, 0.984);
+    border-style:  ridge;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    text-align: center;
 
     padding: 15px;
     margin: 35px;

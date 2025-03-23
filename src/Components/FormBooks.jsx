@@ -86,19 +86,19 @@ useEffect (()=>{
             <h3>Books Form</h3>
         </div>
 <div className='ContainerFormBooks'>
-        <div>
+        <div className='inpFormB'>
             <label htmlFor="">Book Name</label><br />
             <input value={nameBook} onChange={namebook} type="text" />
         </div>
-        <div>
+        <div className='inpFormB'>
             <label htmlFor="">Book Author</label><br />
             <input value={authorBook} onChange={authorbook}  type="text" />
         </div>
-        <div>
+        <div className='inpFormB'>
             <label htmlFor="">Book Category</label><br />
             <input value={categBook} onChange={categbook}  type="text" />
         </div>
-        <div>
+        <div className='inpFormB'>
             <label htmlFor="">Book Information</label><br />
             <input value={infoBook} onChange={infobook}  type="text" />
         </div><br />

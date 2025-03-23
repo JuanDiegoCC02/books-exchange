@@ -70,15 +70,16 @@ const handleBookCheck = async (id,index)=> {
 
   return (
     <div>
-        <div className='searchAllDiv'>
-            <input className='barraSearch' type="search" name="buscador" id="" />  <input className='BTNEnviar' type="submit" />
-        </div>
+       
 
         <div>
 
 
- <div className='AllContainer'>
+ <div className='AllContainer'><br /><br />
       <div className='TitleNewsBooks'> <h2>News Books</h2> </div>
+      <div className='searchAllDiv'>
+            <input className='barraSearch' type="search" name="buscador" id="" />  <input className='BTNEnviar' type="button" value="Search" />
+        </div><br />
 
      <ul className='containerNewsBooks'>
        
@@ -86,10 +87,10 @@ const handleBookCheck = async (id,index)=> {
         {books.map ((libro,index)=>(
         
         <li className='containerBook'>
-           <strong>Name</strong><br /> {libro.namebook} <br />
-           <strong>Author</strong><br /> {libro.authorbook} <br />
-           <strong>Category</strong><br /> {libro.categbook} <br />
-           <strong>Information</strong><br /> {libro.infobook} <br />
+           <strong>Name</strong><br /> {libro.namebook} <br /><br />
+           <strong>Author</strong><br /> {libro.authorbook} <br /><br />
+           <strong>Category</strong><br /> {libro.categbook} <br /><br />
+           <strong>Information</strong><br /> {libro.infobook} <br /><br />
 
                 <div>
                     <input className='inpChangeState'

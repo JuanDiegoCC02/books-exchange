@@ -1,53 +1,61 @@
 .TituloForm{
-    width: 60%;
+    width: 97.4%;
     color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 37px;
-    border-style: ridge;
-    border-width: 11px;
-    padding: 13px;
-    border-color: #010114ea;
+    font-size: 33px;
+    padding: 15px;
+    border-color: #000013;
     text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
-    background-color: rgba(93, 170, 206, 0.482);
+    background-color: rgba(184, 232, 254, 0.884);
     display: grid;
     justify-content: center;
-    position: relative; left: 16%;
+    border: 1px solid #84daff;
+    box-shadow: 5px 5px 15px rgba(65, 2, 167, 0.984);
 
 }
 .FormContainer{
-    width: 35%;
+    width: 40%;
     font-family: 'Times New Roman', Times, serif;
-    color: rgba(10, 1, 43, 0.925);
+    color: rgb(19, 2, 80);
     border-style: ridge;
-    margin: 10px;
-    padding: 15px;
-    border-width: 8px;
-    border-color: #010114ea;
-    background-color: rgba(91, 223, 230, 0.642);
+    margin: 35px auto;
+    padding: 45px;
+    border-width: 6px;
+    border-color: #01010f;
+    background-color: rgba(255, 255, 255, 0.642);
     display: grid;
     justify-content: center;
-    position: relative; left: 27%;
+    position: relative; left: 3px;
+    box-shadow: 5px 5px 15px rgba(9, 9, 124, 0.984);
+
 }
 .BTNRegister{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgba(255, 255, 255, 0.779);
-    background-color: rgb(64, 137, 196);
-    border-color: rgba(0, 0, 0, 0.829);
+    color: rgb(0, 0, 0);
+    background-color: rgba(112, 181, 237, 0.845);
+    border-color: rgb(2, 24, 73);
     border-width: 3px;
-    margin: 15px;
-   
+    margin: 5px auto;
+    padding: 2px;
+    border-radius: 5px;
+    position: relative; left: 34%;
 }
 .BTNRegister:hover{
-    color: rgb(235, 255, 11);
-    background-color: rgba(35, 88, 76, 0.854);
-}
+    color: rgb(255, 251, 14);
+    background-color: rgb(17, 8, 139);
+}   
 .LinkLogIn{
   
     display: grid;
     justify-content: center;
-    position: relative; right: 2%;
+    position: relative; 
 
-    color: rgba(45, 0, 227, 0.724);
+    color: rgb(0, 0, 0);
     font-size: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.inpRegist{
+    text-align: center;
+    align-items: center;
+    padding: 5px;
 }
