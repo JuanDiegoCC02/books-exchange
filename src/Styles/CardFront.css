@@ -16,7 +16,7 @@
 }
 .containerFront{
 display: flex;
-position: relative; left: 29%;
+position: relative; left:32%;
 flex-direction: column;
 gap: 3px;
 height: auto;   

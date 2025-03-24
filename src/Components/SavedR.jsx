@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import '../Styles/SavedStyle.css'
 import llamadosBooks, { updateBooks } from '../Services/llamadosBooks'
+import AlertExchangesModal from './Modals/AlertExchangesModal'
 
 
 function SavedR() {
 
 const [mostrar, setMostrar]=useState(false)
+const [alertExchanges, setAlertExchanges]=useState(false)
 const [books, setBooks]=useState([])
 
 const [editName, setEditName]=useState("")
@@ -54,11 +56,9 @@ const handleBookCheck = async (id,index)=> {
         setReload(!reload);
     }
 
+
     
-    function post() {
-        llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false)
-        setReload(!reload)
-    }
+  
     
     useEffect (()=>{
         async function list() {
@@ -70,19 +70,15 @@ const handleBookCheck = async (id,index)=> {
 
   return (
     <div>
-       
+     <div>
 
-        <div>
-
-
- <div className='AllContainer'><br /><br />
+      <div className='AllContainer'><br /><br />
       <div className='TitleNewsBooks'> <h2>News Books</h2> </div>
       <div className='searchAllDiv'>
             <input className='barraSearch' type="search" name="buscador" id="" />  <input className='BTNEnviar' type="button" value="Search" />
         </div><br />
 
      <ul className='containerNewsBooks'>
-       
         
         {books.map ((libro,index)=>(
         
@@ -91,6 +87,8 @@ const handleBookCheck = async (id,index)=> {
            <strong>Author</strong><br /> {libro.authorbook} <br /><br />
            <strong>Category</strong><br /> {libro.categbook} <br /><br />
            <strong>Information</strong><br /> {libro.infobook} <br /><br />
+           <strong>Usuario</strong><br /> {libro.usuario} <br /><br />
+           <strong>Correo</strong><br /> {libro.correoUsuario} <br /><br />
 
                 <div>
                     <input className='inpChangeState'
@@ -99,8 +97,9 @@ const handleBookCheck = async (id,index)=> {
                      id="StateChange" 
                      checked={libro.statusFront}
                      onChange={()=>handleBookCheck(libro.id,index)}
-                     />
-                    <button className='btnExchange' >Exchanges</button>
+                     /> <br />
+                    <button className='btnExchange' onClick={()=>setAlertExchanges(!alertExchanges)} >Exchanges</button>
+                    
                     <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button>
                     <button className='btnEdit' onClick={()=>setMostrar(!mostrar)}>Edit</button> <br />
                     {mostrar &&
@@ -112,6 +111,8 @@ const handleBookCheck = async (id,index)=> {
                     <button onClick={()=>edit(libro.id)} >Complete</button>
                     </>
                     }
+                    {alertExchanges &&
+                    <AlertExchangesModal AlertExch={"   "}/>}
                 </div>
         </li>
         ))}

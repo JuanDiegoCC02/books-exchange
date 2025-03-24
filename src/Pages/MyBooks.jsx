@@ -1,23 +1,22 @@
 import React from 'react'
-
 import HeaderPages from '../Components/HeaderPages'
-import ContactMain from '../Components/ContactMain'
+import MyBooksCard from '../Components/MyBooksCard'
 import FooterPages from '../Components/FooterPages'
 
-function ContactUs() {
+function MyBooks() {
   return (
     <div>
         <header>
             <HeaderPages/>
-        </header> <br />
+        </header>
         <main>
-          <ContactMain/>
+            <MyBooksCard/>
         </main>
         <footer>
-         <FooterPages/>
+            <FooterPages/>
         </footer>
     </div>
   )
 }
 
-export default ContactUs
+export default MyBooks

@@ -8,6 +8,7 @@ import HomeAdm from '../Pages/HomeAdm';
 import Front from '../Pages/Front';
 import Saved from '../Pages/Saved';
 import ContactUs from '../Pages/ContactUs';
+import MyBooks from '../Pages/MyBooks';
 
 
 
@@ -23,6 +24,7 @@ function Routing() {
             <Route path='/homeadm' element={<HomeAdm/>}/>
             <Route path='/front' element={<Front/>}/>
             <Route path='/saved' element={<Saved/>}/>
+            <Route path='/mybooks' element={<MyBooks/>}/>
             <Route path='/contactus' element={<ContactUs/>}/>
 
         </Routes>

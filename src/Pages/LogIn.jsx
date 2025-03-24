@@ -2,6 +2,7 @@ import React from 'react'
 
 import FormLogIn from '../Components/FormLogIn'
 import HeaderPages from '../Components/HeaderPages'
+import FooterPages from '../Components/FooterPages'
 
 function LogIn() {
   return (
@@ -12,6 +13,9 @@ function LogIn() {
       <main>
         <FormLogIn />
       </main>
+      <footer>
+          <FooterPages/>
+        </footer>
     </div>
   )
 }

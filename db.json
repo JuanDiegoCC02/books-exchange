@@ -24,28 +24,54 @@
   ],
   "books": [
     {
-      "id": "0eb9",
+      "id": "dacc",
       "namebook": "Saco de Huesos",
       "authorbook": "Stephen King ",
       "categbook": "Terror",
+      "infobook": "Good Status",
+      "statusFront": true,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com"
+    },
+    {
+      "id": "4024",
+      "namebook": "Relatos de Miedo",
+      "authorbook": "HP Lovecracft",
+      "categbook": "Terro",
       "infobook": "Very Good",
-      "statusFront": true
+      "statusFront": false,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com"
     },
     {
-      "id": "ee9e",
-      "namebook": "El Cuervo",
-      "authorbook": "Allan Poe",
+      "id": "ce53",
+      "namebook": "Ejército de los Sonambulos",
+      "authorbook": "Wu Ming",
       "categbook": "Terror",
-      "infobook": "Good",
-      "statusFront": true
+      "infobook": "Bad ",
+      "statusFront": false,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com"
     },
     {
-      "id": "16ae",
-      "namebook": "La Ciudad de Papel",
-      "authorbook": "Jhon Green",
-      "categbook": "Drama",
+      "id": "4df4",
+      "namebook": "El señor de los Anillos",
+      "authorbook": "J.K. Tolkien",
+      "categbook": "Fantasy",
+      "infobook": "Bad",
+      "statusFront": true,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com"
+    },
+    {
+      "id": "4ee4",
+      "namebook": "Harry Potter",
+      "authorbook": "J.K. Rowling",
+      "categbook": "Fantasy",
       "infobook": "Good",
-      "statusFront": false
+      "statusFront": true,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com"
     }
   ]
 }

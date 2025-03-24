@@ -10,7 +10,7 @@ function FormLogIn() {
     const [mostrarError,setMostrarError] = useState(false)
     const [Username, setUsername]=useState("")
     const [Password, setPassword]=useState("")
-    const [Profiles, setProfiles]=useState("")
+    const [Profiles, setProfiles]=useState([])
     const Navigate = useNavigate ()
 
 
@@ -29,12 +29,17 @@ function FormLogIn() {
         setPassword (e.target.value)
     }
     function enter() {
-        const found = Profiles.filter(Profiler => Profiler.usrname===Username && Profiler.password===Password)
+        const found = Profiles.find(Profiler => Profiler.nombre===Username && Profiler.password===Password)
         
-        if (found.length === 0) {
-        setMostrarError(true)
-        } else {
+        if (found) {
+            localStorage.setItem("nombreUsuario",found.nombre)
+            localStorage.setItem("correoUsuario",found.email)
+            localStorage.setItem("idUsuario",found.id)
             Navigate('/HomeAdm')
+        } else {
+            setMostrarError(true)
+            console.log("incorrecto");
+            
         }
     }
 
