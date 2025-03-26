@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+    import {useEffect, useState} from 'react'
 import '../Styles/CardFront.css'
 import llamadosBooks, { updateBooks }  from '../Services/llamadosBooks'
 
@@ -65,9 +65,9 @@ const handleBookCheck = async (id,index)=> {
   return (
     <div>
        
-        <div className='TitleCardFront'> <h3 className='SubtitleCardFront'> Welcome</h3>
-            <h3>Books Exchanges </h3>
-       
+        <div className='TitleCardFront'>
+             <h3 className='SubtitleCardFront'> Welcome</h3>
+              <h3>Books Exchanges </h3>
         </div>
         
         <div>

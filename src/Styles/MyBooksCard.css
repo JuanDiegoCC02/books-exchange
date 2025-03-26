@@ -1,0 +1,76 @@
+.titleContainer{
+    margin: 50px;
+    padding: 5px;
+    border-color: rgba(0, 2, 35, 0.648);
+    box-shadow: 5px 5px 15px rgba(59, 0, 152, 0.984);
+    color: rgba(0, 0, 0, 0.932);
+    background-color: rgb(190, 231, 250);
+    text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    justify-content: center;
+    position: relative; 
+}
+.subTitleContainer{ 
+position: relative; left: 37px;
+}
+.FullContainer{
+    border-style: groove;
+    background-color: rgb(190, 231, 250);
+      border-width: 7px;
+      border-color: #03011bc9;
+      list-style: none;
+      box-shadow: inset 5px 5px 15px rgb(1, 8, 72);
+      margin: auto 5px;
+}
+.container-Favorite-Book{
+    height: auto;
+    padding: 35px;
+    margin: 45px;
+    background-color: #fff;
+    border: solid #ffffff;
+    box-shadow: 5px 5px 15px rgba(53, 4, 133, 0.826);
+    font-family: 'Times New Roman';
+    color: rgba(13, 7, 66, 0.879);
+}
+
+.btn{
+    margin: 10px;
+    }   
+    .lblCheckbox{
+        display: inline-block;
+        width: 55px;
+        height: 30px;
+        background-color: #aaa;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+    }
+    #btnCheckbox:checked~.lblCheckbox {
+        background-color: rgb(18, 120, 145);
+    }
+    
+    
+    .lblCheckbox:after{
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;  
+    transition: 0.3s;
+    }
+    #btnCheckbox:checked~.lblCheckbox:after {
+        left: 28px;
+    }
+    .btnCheckbox{
+        position: relative;
+        left: 25px;
+        opacity: 0.1;    
+        z-index: 1;
+        bottom: 10px;
+    }
+    
+    

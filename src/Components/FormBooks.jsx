@@ -66,7 +66,7 @@ function edit(id) {
 }
 
 function post() {
-    llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,"",localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"))
+    llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,"",localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"), false)
     setReload(!reload)
 }
 

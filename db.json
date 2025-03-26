@@ -24,54 +24,48 @@
   ],
   "books": [
     {
-      "id": "dacc",
+      "id": "ca62",
+      "namebook": "El Principito",
+      "authorbook": "Antoine de Saint-Exupéry",
+      "categbook": "Fantasy",
+      "infobook": "Good Status",
+      "statusFront": true,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com",
+      "statusFavorites": false
+    },
+    {
+      "id": "36bd",
       "namebook": "Saco de Huesos",
-      "authorbook": "Stephen King ",
+      "authorbook": "Stephen King",
       "categbook": "Terror",
       "infobook": "Good Status",
       "statusFront": true,
       "usuario": "JDiego",
-      "correoUsuario": "JD2324@gmail.com"
+      "correoUsuario": "JD2324@gmail.com",
+      "statusFavorites": false
     },
     {
-      "id": "4024",
-      "namebook": "Relatos de Miedo",
-      "authorbook": "HP Lovecracft",
-      "categbook": "Terro",
-      "infobook": "Very Good",
-      "statusFront": false,
-      "usuario": "JDiego",
-      "correoUsuario": "JD2324@gmail.com"
-    },
-    {
-      "id": "ce53",
-      "namebook": "Ejército de los Sonambulos",
-      "authorbook": "Wu Ming",
-      "categbook": "Terror",
-      "infobook": "Bad ",
-      "statusFront": false,
-      "usuario": "JDiego",
-      "correoUsuario": "JD2324@gmail.com"
-    },
-    {
-      "id": "4df4",
-      "namebook": "El señor de los Anillos",
-      "authorbook": "J.K. Tolkien",
-      "categbook": "Fantasy",
-      "infobook": "Bad",
-      "statusFront": true,
-      "usuario": "JDiego",
-      "correoUsuario": "JD2324@gmail.com"
-    },
-    {
-      "id": "4ee4",
-      "namebook": "Harry Potter",
+      "id": "1cd6",
+      "namebook": "El Prisionero de Azkaban",
       "authorbook": "J.K. Rowling",
       "categbook": "Fantasy",
+      "infobook": "Very Good",
+      "statusFront": true,
+      "usuario": "JDiego",
+      "correoUsuario": "JD2324@gmail.com",
+      "statusFavorites": false
+    },
+    {
+      "id": "8c25",
+      "namebook": "La Ciudad de Papel",
+      "authorbook": "Jhon Green",
+      "categbook": "Adventure",
       "infobook": "Good",
       "statusFront": true,
       "usuario": "JDiego",
-      "correoUsuario": "JD2324@gmail.com"
+      "correoUsuario": "JD2324@gmail.com",
+      "statusFavorites": false
     }
   ]
 }

@@ -8,6 +8,7 @@ function Front() {
     <div>
       <header>
       <HeaderPages/>
+      
       </header>
       <main>
       <CardFront nombreLibro={"La Sombra del Viento"}  />
