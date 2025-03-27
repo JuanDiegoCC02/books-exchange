@@ -17,9 +17,18 @@ const [editName, setEditName]=useState("")
 const [editAuthor, setEditAuthor]=useState("")
 const [editCateg, setEditCateg]=useState("")
 const [editInfo, setEditInfo]=useState("")
-
+const [img,setImg]=useState(null)
 const [reload, setReload]=useState(false)
-
+const imagencita=(e)=>{
+    const archivo = e.target.files[0]
+    if (archivo) {
+        const lector = new FileReader () 
+        lector.onloadend = ()=> {
+            setImg(lector.result)
+        }
+        lector.readAsDataURL(archivo)
+    }
+}
 
 
 function namebook(e) {
@@ -66,7 +75,7 @@ function edit(id) {
 }
 
 function post() {
-    llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,"",localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"), false)
+    llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,img,localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"), false)
     setReload(!reload)
 }
 
@@ -102,7 +111,10 @@ useEffect (()=>{
             <label htmlFor="">Book Information</label><br />
             <input value={infoBook} onChange={infobook}  type="text" />
         </div><br />
-
+        <div className='inpFormB'>
+            <label htmlFor="">Book Image</label><br />
+            <input onChange={imagencita}  type="file" />
+        </div><br />
         <div>
                 <input className='BTNPost' type="button" value="Post" onClick={post} />
         </div> <br />

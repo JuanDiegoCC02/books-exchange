@@ -35,7 +35,7 @@ function FormRegister() {
         if (!TermCondChecked) {
             setMostrarError(true)
         } else {
-            llamadoServicios.postUsers(Username, Email, Password, Location)
+            llamadoServicios.postUsers(Username, Email, Password, Location, "User")
             navigate ('/LogIn')  
         }
    

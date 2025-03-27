@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Register from '../Pages/Register';
 import LogIn from '../Pages/LogIn';
-import HomeAdm from '../Pages/HomeAdm';
+import HomeForm from '../Pages/HomeForm';
 import Front from '../Pages/Front';
 import Saved from '../Pages/Saved';
 import ContactUs from '../Pages/ContactUs';
@@ -21,7 +21,7 @@ function Routing() {
             <Route path='/register' element={<Register/>}/>
             <Route path='/login' element={<LogIn/>}/>
             <Route path='/' element={<Front/>}/>
-            <Route path='/homeadm' element={<HomeAdm/>}/>
+            <Route path='/homeadm' element={<HomeForm/>}/>
             <Route path='/front' element={<Front/>}/>
             <Route path='/saved' element={<Saved/>}/>
             <Route path='/mybooks' element={<MyBooks/>}/>

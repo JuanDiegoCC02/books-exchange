@@ -72,7 +72,7 @@ function SavedR() {
         }
         list()
     }, [reload])
-
+    console.log(books);
     return (
         <div>
             <div>

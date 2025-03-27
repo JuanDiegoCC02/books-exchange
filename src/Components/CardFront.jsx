@@ -1,4 +1,4 @@
-    import {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import '../Styles/CardFront.css'
 import llamadosBooks, { updateBooks }  from '../Services/llamadosBooks'
 
@@ -51,7 +51,7 @@ const handleBookCheck = async (id,index)=> {
     }
     
     function post() {
-        llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false)
+        llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,img)
         setReload(!reload)
     }
     
@@ -62,6 +62,9 @@ const handleBookCheck = async (id,index)=> {
         }
         list()
     },[reload])
+
+   
+    
   return (
     <div>
        
@@ -79,30 +82,15 @@ const handleBookCheck = async (id,index)=> {
         .filter((libro)=> libro.statusFront===true)
         .map ((libro,index)=>(
         <li className='containerFront'>
-            <img className='imgBookFront' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrNEUasjK2NNpHXdedwhubaD1Ei-PgX9dgXVeD7enjugUbPIJGdVuA3owQml5GoPlOIc&usqp=CAU" width={190} height={160} alt="imgLibro"/> <br />
+
+            <img src={libro.img} alt="BookImg" srcset="" />
+                                
            <strong>Name</strong> {libro.namebook} <br /> <br />
            <strong>Author</strong> {libro.authorbook} <br /><br />
            <strong>Category</strong> {libro.categbook} <br /><br />
-                <div>
+                
                     <div>
-                    <input className='inpChangeState'
-                     type="checkbox" 
-                     name="StateChange"
-                     id="StateChange" 
-                     checked={libro.statusFront}
-                     onChange={()=>handleBookCheck(libro.id,index)}
-                     />                    </div>
                     
-                    <button className='btnDelete' onClick={e=>delet(libro.id)}>Delete</button> 
-                    <button className='btnEdit' onClick={()=>setMostrar(!mostrar)}>Edit</button>
-                    {mostrar &&
-                    <>
-                    <input onChange={newName} type="text" placeholder='Name' />
-                    <input onChange={newAuthor} type="text" placeholder='Author' />
-                    <input onChange={newCateg} type="text" placeholder='Category' />
-                    <button onClick={()=>edit(libro.id)} >Complete</button>
-                    </>
-                    }
                 </div>
         </li>
         ))}

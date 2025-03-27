@@ -31,12 +31,19 @@ function FormLogIn() {
     function enter() {
         const found = Profiles.find(Profiler => Profiler.nombre===Username && Profiler.password===Password)
         
-        if (found) {
+        if (found.typeUser === "admin") {
             localStorage.setItem("nombreUsuario",found.nombre)
             localStorage.setItem("correoUsuario",found.email)
             localStorage.setItem("idUsuario",found.id)
+            localStorage.setItem("typeUser",found.typeUser)
+
             Navigate('/HomeAdm')
-        } else {
+        }else if (found.typeUser === "user") {
+            Navigate('/HomeAdm')            
+            localStorage.setItem("typeUser",found.typeUser)
+
+        }
+        else {
             setMostrarError(true)
             console.log("incorrecto");
             
