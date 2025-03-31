@@ -1,12 +1,20 @@
-# React + Vite
+Proyecto Final Front End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pagina Web Intercambio de Libros
 
-Currently, two official plugins are available:
+Profesores: Barrry Vega, Jean Carlos y Steven
+Estudiante: Juan Diego Corella Camacho
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fecha de Entrega: 31/03/25
 
-## Expanding the ESLint configuration
+Descripcion del Proyecto:
+Esta Pagina web consiste en una pagina de Intercambio de Libros que fomenta la lectura el aprendizaje, además de buscar dar una segunda vida a los libros.
+Esta Pagina de Intercambio de Libros consiste en inicialmente 4 pages por las que vamos a poder navegar desde el Header sin necesidad de registrarnos. Para empezar tenemos la pagina de Home en la cual se van a mostrar algunos de los libros con su respectiva Img esta pagina es epecialmente para que la gente vea el contenido y se sienta atraidos a ingresar, continuando con las otras paginas tenemos lo que es la pagina de Contact Us que contiene Informacion de la atencion al cliente ademas de informacion de lo que es la Pagina como tal. Y por ultimo tenemos la Pagina de Register que nos sirve para registrarnos y la pagina de Log In que nos sirve para validar el Ingreso de Usuarios, ambas paginas cuentan con sus respectivas validaciones de Ingreso.
+Ya una vez Registrados como Usuarios en la Pagina vamos a poder ver 3 Paginas de navegacion mas en el Header las cuales deberian ser FormBooks, Posts y Favorites. En FormBooks vamos a encontrar un formulario el cual nos sirve para realizar la publicacion del Libro que estamos interesados en cambiar. Luego tenemos la Pagina de Post que nos muestra los Libros de Intercambio publicados por los Usuarios en esta pagina donde se muestran los Libros aca vamos a tener una opcion de Checkbox para añadirlos a favoritos en caso de estar Interesados en algun libro. Y por ultimo tendriamos lo que es la Pagina de Favorites que es a donde se van a guardar los libros que marquemos con el Checkbox de Favorito.
+Cada una de las paginas anteriores contiene los siguientes componentes que son un Header (HeaderPages), un Main que varia dependiendo la pag y su Funcion y por ultimo un Footer (FooterPages).
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Herramienta Utilizadas:
+React (html, javascript y css).
+
+Almacenamientos: 
+DB.JSON y LocalStorage.
