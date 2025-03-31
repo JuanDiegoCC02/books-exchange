@@ -1,46 +1,53 @@
 .TitleForm{
-    width: 90%;
-    background-color: rgb(190, 231, 250);
-    color: rgba(0, 0, 0, 0.751);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    margin: 15px;
-    text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
+    width: 96%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 27px;
+    padding: 15px;
+  
+    background-color: #8B4513;
+    border: 7px ridge rgba(200, 60, 0, 0.984);
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.984);
     display: grid;
     justify-content: center;
-    position: relative; left:55px;
-    box-shadow: 5px 5px 15px rgba(59, 0, 152, 0.984);
+    align-items: center;                            /* verticalmente */
 
 }
 .ContainerFormBooks{
-    width: 60%;
+    width: 50%;
+    color: #FAF3E0;
     border-style: groove;
-    border-color: #03011bc9;
-    color: rgb(0, 0, 0);
-    background-color: rgba(192, 241, 250, 0.861);
-    border-width: 10px;
-    padding: 15px;
-    margin: 25px;
+    margin: 35px auto;
+    padding: 45px;
+    border-width: 6px;
+    border-color: #393838;
+    background-color: #8B4513;
     display: grid;
     justify-content: center;
-    position: relative; left: 17%;
-    box-shadow: inset 5px 5px 15px rgb(1, 8, 72);
-    transform-box: ;
+    box-shadow:  5px 5px 15px rgba(49, 1, 1, 0.774);
+
     
 
 }
 .BTNPost{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(193, 218, 219);
-    background-color: rgb(7, 74, 134);
-    border-color: rgb(8, 7, 66);
- 
-    position: relative; left: 69px;
-
+    color: #d7e8e0;
+    background-color: rgb(27, 27, 27);
+    border-color: rgb(73, 67, 67);
+    border-width: 3px;
+    margin: 5px auto;
+    padding: 4px;
+    border-radius: 15px;
+    display: grid;           
+    flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+    justify-content: center;              
+    align-items: center;                            /* verticalmente */
+    width: 20%;     
 }
 .BTNPost:hover{
-    color: rgb(235, 255, 11);
-    background-color: rgb(49, 3, 95);
+    color: rgb(208, 255, 19);
+    border-color: rgb(108, 108, 108);
+    background-color: rgb(30, 29, 29);
 }
 .inpFormB{
     margin: 7px;

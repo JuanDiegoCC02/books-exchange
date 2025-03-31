@@ -1,22 +1,23 @@
 import React from 'react'
-import SavedR from '../Components/SavedR'
+import UserSaved from '../Components/UserSaved'
 import HeaderPages from '../Components/HeaderPages'
 import FooterPages from '../Components/FooterPages'
 
-function Saved() {
+function UserSavedPag() {
   return (
-    <div>
-         <header>
-        <HeaderPages/>
+    
+     <div>
+        <header>
+         <HeaderPages/>
         </header>
         <main>
-        <SavedR/>
+         <UserSaved/>
         </main>
         <footer>
-        <FooterPages/>
+          <FooterPages/>
         </footer>
     </div>
   )
 }
 
-export default Saved
+export default UserSavedPag

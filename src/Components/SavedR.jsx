@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
 import '../Styles/SavedStyle.css'
-import llamadosBooks, { getBooks, updateBooks } from '../Services/llamadosBooks'
+import llamadosBooks, {updateBooks } from '../Services/llamadosBooks'
 
 
 function SavedR() {
-
     const [mostrar, setMostrar] = useState(false)
-    const [alertExchanges, setAlertExchanges] = useState(false)
     const [books, setBooks] = useState([])
-    const [changeFavorite,setChangeFavorite] = useState(false)
     const [editName, setEditName] = useState("")
     const [editAuthor, setEditAuthor] = useState("")
     const [editCateg, setEditCateg] = useState("")
@@ -16,12 +13,22 @@ function SavedR() {
 
     const [reload, setReload] = useState(false)
 
+    //Const para Home
     const handleBookCheck = async (id, index) => {
         const updatedBooks = [...books]
         updatedBooks[index].statusFront = !updatedBooks[index].statusFront
         await updateBooks(
             { "statusFront": updatedBooks[index].statusFront }, id)
         setBooks(updatedBooks)
+    }
+
+    //Const para Favortitos
+    const handleBookFavorite = async (id,index)=> {
+        const updatedBooks = [...books]
+        updatedBooks[index].statusFavorites = !updatedBooks[index].statusFavorites
+        await updateBooks(
+            {"statusFavorites": updatedBooks[index].statusFavorites}, id)
+            setBooks(updatedBooks)
     }
 
     function newName(e) {
@@ -54,13 +61,7 @@ function SavedR() {
         setReload(!reload);
     }
 
-    const handleBookFavorite = async (id,index)=> {
-        const updatedBooks = [...books]
-        updatedBooks[index].statusFavorites = !updatedBooks[index].statusFavorites
-        await updateBooks(
-            {"statusFavorites": updatedBooks[index].statusFavorites}, id)
-            setBooks(updatedBooks)
-    }
+   
 
 
 
@@ -72,12 +73,11 @@ function SavedR() {
         }
         list()
     }, [reload])
-    console.log(books);
     return (
         <div>
             <div>
 
-                <div className='AllContainer'><br /><br />
+                <div className='AllContainer'><br />
                     <div className='TitleNewsBooks'><h2>News Books</h2> </div>
                     <div className='searchAllDiv'>
                         <input className='barraSearch' type="search" name="buscador" id="barraSearch" />  <input className='BTNEnviar' type="button" value="Search" />
@@ -88,14 +88,16 @@ function SavedR() {
                         {books.map((libro, index) => (
 
                             <li key={libro.id} className='containerBook'>
-                                <strong>Name</strong><br /> {libro.namebook} <br /><br />
-                                <strong>Author</strong><br /> {libro.authorbook} <br /><br />
-                                <strong>Category</strong><br /> {libro.categbook} <br /><br />
-                                <strong>Information</strong><br /> {libro.infobook} <br /><br />
-                                <strong>Usuario</strong><br /> {libro.usuario} <br /><br />
-                                <strong>Correo</strong><br /> {libro.correoUsuario} <br /><br />
+                                
+                                <strong>Name</strong> {libro.namebook} <br /><br /><br />
+                                <strong>Author</strong> {libro.authorbook} <br /><br /><br />
+                                <strong>Category</strong> {libro.categbook} <br /><br /><br />
+                                <strong>Information</strong> {libro.infobook} <br /><br /><br />
+                                <strong>Usuario</strong> {libro.usuario} <br /><br /><br />
+                                <strong>Correo</strong> {libro.correoUsuario} <br /><br /><br />
 
                                 <div>
+                                    <label htmlFor="">Home</label><br />
                                     <input className='inpChangeState'
                                         type="checkbox"
                                         name="StateChange"
@@ -103,12 +105,14 @@ function SavedR() {
                                         checked={libro.statusFront}
                                         onChange={() => handleBookCheck(libro.id,index)}
                                     /> <br />
+                                    <label htmlFor="">Favorites</label>
                                     <div className='btn'>
                                       <input className='btnCheckbox'
                                         type="checkbox"
                                         name=""
                                         id="btnCheckbox"
-                                    
+                                        checked={libro.statusFavorites}
+
                                         onChange={() =>handleBookFavorite(libro.id,index)}
                                     /> 
                                      <label htmlFor="btnChecbox" className='lblCheckbox'></label>
@@ -119,11 +123,11 @@ function SavedR() {
                                     <button className='btnEdit' onClick={() => setMostrar(!mostrar)}>Edit</button> <br />
                                     {mostrar &&
                                         <>
-                                            <input onChange={newName} type="text" placeholder='Name' />
-                                            <input onChange={newAuthor} type="text" placeholder='Author' />
-                                            <input onChange={newCateg} type="text" placeholder='Category' />
-                                            <input onChange={newInfo} type="text" placeholder='Information' />
-                                            <button onClick={() => edit(libro.id)} >Complete</button>
+                                            <input onChange={newName} type="text" placeholder='Name' /> <br />
+                                            <input onChange={newAuthor} type="text" placeholder='Author' /><br />
+                                            <input onChange={newCateg} type="text" placeholder='Category' /><br />
+                                            <input onChange={newInfo} type="text" placeholder='Information' /><br />    
+                                            <button  onClick={() => edit(libro.id)} >Complete</button>
                                         </>
                                     }
                         

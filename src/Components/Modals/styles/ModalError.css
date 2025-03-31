@@ -1,18 +1,25 @@
 .cont-modal-error{
-    position: relative;
+    display: grid;
+    position: relative; 
     text-align: center;
     font-family: monospace;
-    font-size: 6px;
+    font-size: 7px;
     top: 40%;
-    left: 40%;
-    width: 20% ;
-    background-color: #fff;
-    border: 1px solid #310101;
+    left: 35%;
+    width:30% ;
+    
+    background-color: #ff0000;
+    border: 3px solid #310101;
     box-shadow: inset 5px 5px 15px rgba(88, 2, 13, 0.945);
+
+    
 
 }
 .cont-modal-error:hover{
-background-color: rgb(197, 1, 1);
-border: 1px solid rgba(0, 0, 0, 0.945);
-box-shadow: 5px 5px 15px rgb(79, 0, 0);
+background-color: rgb(0, 0, 0);
+border: solid rgb(134, 3, 3);
+box-shadow: 5px 5px 15px rgb(223, 8, 8);
+color: rgba(247, 20, 8, 0.973);
+text-shadow: 2px 2px 4px rgb(185, 2, 2);
+
 }

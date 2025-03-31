@@ -30,13 +30,13 @@
 }
 .textFooter{
     text-align: center;
-    background-color: rgb(180, 233, 252);
-    color: rgb(0, 0, 0);
-    margin: 15px;
-    font-size: 15px;
-    border-style: double;
-    border-color: black;
-    border-width: 5px;
-    box-shadow: inset 5px 5px 15px rgb(45, 3, 95);
 
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    background-color: #8B4513;
+    color: rgba(195, 243, 73, 0.961);
+    font-size: 20px;
+    border: 5px groove #030000 ;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.984);
+     
+    
 }

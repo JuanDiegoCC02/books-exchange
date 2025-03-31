@@ -31,15 +31,18 @@ function FormLogIn() {
     function enter() {
         const found = Profiles.find(Profiler => Profiler.nombre===Username && Profiler.password===Password)
         
-        if (found.typeUser === "admin") {
+        if (found && found.typeUser === "admin") {
             localStorage.setItem("nombreUsuario",found.nombre)
             localStorage.setItem("correoUsuario",found.email)
             localStorage.setItem("idUsuario",found.id)
             localStorage.setItem("typeUser",found.typeUser)
 
             Navigate('/HomeAdm')
-        }else if (found.typeUser === "user") {
-            Navigate('/HomeAdm')            
+        }else if (found && found.typeUser === "user") {
+            Navigate('/HomeAdm')    
+            localStorage.setItem("nombreUsuario",found.nombre)
+            localStorage.setItem("correoUsuario",found.email)
+            localStorage.setItem("idUsuario",found.id)        
             localStorage.setItem("typeUser",found.typeUser)
 
         }
@@ -56,9 +59,7 @@ function FormLogIn() {
 <div>
 
     <h1 className='TituloForm'>Log In</h1>
-    {mostrarError &&
-    <ModalError Error={" Username or Password Invalid "}/>
-    }
+  
     <div className='FormContainer'>
         <div className='inpLogIn'>
             <label htmlFor="">Username</label><br />
@@ -76,7 +77,12 @@ function FormLogIn() {
 
     </div> 
 
- 
+ <div>
+ {mostrarError &&
+    <ModalError Error={" Username or Password Invalid "}/>
+    }
+ </div><br />
+
 <div className='LinkLogIn'>
     <p>Not registered?<br /> <Link to= '/Register'>Register</Link></p>
 </div>

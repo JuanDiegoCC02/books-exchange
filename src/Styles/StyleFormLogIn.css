@@ -1,5 +1,16 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #FAF3E0;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+    display: grid;           
+    flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+    justify-content: center;              
+    align-items: center;                            /* verticalmente */
+    width: %;                        /* Hace que se ajuste al ancho de la pantalla */
+  
     
 }
 .inpLogIn{
@@ -9,16 +20,22 @@ body{
 }
 .BTNLogIn{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
-    background-color: rgba(112, 181, 237, 0.845);
-    border-color: rgb(2, 24, 73);
+    color: #d7e8e0;
+    background-color: rgb(27, 27, 27);
+    border-color: rgb(73, 67, 67);
     border-width: 3px;
     margin: 5px auto;
-    padding: 2px;
-    border-radius: 5px;
-    position: relative; left: 34%;
+    padding: 4px;
+    border-radius: 15px;
+    display: grid;           
+    flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+    justify-content: center;              
+    align-items: center;                            /* verticalmente */
+    width: 30%;                         /* Hace que se ajuste al ancho de la pantalla */
+  
 }
 .BTNLogIn:hover{
-    color: rgb(255, 251, 14);
-    background-color: rgb(17, 8, 139);
-}
+    color: rgb(208, 255, 19);
+    border-color: rgb(73, 67, 67);
+    background-color: rgb(30, 29, 29);
+}   

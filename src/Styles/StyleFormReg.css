@@ -1,61 +1,84 @@
 .TituloForm{
-    width: 97.4%;
-    color: rgb(0, 0, 0);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 33px;
+    width: 96%;
+    color: #FAF3E0;
+    font-size: 40px;
     padding: 15px;
     border-color: #000013;
-    text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
-    background-color: rgba(184, 232, 254, 0.884);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.975);
+    background-color: #8B4513;
     display: grid;
     justify-content: center;
-    border: 1px solid #84daff;
-    box-shadow: 5px 5px 15px rgba(65, 2, 167, 0.984);
+    border: 7px ridge #b94700ef;
+    box-shadow: inset 5px 5px 15px rgb(0, 0, 0);
 
 }
 .FormContainer{
     width: 40%;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(19, 2, 80);
-    border-style: ridge;
+    color: #FAF3E0;
+    border-style: groove;
     margin: 35px auto;
     padding: 45px;
     border-width: 6px;
-    border-color: #01010f;
-    background-color: rgba(255, 255, 255, 0.642);
-    display: grid;
+    border-color: #393838;
+    background-color: #8B4513;
     justify-content: center;
-    position: relative; left: 3px;
-    box-shadow: 5px 5px 15px rgba(9, 9, 124, 0.984);
+    box-shadow: 5px 5px 15px rgba(49, 1, 1, 0.774);
 
 }
 .BTNRegister{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
-    background-color: rgba(112, 181, 237, 0.845);
-    border-color: rgb(2, 24, 73);
+    color: #d7e8e0;
+    background-color: rgb(27, 27, 27);
+    border-color: rgb(73, 67, 67);
     border-width: 3px;
     margin: 5px auto;
-    padding: 2px;
-    border-radius: 5px;
-    position: relative; left: 34%;
+    padding: 4px;
+    border-radius: 15px;
+    display: grid;           
+    flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+    justify-content: center;              
+    align-items: center;                            /* verticalmente */
+    width: 30%;                        /* Hace que se ajuste al ancho de la pantalla */
+  
 }
 .BTNRegister:hover{
-    color: rgb(255, 251, 14);
-    background-color: rgb(17, 8, 139);
+    color: rgb(208, 255, 19);
+    border-color: rgb(73, 67, 67);
+    background-color: rgb(30, 29, 29);
 }   
 .LinkLogIn{
   
-    display: grid;
-    justify-content: center;
-    position: relative; 
+    
+    display: grid;           
+    
+    text-align: center;                
+                                
+  font-family: monospace;
 
-    color: rgb(0, 0, 0);
-    font-size: 13px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(106, 35, 0);
+    font-size: 14px;
 }
 .inpRegist{
     text-align: center;
     align-items: center;
     padding: 5px;
+}
+.inputText{
+    background-color: #120f0f;
+    border: rgb(0, 0, 0);
+    border-radius: 5px;
+    color: white;
+}
+.inpCheckboxTC{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.BtnInfoModal{
+    display: grid;
+    margin-left: 302px;
+    background-color: #000013;
+    color: gold;
 }

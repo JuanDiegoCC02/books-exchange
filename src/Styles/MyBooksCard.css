@@ -1,38 +1,68 @@
 .titleContainer{
-    margin: 50px;
-    padding: 5px;
-    border-color: rgba(0, 2, 35, 0.648);
-    box-shadow: 5px 5px 15px rgba(59, 0, 152, 0.984);
-    color: rgba(0, 0, 0, 0.932);
-    background-color: rgb(190, 231, 250);
-    text-shadow: 2px 2px 4px rgba(23, 3, 243, 0.783);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 95%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 27px;
+    padding: 15px;
+  
+    background-color: #8B4513;
+    border: 7px ridge rgba(200, 60, 0, 0.984);
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.984);
     display: grid;
     justify-content: center;
-    position: relative; 
+    align-items: center;        
+    flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+    justify-content: center;              
+    align-items: center;                            /* verticalmente */
+    
+    
 }
-.subTitleContainer{ 
-position: relative; left: 37px;
-}
+
 .FullContainer{
-    border-style: groove;
-    background-color: rgb(190, 231, 250);
+    width: 80%;
+     
+
+    border-style: ridge;
+
+      color: #FAF3E0;
+      border-style: groove;
+      margin: 25px auto;
+      padding: 25px;
       border-width: 7px;
-      border-color: #03011bc9;
-      list-style: none;
-      box-shadow: inset 5px 5px 15px rgb(1, 8, 72);
-      margin: auto 5px;
+      border-color: #393838;
+      background-color: #8B4513;
+      display: grid;
+      justify-content: center;
+      box-shadow: inset 5px 5px 15px rgba(49, 1, 1, 0.774);
+    
+        list-style: none;
+
+        display: grid;           
+        flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+        justify-content: center;              
+        align-items: center;                            /* verticalmente */
+                
+      
+        
 }
-.container-Favorite-Book{
+.container-Favorite-Book{      
     height: auto;
     padding: 35px;
     margin: 45px;
-    background-color: #fff;
-    border: solid #ffffff;
-    box-shadow: 5px 5px 15px rgba(53, 4, 133, 0.826);
-    font-family: 'Times New Roman';
-    color: rgba(13, 7, 66, 0.879);
-}
+    background-color: #070a00;
+    border-color: rgba(255, 230, 0, 0.858);
+
+    box-shadow: 5px 5px 15px rgba(248, 217, 170, 0.763);
+    
+    color: rgb(234, 250, 161);
+    display: flex;           
+    flex-direction: column;
+    align-items: center;                            /* verticalmente */
+    width: 77%;    
+    position: relative; right: 45px;
+    border-radius: 15px;   
+      
+  }
 
 .btn{
     margin: 10px;

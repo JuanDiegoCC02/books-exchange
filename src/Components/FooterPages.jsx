@@ -1,14 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 import '../Styles/FooterPages.css'
 
 function FooterPages() {
+  const navigate = useNavigate()
+  const closeUser = () => {
+    localStorage.clear();
+    navigate('/LogIn'); // Redirige a la página de inicio de sesión
+  };
+
+
   return (
     <div>
         <footer>
 
         <div className='textFooter'>
           <h5>©Shared Exchanges <br /> Design JD</h5>
-        </div>
+        </div><br />
 
         <h4>Networks</h4>
         <div className='networksContainer'>
@@ -26,7 +34,9 @@ function FooterPages() {
           </div>
         </div>
 
-
+          <div>
+            <button className='BtnCloseCS' id='CloseCS'onClick={closeUser} >Close Session </button>
+          </div>
           
         </footer>
     </div>

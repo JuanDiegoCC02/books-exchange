@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../Styles/FormBooks.css'
 import llamadosBooks from '../Services/llamadosBooks'
+import CompleteInfoModal from './Modals/CompleteInfoModal';
 
 
 function FormBooks() {
@@ -9,10 +10,7 @@ const [nameBook, setNameBook]=useState()
 const [authorBook, setAuthorBook]=useState()
 const [categBook, setCategBook]=useState()
 const [infoBook, setInfoBook]=useState()
-
-const [mostrar, setMostrar]=useState(false)
-const [books, setBooks]=useState([])
-
+const [ErrorCampos, setErrorCampos] = useState(false);
 const [editName, setEditName]=useState("")
 const [editAuthor, setEditAuthor]=useState("")
 const [editCateg, setEditCateg]=useState("")
@@ -75,8 +73,15 @@ function edit(id) {
 }
 
 function post() {
-    llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,img,localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"), false)
-    setReload(!reload)
+    if (!nameBook || !authorBook || !categBook || !infoBook || !img) {
+        setErrorCampos(true)
+    }  else {
+        llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,img,localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"), false)
+        setReload(!reload) 
+    }
+   
+
+    
 }
 
 useEffect (()=>{
@@ -110,23 +115,29 @@ useEffect (()=>{
         <div className='inpFormB'>
             <label htmlFor="">Book Information</label><br />
             <input value={infoBook} onChange={infobook}  type="text" />
-        </div><br />
+        </div>
         <div className='inpFormB'>
-            <label htmlFor="">Book Image</label><br />
+            <label htmlFor="">Book Image</label><br /> 
             <input onChange={imagencita}  type="file" />
         </div><br />
         <div>
                 <input className='BTNPost' type="button" value="Post" onClick={post} />
         </div> <br />
+      
 
 </div>
             
 
-
+<div>
+        {ErrorCampos &&
+            <CompleteInfoModal ErrorCV={"Complete Information"}/>
+            }
+        </div><br />
            
 
-
     </div>
+
+
   )
 }
 

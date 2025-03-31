@@ -13,6 +13,7 @@ function MyBooksCard() {
   const handleBookFavorite = async (id,index)=> {
     const updatedBooks = [...books]
     updatedBooks[index].statusFavorites = !updatedBooks[index].statusFavorites
+    console.log("Estado actualizado:", updatedBooks);
     await updateBooks(
         {"statusFavorites": updatedBooks[index].statusFavorites}, id)
         setBooks(updatedBooks)
@@ -27,24 +28,24 @@ function MyBooksCard() {
 },[reload])
 
   return (
-    <div>
+    <div><br />
         <div className='titleContainer'>
-          <h3 className='subTitleContainer'>Welcome</h3>
-          <h3>My favorite Books</h3>
-        </div>
+        
+          <h3>Favorites Books</h3>
+        </div><br /><br />
 
         <div className=''>
           <ul className='FullContainer'>
             {books
             .filter((libro)=> libro.statusFavorites===true)
             .map((libro,index)=>(
-              <li className='container-Favorite-Book'>
-                   <strong>Name</strong><br /> {libro.namebook} <br /><br />
-                   <strong>Author</strong><br /> {libro.authorbook} <br /><br />
-                   <strong>Category</strong><br /> {libro.categbook} <br /><br />
-                   <strong>Information</strong><br /> {libro.infobook} <br /><br />
-                   <strong>Usuario</strong><br /> {libro.usuario} <br /><br />
-                   <strong>Correo</strong><br /> {libro.correoUsuario} <br /><br />
+              <li key={libro.id} className='container-Favorite-Book'>
+                   <strong>Name</strong> {libro.namebook} <br /><br />
+                   <strong>Author</strong> {libro.authorbook} <br /><br />
+                   <strong>Category</strong>{libro.categbook} <br /><br />
+                   <strong>Information</strong> {libro.infobook} <br /><br />
+                   <strong>Usuario</strong> {libro.usuario} <br /><br />
+                   <strong>Correo</strong> {libro.correoUsuario} <br /><br />
 
                    <div>
                     <input className='btnCheckbox'

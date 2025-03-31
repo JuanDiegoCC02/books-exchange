@@ -1,0 +1,11 @@
+.InfoTC{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(99, 242, 230);
+    color: black;
+    border: 5px ridge rgb(3, 3, 53) ;
+    padding: 5px;
+}

@@ -13,17 +13,29 @@ function HeaderPages() {
 
 
         <div>
+          <div className='containerLinksHdr'>
           <Link className='LinksHeader' to='/Register'> Register </Link>
           <Link className='LinksHeader' to='/LogIn'> Log In </Link>
-          <Link className='LinksHeader' to='/HomeAdm'> Form Books </Link>
           {
-          localStorage.getItem("typeUser") && 
+            localStorage.getItem ("typeUser") &&
+          <Link className='LinksHeader' to='/HomeAdm'> Form Books </Link>
+         } 
+          {
+          localStorage.getItem("typeUser") === "admin" && 
           <Link className='LinksHeader' to='/Saved'> Saved </Link>
-            }
+         }
+          {
+            localStorage.getItem("typeUser") === "user" && 
+            <Link className='LinksHeader' to='/UserSavedPag'> Post </Link>
+          }
+          {
+                        localStorage.getItem ("typeUser") &&
           <Link className='LinksHeader' to='/MyBooks'>Favorites</Link>
+        }
+        
           <Link className='LinksHeader' to='/ContactUs'> Contatc Us </Link>
           <Link className='LinksHeader' to='/Front'> Home </Link>
-
+          </div>
 
 
         </div><br />
