@@ -1,0 +1,125 @@
+
+
+
+/* ---- Título ---- */
+.containerTitleContacUs {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.titleContacUs {
+  padding: 18px 32px;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fdf5d1;
+  background: linear-gradient(145deg, #3e1f0a 0%, #4b470dfa 50%, #3e1f0a 100%);
+  border: 6px groove #383b01;
+  border-radius: 12px;
+ text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.85),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Contenedor descripción general ---- */
+.fullDescripContainer {
+  background-color: #291d05;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+
+.ContainerDataPag {
+  width: 85%;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.DescriptionContacUs {
+  padding: 35px 40px;
+  background: #000000;
+  border: 3px double #e6e7a0;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(252, 255, 87, 0.5);
+  color: #e6e7a0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 5% auto;
+}
+
+
+
+.InfoTYPag {
+  padding: 20px 25px;
+  background: #000000;
+  border: 3px double #e6e7a0;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(252, 255, 87, 0.5);
+  color: #e6e7a0;
+  font-size: 1.00rem;
+  line-height: 1.5;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 7% auto;
+}
+
+/* ---- Contenedor principal ---- */
+.ContainerContactUs {
+  width: 85%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #4b1f06 0%, #2d1b0d 100%);
+  border: 3px solid #393838;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  color: #FAF3E0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* ---- Tarjetas de datos ---- */
+.ContainerData {
+  padding: 25px;
+  background: #0d0d0d;
+  border: 2px solid #d4b15c;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(248, 217, 170, 0.35);
+  color: #f8eebd;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ContainerData:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(248, 217, 170, 0.55);
+}
+
+/* ---- Subtítulos dentro de las tarjetas ---- */
+.titleHrContacUs,
+.titleTelefContacUs,
+.titleEmailContacUs {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #ffd86b;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(255, 216, 107, 0.5);
+  padding-bottom: 5px;
+}
+
+/* ---- Textos específicos ---- */
+.HrContacUs,
+.telfContacUs,
+.emailContacUs {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #fdf5d1;
+}

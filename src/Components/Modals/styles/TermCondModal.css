@@ -1,0 +1,20 @@
+.Term-Cond-Modal{
+    position: relative;
+    text-align: center;
+    font-family: monospace;
+    font-size: 6px;
+    top: 40%;
+    left: 40%;
+    width: 20% ;
+    background-color: #ff0000;
+    border: 3px solid #310101;
+    box-shadow: inset 5px 5px 15px rgba(88, 2, 13, 0.945);
+
+}
+.Term-Cond-Modal:hover{
+    background-color: rgb(0, 0, 0);
+    border: solid rgb(134, 3, 3);
+    box-shadow: 5px 5px 15px rgb(223, 8, 8);
+    color: rgba(247, 20, 8, 0.973);
+    text-shadow: 2px 2px 4px rgb(185, 2, 2);
+}

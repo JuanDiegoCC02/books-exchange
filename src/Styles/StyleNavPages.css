@@ -1,0 +1,74 @@
+/* Título principal */
+.titleHeader {
+  color: #000000e5;
+  text-shadow: 2px 2px 6px rgb(247, 252, 0);
+  font-size: 64px;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive; /* Manteniendo tipografía */
+  text-align: center;
+  letter-spacing: 2px;
+
+  display: flex;           
+  justify-content: center;              
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Barra del nav */
+.containerLinksHdr {
+  display: flex;
+  justify-content: center;              
+  align-items: center;
+  gap: 30px;
+  width: 100%; 
+  padding: 14px 0;
+  
+}
+
+/* Enlaces */
+.LinksHeader {
+  font-size: 20px;
+  font-family: "Dancing Script", cursive; /* Se mantiene */
+  padding: 10px 18px;
+  color: #f5f5f5;
+  text-decoration: none;
+  border-radius: 25px;
+  background: rgba(122, 39, 0, 0.89);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover elegante */
+.LinksHeader:hover {
+  color: gold;
+  background: rgba(19, 1, 1, 0.801);
+  box-shadow: 0 0 12px rgba(252, 255, 72, 0.774);
+  transform: scale(1.07);
+}
+
+/* Subrayado animado tipo marcador */
+.LinksHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: gold;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.LinksHeader:hover::after {
+  width: 70%;
+}
+
+
+.containerOptions{
+display: flex;
+flex-direction: row;
+margin-left: 1%;
+}

@@ -1,0 +1,259 @@
+/* Contenedor general */
+.AllContainer {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #4b1f06 0%, #4b1f06 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Contenedor del título */
+.TitleNewsBooks {
+  width: 100%;
+  text-align: center;
+  margin: 50px auto 35px auto;
+}
+
+/* Texto del título */
+.titleNewBk {
+  display: block;
+  padding: 18px 32px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fdf5d1;
+  background: linear-gradient(145deg, #3e1f0a 0%, #4b470dfa 50%, #3e1f0a 100%);
+  border: 6px groove #383b01;
+  border-radius: 14px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.85),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Buscador */
+.searchAllDiv {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.barraSearch {
+  width: 55%;
+  padding: 10px;
+  border: 2px solid #7b5e2f;
+  border-radius: 8px;
+  background: #fffef7;
+  font-family: Georgia, serif;
+  color: #2c2c2c;
+  transition: 0.3s;
+}
+
+.barraSearch:focus {
+  border-color: #b8860b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(184, 134, 11, 0.6);
+}
+
+.BTNEnviar {
+  background: #7b5e2f;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.BTNEnviar:hover {
+  background: #5c4522;
+}
+
+/* Grid de libros */
+/* Contenedor vertical de cards */
+.UlBook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  
+}
+
+/* Card de libro */
+.LiBook {
+  display: flex;                  
+  flex-direction: row;            /* imagen a la izquierda, contenido a la derecha */
+  align-items: flex-start;
+  width: 90%;
+  max-width: 700px;
+  background: linear-gradient(145deg, #000000 0%, #3e1f0a 50%, #000000 100%);
+  border: 4px double rgb(230, 255, 89);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+  padding: 18px;
+  gap: 10px;    
+  color: rgb(238, 220, 220);  
+  
+  font-size:110%;       
+  font-family: 'Times New Roman', Times, serif;        
+}
+
+/* Imagen del libro */
+.containerImg{  
+margin: 5%;
+margin-top: 17%;
+
+}
+.BookImg {
+  width: 200px;                   
+  height: 280px;
+  padding: 15px;
+  object-fit: cover;              
+  border-radius: 8px;
+  background-color: black;
+  border: groove, 5px, rgba(0, 0, 0, 0.973); 
+  box-shadow: 0 2px 6px 2px rgb(236, 255, 66);
+}
+
+
+/* Contenido del libro (vertical) */
+.BookContent {
+  display: flex;
+  flex-direction: column;         /* esto hace que los elementos se apilen verticalmente */
+  justify-content: flex-start;    /* alineación desde arriba */
+  flex: 1;                        
+  gap: 10px;                     
+}
+/*InfoPropOfBook*/
+.BookContent strong {
+  display: block;
+  font-family: Georgia, serif;
+  color: #eef7a1;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+
+
+/* Contenido !!!!!!!!!*****  DUDA  *****!!!!!!!!!!!! */
+.containerBook strong.BookInfo {
+  display: block;
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.containerBook {
+  padding: 15px;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #2c2c2c;
+  font-size: 14px;
+}
+
+
+
+/* Botones */
+.btnDelete,
+.btnEdit,
+.confirmEdit {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 2px solid #3e2b23;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Delete */
+.btnDelete {
+  background: #9e1010;
+  color: #fff;
+}
+.btnDelete:hover {
+  background: #b80c0c;
+}
+
+/* Edit */
+.btnEdit {
+  background: #2f5555;
+  color: #fff;
+  margin: 5%;
+}
+.btnEdit:hover {
+  background: #6d6868;
+}
+
+/* Complete edit */
+.confirmEdit {
+  width: 90%;
+  background: #148852;
+  color: #fff;
+}
+.confirmEdit:hover {
+  background: #087269;
+}
+/* Inputs */
+.spaceEdit {
+  width: 80%;
+  border: 2px solid #444443;
+  border-radius: 6px;
+  background: #c2c2c0;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  padding: 6px 10px;
+  color: #3e2b23;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+
+}
+
+
+
+/* Checkbox */
+.inpChangeState{
+position: relative;
+right: 40%;
+}
+
+.btnCheckbox {
+  transform: scale(1.1);
+  margin: 6px 0;
+}
+
+.containerOptUptdates {
+  width: 100%;          
+  margin-top: 5%; 
+  margin-left: 10%;
+  display: grid; 
+  font-family: Georgia, serif;
+  font-size: 14px;
+  
+}
+
+
+.lbHome,
+.lbFavorites{
+  font-weight: bold;
+  color: #f0eeee;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+
+.edit-fields{
+  position: absolute;
+  display: grid;
+  margin: 17%;
+  margin-left: 0px;
+
+}

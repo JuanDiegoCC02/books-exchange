@@ -1,0 +1,155 @@
+/* ---- Título (idéntico al TitleForm) ---- */
+.titleContainer {
+  width: 100%;
+  text-align: center;
+  margin: 50px auto 35px auto;
+}
+
+.titleFavBooks {
+  display: block;
+  padding: 18px 32px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fdf5d1;
+  background: linear-gradient(145deg, #3e1f0a 0%, #4b470dfa 50%, #3e1f0a 100%);
+  border: 6px groove #383b01;
+  border-radius: 14px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.85),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Fondo general ---- */
+.containerAll-FavBooks {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #4b1f06 0%, #4b1f06 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+/* ---- Contenedor principal ---- */
+.containerFavBooks {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+  
+}
+
+/* ---- Lista de favoritos ---- */
+.UlFavBooks {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto, auto;
+  justify-items: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* ---- Card de libro favorito ---- */
+.LiFavBook {
+ display: flex;                  
+  flex-direction: row;            /* imagen a la izquierda, contenido a la derecha */
+  align-items: flex-start;
+  width: 90%;
+  max-width: 700px;
+background: linear-gradient(145deg, #000000 0%, #3e1f0a 50%, #000000 100%);  border: 4px solid hsl(0, 0%, 0%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+  padding: 18px;
+  gap: 10px;    
+  color: rgb(238, 220, 220);   
+  font-size:110%;       
+  font-family: 'Times New Roman', Times, serif;
+   border: 4px double rgb(230, 255, 89); 
+}
+
+
+.containerImgFav{
+  margin: 7%;
+  margin-top: 9%;
+}
+.BookImgFav{
+  width: 200px;                   
+  height: 280px;
+  padding: 15px;
+  object-fit: cover;              
+  border-radius: 8px;
+  background-color: black;
+  border: groove, 5px, rgba(0, 0, 0, 0.973); 
+  box-shadow: 0 2px 6px 2px rgb(236, 255, 66);
+}
+
+.containerBookInfoFav{
+ display: flex;
+  flex-direction: column;         /* esto hace que los elementos se apilen verticalmente */
+  justify-content: flex-start;    /* alineación desde arriba */
+  flex: 1;                        
+  gap: 10px;    
+}
+
+
+/* ---- Info dentro del card ---- */
+.InfoFavBook {
+  display: block;
+  font-family: Georgia, serif;
+  color: #eef7a1;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+
+
+
+
+
+  /*Diseño CheckBox Off/On Apagdor*/
+.btn{
+    margin: 10px;
+    }   
+    .lblCheckbox{
+        display: inline-block;
+        width: 55px;
+        height: 30px;
+        background-color: #6d6d6d;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+    }
+    #btnCheckbox:checked~.lblCheckbox {
+        background-color: rgb(206, 203, 14);
+    }
+    
+    
+    .lblCheckbox:after{
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;  
+    transition: 0.3s;
+    }
+    #btnCheckbox:checked~.lblCheckbox:after {
+        left: 28px;
+    }
+    .btnCheckbox{
+        position: relative;
+        left: 25px;
+        opacity: 0.1;    
+        z-index: 1;
+        bottom: 10px;
+    }
+    
+    

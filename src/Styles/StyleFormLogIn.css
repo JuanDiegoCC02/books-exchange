@@ -1,0 +1,74 @@
+.containerTitleLogIn{
+    
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+
+}
+.TituloLogIn {
+  width: 95%;
+  text-align: center;
+  font-size: 38px;
+  border: 6px, #f1f07f;
+  font-weight: bold;
+  color: #FAF3E0;
+  padding: 18px;
+  background: linear-gradient(145deg, #000000e3 0%, #4e3008e8 50%, #000000e3 100%);
+  border-style:  double;
+  border-radius: 25px 25px 0 0;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  box-shadow:  0px 8px 20px rgba(0,0,0,0.8);
+}
+.FormContainerLogIn{
+    width: 55%;
+    font-size: 19px;
+    color: #FAF3E0;
+    border-style: groove;
+    margin: 35px auto;
+    padding: 55px;
+    border-width: 6px;
+    border-color: #020000;
+    background: linear-gradient(145deg, #000000 0%, #3e1f0a 50%, #000000 100%);
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(49, 1, 1, 0.774);
+
+}
+
+.inpLogIn{
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+}
+.BTNLogIn{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: #f7ff88;
+    background-color: rgb(3, 2, 2);
+    border-color: rgb(245, 253, 136);
+    border-width: 3px;
+    margin: 5px auto;
+    padding: 4px;
+    border-radius: 15px;
+    display: grid;           
+    flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
+    justify-content: center;              
+    align-items: center;                            /* verticalmente */
+    width: 15%;                        /* Hace que se ajuste al ancho de la pantalla */
+                      /* Hace que se ajuste al ancho de la pantalla */
+  
+}
+.BTNLogIn:hover{
+     color: rgba(255, 253, 124, 0.897);
+    border-color: rgb(248, 250, 135);
+    background-color: rgb(48, 30, 30);
+}   
+.ContainerLinkRegister{
+           
+    text-align: center;                                            
+    font-family: monospace;
+    color: rgb(102, 59, 10);
+    font-size: 14px;
+}
+.LinkRegister{
+color: rgb(62, 63, 63);
+}
