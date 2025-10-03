@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../Styles/SavedStyle.css'
-import llamadosBooks, {updateBooks } from '../Services/llamadosBooks'
+import llamadosBooks, {updateBooks, deleteBooks } from '../Services/llamadosBooks'
 
 
 function SavedR() {
@@ -10,7 +10,7 @@ function SavedR() {
     const [editAuthor, setEditAuthor] = useState("")
     const [editCateg, setEditCateg] = useState("")
     const [editInfo, setEditInfo] = useState("")
-
+    const [search, setSearch]= useState("")
     const [reload, setReload] = useState(false)
 
     //Const para Home
@@ -46,7 +46,7 @@ function SavedR() {
 
     //Funcion Delete
     function delet(id) {
-        llamadosBooks.deleteBooks(id)
+        deleteBooks(id)
         setReload(!reload)
     }
     //Funcion Edit
@@ -57,7 +57,7 @@ function SavedR() {
             "categbook": editCateg,
             "infobook": editInfo
         }
-        llamadosBooks.updateBooks(bookEdit, id)
+        updateBooks(bookEdit, id)
         setReload(!reload);
     }
 
@@ -73,6 +73,13 @@ function SavedR() {
         }
         list()
     }, [reload])
+
+    const filteredBooks= books.filter((libro) =>
+    libro.namebook.toLowerCase().includes(search.toLocaleLowerCase())||
+    libro.authorbook.toLocaleLowerCase().includes(search.toLowerCase()) ||
+    libro.categbook.toLowerCase().includes(search.toLowerCase())
+    )
+
     return (
         <div>
             <div>
@@ -81,12 +88,12 @@ function SavedR() {
                 <div className='AllContainer'><br />
                     
                     <div className='searchAllDiv'>
-                        <input className='barraSearch' type="search" name="buscador" id="barraSearch" />  <input className='BTNEnviar' type="button" value="Search" />
+                        <input className='barraSearch' onChange={(e)=> setSearch(e.target.value)} type="search" name="buscador" id="barraSearch" /> 
+                        <input className='BTNEnviar' type="button" value="Search" />
                     </div><br />
 
                     <ul className='UlBook'>
-
-                        {books.map((libro, index) => (
+                    {filteredBooks.map((libro, index) =>
 
                             <li key={libro.id} className='LiBook'>
                                 <div className='containerImg'>
@@ -141,7 +148,7 @@ function SavedR() {
                         
                                 </div>
                             </li>
-                        ))}
+                        )}
                     </ul>
                 </div>
 
