@@ -41,7 +41,7 @@ function CardFront() {
             <img className='ImgofBookHome' src={libro.img} alt="BookImg" srcset="" />
           </div>
         <div className='containerBookInfoHome'>                    
-           <strong className='BookInfoHome'>Name</strong> {libro.namebook} <br /> <br />
+           <strong className='BookInfoHome'>Title</strong> {libro.namebook} <br /> <br />
            <strong className='BookInfoHome'>Author</strong> {libro.authorbook} <br /><br />
            <strong className='BookInfoHome'>Category</strong> {libro.categbook} <br /><br />
         </div>    

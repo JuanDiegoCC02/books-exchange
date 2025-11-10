@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../Styles/SavedStyle.css'
 import llamadosBooks, {updateBooks, deleteBooks } from '../Services/llamadosBooks'
+import BookProfileExtend from './BookProfileExtend'
 
 
 function SavedR() {
@@ -12,6 +13,7 @@ function SavedR() {
     const [editInfo, setEditInfo] = useState("")
     const [search, setSearch]= useState("")
     const [reload, setReload] = useState(false)
+    const [selectedUser, setSelectedUser] = useState(null);
 
     //Const para Home
     const handleBookCheck = async (id, index) => {
@@ -97,17 +99,17 @@ function SavedR() {
 
                             <li key={libro.id} className='LiBook'>
                                 <div className='containerImg'>
-                                <img className='BookImg' src={libro.img} alt="BookImg" />
+                                <img className='BookImg'onClick={()=> setSelectedUser(libro.usuario)} src={libro.img} alt="BookImg" />
                                 </div>
                                 <div className='BookContent'>  
                                 <strong  className='BookInfo'>Name</strong> {libro.namebook} <br /><br /><br />
                                 <strong className='BookInfo'>Author</strong> {libro.authorbook} <br /><br /><br />
                                 <strong className='BookInfo'>Category</strong> {libro.categbook} <br /><br /><br />
                                 <strong className='BookInfo'>Information</strong> {libro.infobook} <br /><br /><br />
-                                <strong className='BookInfo'>Usuario</strong> {libro.usuario} <br /><br /><br />
-                                <strong className='BookInfo'>Correo</strong> {libro.correoUsuario} <br /><br /><br />
+                                <strong className='BookInfo'>Username</strong> <a onClick={()=> setSelectedUser(libro.usuario)}>{libro.usuario}</a><br />
+                                <strong className='BookInfo'>Email</strong> {libro.correoUsuario} <br /><br /><br />
                                 </div>
-
+                                
                                 <div className='containerOptUptdates'>
                                     <label className='lbHome' htmlFor="">Home</label><br />
                                     <input className='inpChangeState'
@@ -150,10 +152,18 @@ function SavedR() {
                             </li>
                         )}
                     </ul>
+                    
                 </div>
-
+                
+             {selectedUser && (
+                <BookProfileExtend
+                    usuario={selectedUser}
+                    onClose={() => setSelectedUser(null)}
+                />
+            )}
 
             </div>
+            
         </div>
     )
 }

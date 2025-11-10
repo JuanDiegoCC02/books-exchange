@@ -43,12 +43,12 @@ function MyBooksCard() {
                   <img className='BookImgFav' src={libro.img} alt="" />
                 </div>
                   <div className='containerBookInfoFav'>
-                   <strong className='InfoFavBook'>Name</strong> {libro.namebook} <br /><br />
+                   <strong className='InfoFavBook'>Title</strong> {libro.namebook} <br /><br />
                    <strong className='InfoFavBook'>Author</strong> {libro.authorbook} <br /><br />
                    <strong className='InfoFavBook'>Category</strong>{libro.categbook} <br /><br />
                    <strong className='InfoFavBook'>Information</strong> {libro.infobook} <br /><br />
-                   <strong className='InfoFavBook'>Usuario</strong> {libro.usuario} <br /><br />
-                   <strong className='InfoFavBook'>Correo</strong> {libro.correoUsuario} <br /><br />
+                   <strong className='InfoFavBook'>Username</strong> {libro.usuario} <br /><br />
+                   <strong className='InfoFavBook'>Email</strong> {libro.correoUsuario} <br /><br />
                     </div>
                    <div>
                     <input className='btnCheckbox'

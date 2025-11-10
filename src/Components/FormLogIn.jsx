@@ -33,6 +33,7 @@ function FormLogIn() {
         const found = Profiles.find(Profiler => Profiler.nombre===Username && Profiler.password===Password)
         
         if (found && found.typeUser === "admin") {
+            
             localStorage.setItem("nombreUsuario",found.nombre)
             localStorage.setItem("correoUsuario",found.email)
             localStorage.setItem("idUsuario",found.id)
@@ -40,9 +41,9 @@ function FormLogIn() {
 
             
 
-            Navigate('/HomeAdm')
+            Navigate('/')
         }else if (found && found.typeUser === "User") {
-            Navigate('/HomeAdm')    
+            Navigate('/')    
             localStorage.setItem("nombreUsuario",found.nombre)
             localStorage.setItem("correoUsuario",found.email)
             localStorage.setItem("idUsuario",found.id)        

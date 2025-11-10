@@ -17,12 +17,8 @@ function ContactMain() {
           <p className='InfoTYPag'>If you have questions, comments, or suggestions, please don't hesitate to contact us. Your participation is what keeps this reading community alive. 
        <br /> Thank you for visiting!
      </p>
-    </div>
 
-    
-    </div>
-
-<div className='ContainerContactUs'>
+     <div className='ContainerContactUs'>
     <div className='ContainerData'>
         <h4 className='titleHrContacUs'>Days of attention</h4>
         <p className='HrContacUs'>Monday to Friday from 8 am to 4 pm.</p>
@@ -40,8 +36,14 @@ function ContactMain() {
         <p className='emailContacUs'>SharedEx44@gmail.com</p>
     </div>
 
-</div>
+</div><br />
    
+    </div>
+
+    
+    </div>
+
+
 </main>
 
     </div>

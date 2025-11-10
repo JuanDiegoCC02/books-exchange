@@ -40,26 +40,23 @@
   cursor: pointer;
 }
 
-/* Hover elegante */
+
 .LinksHeader:hover {
   color: gold;
   background: rgba(19, 1, 1, 0.801);
   box-shadow: 0 0 12px rgba(252, 255, 72, 0.774);
   transform: scale(1.07);
+
 }
 
-/* Subrayado animado tipo marcador */
-.LinksHeader::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  width: 0%;
-  height: 2px;
-  background: gold;
-  transition: width 0.3s ease-in-out;
-  transform: translateX(-50%);
-  border-radius: 2px;
+
+.LinksHeader.active {
+
+  color: gold;
+  background: rgba(19, 1, 1, 0.801);
+  box-shadow: 0 0 12px rgba(252, 255, 72, 0.774);
+  transform: scale(1.07);
+ 
 }
 
 .LinksHeader:hover::after {

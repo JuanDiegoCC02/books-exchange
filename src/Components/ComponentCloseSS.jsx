@@ -11,7 +11,9 @@ function ComponentCloseSS() {
   return (
     <div>
 
-
+        <div>
+          <a href="/profile">Profile</a>
+        </div>
 
 
         

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../Styles/StyleNavPages.css'
 import UserConfg from '../icons/UserConfg.png'
 import ComponentCloseSS from './ComponentCloseSS';
@@ -20,32 +20,32 @@ function NavPages() {
             {
               !localStorage.getItem("typeUser")&&(
                 <>
-                 <Link className='LinksHeader' to='/Register'> Register </Link>
-                 <Link className='LinksHeader' to='/LogIn'> Log In </Link>
+                 <NavLink className='LinksHeader' to='/Register'> Register </NavLink>
+                 <NavLink className='LinksHeader' to='/LogIn'> Log In </NavLink>
                 </>
               )
             }
          
           {
             localStorage.getItem ("typeUser") &&
-          <Link className='LinksHeader' to='/HomeAdm'> Books Form </Link>
+          <NavLink className='LinksHeader' to='/formBooks'> Books Form </NavLink>
          } 
           {
           localStorage.getItem("typeUser") === "admin" && 
-          <Link className='LinksHeader' to='/Saved'> Books Admin </Link>
+          <NavLink className='LinksHeader' to='/Saved'> Books Admin </NavLink>
          }
           {
             localStorage.getItem("typeUser") === "User" && 
-            <Link className='LinksHeader' to='/UserSavedPag'> Books </Link>
+            <NavLink className='LinksHeader' to='/UserSavedPag'> Books </NavLink>
           }
           {
                         localStorage.getItem ("typeUser") &&
-          <Link className='LinksHeader' to='/MyBooks'>Favorites</Link>
+          <NavLink className='LinksHeader' to='/MyBooks'>Favorites</NavLink>
           
         }
         
-          <Link className='LinksHeader' to='/ContactUs'> Contatc Us </Link>
-          <Link className='LinksHeader' to='/'> Home </Link>
+          <NavLink className='LinksHeader' to='/ContactUs'> Contatc Us </NavLink>
+          <NavLink className='LinksHeader' to='/'> Home </NavLink>
 
          
          

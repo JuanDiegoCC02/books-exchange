@@ -3,7 +3,7 @@ import NavPages from '../Components/NavPages'
 import FormBooks from '../Components/FormBooks'
 import FooterPages from '../Components/FooterPages'
 
-function HomeAdm() {
+function BooksFormPage() {
   return (
     <div>
       <nav>
@@ -19,4 +19,4 @@ function HomeAdm() {
   )
 }
 
-export default HomeAdm
+export default BooksFormPage
