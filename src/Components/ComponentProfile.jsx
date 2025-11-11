@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getUsers } from '../Services/llamados';
+import "../Styles/ComponentProfile.css";
 
 function ComponentProfile() {
     const IdLog = localStorage.getItem("idUsuario");
@@ -44,18 +45,18 @@ function ComponentProfile() {
         return <p>loagding user</p>
     }
   return (
-    <div>
-        <div>
-            <h4>Profile</h4>
+    <div className='containerAllProfile'>
+        <div className='containerTitleProfile'>
+            <h4 className='ContainerTitleProfile'>Profile</h4>
         </div>
         
-        <div>
+        <div className='containerInfoProfile'>
             <div className='containerDataUserProfile'><strong className='dataUser'>Username</strong><br />{user.nombre} </div>
             <div className='containerDataUserProfile'><strong className='dataUser'>Email</strong><br />{user.email} </div>
             <div className='containerDataUserProfile'><strong className='dataUser'>Location</strong><br />{user.location} </div>
         </div>
 
-        <div><strong>Exchanged Books</strong><br />{books.length} </div>
+        <div className='containerBooksProfile'><strong className='BookInfoProfile'>Exchanged Books</strong><br />{books.length} </div>
     </div>
   )
 }

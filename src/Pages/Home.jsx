@@ -1,6 +1,6 @@
 import React from 'react'
 import NavPages from '../Components/NavPages'
-import CardFront from '../Components/CardFront'
+import CardHome from '../Components/CardHome'
 import FooterPages from '../Components/FooterPages'
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
       
       </nav>
       <main>
-      <CardFront nombreLibro={"La Sombra del Viento"}  />
+      <CardHome nombreLibro={"La Sombra del Viento"}  />
       </main>
       <footer>
         <FooterPages/>

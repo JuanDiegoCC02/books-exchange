@@ -1,84 +1,177 @@
+/* === Fondo del modal === */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(6px);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.4s ease forwards;
 }
 
-.modal-card {
-  background: #1f1f1f;
-  color: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  width: 380px;
-  max-height: 80vh;
-  overflow-y: auto;
+/* Animación de aparición del modal */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* === Card principal del perfil === */
+.CardInfoCreatorProfile {
+  background: linear-gradient(145deg, #1c1c1c, #2b2b2b);
+  color: #f8f8f8;
+  border-radius: 18px;
+  padding: 2rem 2.2rem;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
   position: relative;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-  animation: slideUp 0.3s ease;
+  overflow: hidden;
+  animation: popUp 0.35s ease forwards;
 }
 
-.close-btn {
+/* Animación del card */
+@keyframes popUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Botón de cerrar === */
+.close-btnProfile {
   position: absolute;
-  top: 10px;
-  right: 14px;
+  top: 15px;
+  right: 15px;
   background: transparent;
   border: none;
-  color: #fff;
-  font-size: 20px;
+  color: #bdbdbd;
+  font-size: 1.4rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.close-btn:hover {
-  color: #ff6961;
+.close-btnProfile:hover {
+  color: #ff6b6b;
+  transform: rotate(90deg);
 }
 
-.title-profile {
+/* === Título general del modal === */
+.containerTitleProfileExtend {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.titleProfileExtend {
+  color: #f8f8f8;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+/* === Título principal === */
+.title-profileExtend {
   text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #c8e0ff;
-}
-
-.user-info p {
-  margin: 8px 0;
-}
-
-.books-section {
   margin-top: 1.5rem;
+  font-size: 1.6rem;
+  color: #ffd166;
+  text-shadow: 0 1px 10px rgba(255, 209, 102, 0.25);
 }
 
-.book-list {
+/* === Información del usuario === */
+.containerInfoCreatorProfile {
+  margin-top: 1.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.InfoCreator {
+  color: #ffd166;
+  font-weight: 600;
+}
+
+/* === Sección de libros === */
+.books-sectionExtendProfile {
+  margin-top: 2rem;
+}
+
+.ProfileExtendBooks {
+  font-size: 1.2rem;
+  color: #8be9fd;
+  margin-bottom: 0.8rem;
+}
+
+.bookUlExtendd {
   list-style: none;
   padding: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1e1e1e;
 }
 
-.book-item {
-  background: #292929;
-  padding: 0.6rem;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
+.bookUlExtendd::-webkit-scrollbar {
+  width: 6px;
+}
+.bookUlExtendd::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+}
+
+.bookLiExtend {
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.bookLiExtend:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.infoBookExtend {
+  color: #ffd166;
+  font-weight: 600;
 }
 
 .no-books {
-  color: #aaa;
   text-align: center;
+  opacity: 0.7;
+  font-style: italic;
   margin-top: 1rem;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; } to { opacity: 1; }
-}
+/* === Responsividad === */
+@media (max-width: 600px) {
+  .CardInfoCreatorProfile {
+    width: 92%;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
 
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  .title-profileExtend {
+    font-size: 1.3rem;
+  }
+
+  .containerInfoCreatorProfile {
+    font-size: 0.9rem;
+  }
+
+  .ProfileExtendBooks {
+    font-size: 1rem;
+  }
+
+  .bookLiExtend {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .close-btnProfile {
+    font-size: 1.2rem;
+  }
 }

@@ -1,0 +1,142 @@
+/* === CONTENEDOR PRINCIPAL === */
+.containerAllProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #1c1a17, #2b241e);
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  color: #f5e6c5; /* tono cálido crema */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === TÍTULO PRINCIPAL === */
+.containerTitleProfile {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.ContainerTitleProfile {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffcc66; /* dorado cálido */
+  border-bottom: 3px solid #a4753d;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 204, 102, 0.3);
+}
+
+/* === CONTENEDOR DE INFORMACIÓN === */
+.containerInfoProfile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  background: rgba(35, 30, 25, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 204, 102, 0.15);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containerInfoProfile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(255, 204, 102, 0.15);
+}
+
+/* === BLOQUES DE INFORMACIÓN === */
+.containerDataUserProfile {
+  text-align: center;
+  background: linear-gradient(145deg, #2e2720, #3a3128);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255, 204, 102, 0.15);
+  box-shadow: inset 0 0 10px rgba(255, 204, 102, 0.1);
+  transition: all 0.3s ease;
+}
+
+.containerDataUserProfile:hover {
+  background: linear-gradient(145deg, #3c332a, #4a3e32);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(255, 204, 102, 0.2);
+}
+
+/* === TEXTOS DE LOS DATOS === */
+.dataUser {
+  display: block;
+  color: #ffcc66; /* dorado */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(255, 204, 102, 0.2);
+}
+
+/* === SECCIÓN DE LIBROS === */
+.containerBooksProfile {
+  margin-top: 2.5rem;
+  text-align: center;
+  background: linear-gradient(145deg, #2a241e, #3b3229);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 204, 102, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containerBooksProfile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 204, 102, 0.15);
+}
+
+.BookInfoProfile {
+  color: #e0b64f;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0 0 8px rgba(255, 204, 102, 0.3);
+}
+
+/* === ESTADO DE CARGA === */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d8c79c;
+}
+
+/* === RESPONSIVIDAD === */
+@media (max-width: 768px) {
+  .ContainerTitleProfile {
+    font-size: 1.8rem;
+  }
+
+  .containerInfoProfile {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .containerDataUserProfile {
+    padding: 1rem;
+  }
+
+  .BookInfoProfile {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerAllProfile {
+    padding: 2rem 0.8rem;
+  }
+
+  .ContainerTitleProfile {
+    font-size: 1.5rem;
+  }
+
+  .dataUser {
+    font-size: 1rem;
+  }
+}

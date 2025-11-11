@@ -4,7 +4,7 @@ import llamadosBooks, {updateBooks, deleteBooks } from '../Services/llamadosBook
 import BookProfileExtend from './BookProfileExtend'
 
 
-function SavedR() {
+function AdminNewBooks() {
     const [mostrar, setMostrar] = useState(false)
     const [books, setBooks] = useState([])
     const [editName, setEditName] = useState("")
@@ -168,4 +168,4 @@ function SavedR() {
     )
 }
 
-export default SavedR
+export default AdminNewBooks

@@ -48,22 +48,3 @@ footer {
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
-.containerCloseProfile {
-  margin-top: 20px;
-}
-
-.BtnCloseCS {
-  background-color: #fff;
-  color: #3b2a1a;
-  border: 2px solid #8b5e3c;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.BtnCloseCS:hover {
-  background-color: #8b5e3c;
-  color: #fff;
-}

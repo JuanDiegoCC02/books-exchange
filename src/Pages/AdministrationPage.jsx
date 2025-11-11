@@ -1,23 +1,22 @@
 import React from 'react'
-import UserSaved from '../Components/UserSaved'
 import NavPages from '../Components/NavPages'
 import FooterPages from '../Components/FooterPages'
+import AdminCard from '../Components/AdminCard'
 
-function UserSavedPag() {
+function AdministrationPage() {
   return (
-    
-     <div>
+    <div>
         <nav>
-         <NavPages/>
+        <NavPages/>
         </nav>
         <main>
-         <UserSaved/>
+        <AdminCard/>
         </main>
         <footer>
-          <FooterPages/>
+        <FooterPages/>
         </footer>
     </div>
   )
 }
 
-export default UserSavedPag
+export default AdministrationPage

@@ -43,23 +43,23 @@ function BookProfileExtend({ usuario, onClose }) {
 
   return (
     <div className="modal-overlay" onClick={handleOutsideClick}>
-        <div><h3>Creator Profile</h3></div>
-      <div className="modal-card">
-        <button className="close-btn" onClick={onClose}>✖</button>
-        <h3 className="title-profile">User Profile</h3>
-        <div className="user-info">
-          <p><strong>Username:</strong> {user.nombre}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Location:</strong> {user.location}</p>
+        <div className="containerTitleProfileExtend"><h3 className="titleProfileExtend">Creator Profile</h3></div>
+      <div className="CardInfoCreatorProfile">
+        <button className="close-btnProfile" onClick={onClose}>✖</button>
+        <h3 className="title-profileExtend">User Profile</h3>
+        <div className="containerInfoCreatorProfile">
+          <p><strong className="InfoCreator">Username:</strong> {user.nombre}</p>
+          <p><strong className="InfoCreator">Email:</strong> {user.email}</p>
+          <p><strong className="InfoCreator">Location:</strong> {user.location}</p>
         </div>
 
-        <div className="books-section">
-          <h4>Exchanged Books ({exchangedBooks.length})</h4>
+        <div className="books-sectionExtendProfile">
+          <h4 className="ProfileExtendBooks">Exchanged Books ({exchangedBooks.length})</h4>
           {exchangedBooks.length > 0 ? (
-            <ul className="book-list">
+            <ul className="bookUlExtendd">
               {exchangedBooks.map((book) => (
-                <li key={book.id} className="book-item">
-                  <strong>{book.namebook}</strong> — {book.authorbook}
+                <li key={book.id} className="bookLiExtend">
+                  <strong className="infoBookExtend">{book.namebook}</strong> — {book.authorbook}
                 </li>
               ))}
             </ul>

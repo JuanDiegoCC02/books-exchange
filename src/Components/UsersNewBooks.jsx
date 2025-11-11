@@ -4,7 +4,7 @@ import llamadosBooks,  {deleteBooks, updateBooks }from '../Services/llamadosBook
 import BookProfileExtend from './BookProfileExtend'
 
 
-function UserSavedPag() {
+function UsersNewBooks() {
     
     const presentUserEmail = localStorage.getItem("correoUsuario")
     const [search, setSearch] = useState("")
@@ -137,4 +137,4 @@ const handleBookChanged = async (id, index)=> {
   )
 }
 
-export default UserSavedPag
+export default UsersNewBooks

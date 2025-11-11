@@ -3,7 +3,7 @@ import '../Styles/CardFront.css'
 import llamadosBooks, { updateBooks }  from '../Services/llamadosBooks'
 
 
-function CardFront() {
+function CardHome() {
   const [books, setBooks]=useState([])    
   const [reload, setReload]=useState(false)
     
@@ -61,4 +61,4 @@ function CardFront() {
   )
 }
 
-export default CardFront
+export default CardHome

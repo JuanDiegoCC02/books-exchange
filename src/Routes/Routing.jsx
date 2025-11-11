@@ -6,12 +6,13 @@ import Register from '../Pages/Register';
 import LogIn from '../Pages/LogIn';
 import BooksFormPage from '../Pages/BooksFormPage';
 import Home from '../Pages/Home';
-import Saved from '../Pages/Saved';
+import PagAdminNewBooks from '../Pages/PagAdminNewBooks';
 
 import ContactUs from '../Pages/ContactUs';
 import MyBooks from '../Pages/MyBooks';
-import UserSavedPag from '../Pages/UserSavedPag';
+import PagUsersNewBooks from '../Pages/PagUsersNewBooks';
 import Profile from '../Pages/Profile';
+import AdministrationPage from '../Pages/AdministrationPage';
 
 
 function Routing() {
@@ -28,8 +29,10 @@ function Routing() {
             <Route path='/formBooks' element={<BooksFormPage/>}/>
             <Route path='/profile' element={<Profile/>}/>
 
-            <Route path='/usersavedpag' element={<UserSavedPag/>}/>
-            <Route path='/saved' element={<Saved/>}/>
+             <Route path='/adminPage' element={<AdministrationPage/>}/>
+
+            <Route path='/usersNewBooks' element={<PagUsersNewBooks/>}/>
+            <Route path='/adminNewBooks' element={<PagAdminNewBooks/>}/>
             <Route path='/mybooks' element={<MyBooks/>}/>
             <Route path='/contactus' element={<ContactUs/>}/>
 

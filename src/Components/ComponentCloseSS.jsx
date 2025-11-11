@@ -11,8 +11,8 @@ function ComponentCloseSS() {
   return (
     <div>
 
-        <div>
-          <a href="/profile">Profile</a>
+        <div className='containerCloseProfile'>
+          <a className='BtnProfile' href="/profile">Profile</a>
         </div>
 
 

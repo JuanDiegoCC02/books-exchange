@@ -32,14 +32,17 @@ function NavPages() {
          } 
           {
           localStorage.getItem("typeUser") === "admin" && 
-          <NavLink className='LinksHeader' to='/Saved'> Books Admin </NavLink>
+          <>
+          <NavLink className='LinksHeader' to='/adminNewBooks'> Books Admin </NavLink>
+          <NavLink className='LinksHeader' to='/adminPage'> Administration</NavLink>
+         </>
          }
           {
             localStorage.getItem("typeUser") === "User" && 
-            <NavLink className='LinksHeader' to='/UserSavedPag'> Books </NavLink>
+            <NavLink className='LinksHeader' to='/usersNewBooks'> Books </NavLink>
           }
           {
-                        localStorage.getItem ("typeUser") &&
+           localStorage.getItem ("typeUser") &&
           <NavLink className='LinksHeader' to='/MyBooks'>Favorites</NavLink>
           
         }

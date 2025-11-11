@@ -1,22 +1,23 @@
 import React from 'react'
-import SavedR from '../Components/SavedR'
+import UsersNewBooks from '../Components/UsersNewBooks'
 import NavPages from '../Components/NavPages'
 import FooterPages from '../Components/FooterPages'
 
-function Saved() {
+function PagUsersNewBooks() {
   return (
-    <div>
-         <nav>
-        <NavPages/>
+    
+     <div>
+        <nav>
+         <NavPages/>
         </nav>
         <main>
-        <SavedR/>
+         <UsersNewBooks/>
         </main>
         <footer>
-        <FooterPages/>
+          <FooterPages/>
         </footer>
     </div>
   )
 }
 
-export default Saved
+export default PagUsersNewBooks
