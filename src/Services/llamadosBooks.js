@@ -22,7 +22,7 @@ export {getBooks}
 
 //////////LLAMADO POST//////////
 
-async function postBooks(namebook,authorbook,categbook,infobook,statusFront, img, usuario,correoUsuario, statusFavorites, statusChanged) {
+async function postBooks(namebook,authorbook,categbook,infobook,statusFront, img, usuario,correoUsuario, statusFavorites, statusChanged, bookCreateDate) {
     try {
      
         const userData = { 
@@ -35,7 +35,8 @@ async function postBooks(namebook,authorbook,categbook,infobook,statusFront, img
             usuario,
             correoUsuario,
             statusFavorites,
-            statusChanged
+            statusChanged,
+            bookCreateDate
         };
 
 

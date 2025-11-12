@@ -16,6 +16,7 @@ function AdminRequestBooks() {
 
     async function bookDelete(id) {
      await deleteBooks(id)   
+     setReload(!reload)
     }
 
   return (
@@ -27,16 +28,17 @@ function AdminRequestBooks() {
                     {books.map(book => (
                         <li className='AdminLiBooks' key={book.id}>
                             <h5 className='titleBookAdmin'> {book.namebook} </h5>
-                            <span className='infoAdminBook'> {book.usuario} </span>
-                            <span className='infoAdminBook'> {book.correoUsuario} </span>
-                            <span className='infoAdminBook'> {book.namebook} </span>
-                            <span className='infoAdminBook'> {book.authorbook} </span>
-                            <span className='infoAdminBook'> {book.categbook} </span>
-                            <span className='infoAdminBook'> {book.infobook} </span>
-                            <span className='infoAdminBook'> {book.statusFront ? "True" : "False"} </span>
-                            <span className='infoAdminBook'> {book.statusChanged ? "True" : "False"} </span>
-
-                            <div>
+                            <span className='infoAdminBook'> {book.usuario} </span><br />
+                            <span className='infoAdminBook'> {book.correoUsuario} </span><br />
+                            <span className='infoAdminBook'> {book.namebook} </span><br />
+                            <span className='infoAdminBook'> {book.authorbook} </span><br />
+                            <span className='infoAdminBook'> {book.categbook} </span><br />
+                            <span className='infoAdminBook'> {book.infobook} </span><br />
+                            <span className='infoAdminBook'> {book.statusFront ? "True" : "False"} </span><br />
+                            <span className='infoAdminBook'> {book.statusChanged ? "True" : "False"} </span><br />
+                            <span className='infoAdminBook'> {book.bookCreateDate}</span><br />
+                          
+                            <div><br />
                                 <button className='btnDeleteAdminBook' 
                                 onClick={()=> bookDelete(book.id)}>delete</button>
                             </div>

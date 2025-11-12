@@ -11,10 +11,6 @@ const [authorBook, setAuthorBook]=useState()
 const [categBook, setCategBook]=useState()
 const [infoBook, setInfoBook]=useState()
 const [ErrorCampos, setErrorCampos] = useState(false);
-const [editName, setEditName]=useState("")
-const [editAuthor, setEditAuthor]=useState("")
-const [editCateg, setEditCateg]=useState("")
-const [editInfo, setEditInfo]=useState("")
 const [img,setImg]=useState(null)
 const [reload, setReload]=useState(false)
 const imagencita=(e)=>{
@@ -42,47 +38,35 @@ function infobook(e) {
     setInfoBook(e.target.value)
 
 }
-function newName(e) {
-    setEditName(e.target.value)
-}
-function newAuthor(e) {
-    setEditAuthor(e.target.value)
-}
-function newCateg(e) {
-    setEditCateg(e.target.value)
-}
-function newInfo(e) {
-    setEditInfo(e.target.value)
-}
 
-//Funcion Delete
-function delet(id) {
-    llamadosBooks.deleteBooks(id)
-    setReload(!reload)
-}
-//Funcion Edit
-function edit(id) {
-    const bookEdit ={
-        "namebook":editName,
-        "authorbook":editAuthor,
-        "categbook":editCateg,
-        "infobook":editInfo
+
+async function post() {
+    if (!nameBook || !authorBook || !categBook || !infoBook || !img) {
+        setErrorCampos(true);
+        return;
     }
-    llamadosBooks.updateBooks(bookEdit,id)
+
+    const bookCreateDate = new Date().toISOString();
+
+      await llamadosBooks.postBooks(
+        nameBook,
+        authorBook,
+        categBook,
+        infoBook,
+        false,
+        img,
+        localStorage.getItem("nombreUsuario"),
+        localStorage.getItem("correoUsuario"),
+        false,
+        false,
+        bookCreateDate,
+      );
+  
+    setNameBook(""); setAuthorBook(""); setCategBook(""); setInfoBook(""); setImg(null);
+
     setReload(!reload);
 }
 
-function post() {
-    if (!nameBook || !authorBook || !categBook || !infoBook || !img) {
-        setErrorCampos(true)
-    }  else {
-        llamadosBooks.postBooks(nameBook,authorBook,categBook,infoBook,false,img,localStorage.getItem("nombreUsuario"),localStorage.getItem("correoUsuario"), false)
-        setReload(!reload) 
-    }
-   
-
-    
-}
 
 useEffect (()=>{
     async function list() {

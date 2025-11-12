@@ -49,7 +49,8 @@ function FormRegister() {
             setMostrarError(true)
         }
         else {
-            llamadoServicios.postUsers(Username, Email, Password, Location, "User")
+            const userCreateDate = new Date().toISOString();
+            llamadoServicios.postUsers(Username, Email, Password, Location,  userCreateDate, "User")
                 navigate ('/LogIn')  
         }
    

@@ -23,7 +23,7 @@ export { getUsers };
 
 //////////LLAMADO POST//////////
 
-async function postUsers(nombre,email,password,location,typeUser) {
+async function postUsers(nombre,email,password,location, userCreateDate, typeUser) {
     try {
      
         const userData = { 
@@ -31,6 +31,7 @@ async function postUsers(nombre,email,password,location,typeUser) {
             email,
             password,
             location,
+            userCreateDate,
             typeUser
         
         };
@@ -68,7 +69,7 @@ async function updateUsers(nombre,apellido,edad,id)
             nombre, 
             apellido,
             edad,
-            
+            userCreateDate
         
         };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { deleteUser, getUsers } from '../Services/llamados'
+import AdminUsersChart from './AdminUsersChart'
 
 function AdminRequestUsers() {
         const [users, setUsers] = useState([])
@@ -30,16 +31,22 @@ function AdminRequestUsers() {
                     {users.map(user => (
                         <li className='AdminLiUsers' key={user.id}>
                             <h5 className='UsernameAdminPage'> {user.nombre} </h5>
-                            <span className='infoUserAdminPage'> {user.nombre} </span>
-                            <span className='infoUserAdminPage'> {user.email} </span>
-                            <span className='infoUserAdminPage'> {user.location} </span>
-                            <span className='infoUserAdminPage'> {user.typeUser} </span>
-                            <div>
+                            <span className='infoUserAdminPage'> {user.nombre} </span><br />
+                            <span className='infoUserAdminPage'> {user.email} </span><br />
+                            <span className='infoUserAdminPage'> {user.location} </span><br />
+                            <span className='infoUserAdminPage'> {user.typeUser} </span><br />
+                            <span className='infoUserAdminPage'> {user.userCreateDate} </span><br />
+
+                            <div><br />
                                 <button onClick={()=> userDelete(user.id)}>delete</button>
                             </div>
                         </li>
                     ))}
                 </ul>
+            </div>
+
+            <div>
+                <AdminUsersChart/>
             </div>
     </div>
   )
