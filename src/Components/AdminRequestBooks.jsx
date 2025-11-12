@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { deleteBooks, getBooks } from '../Services/llamadosBooks'
+import AdminBooksChart from './AdminBooksChart'
+import AdminBooksChartComparative from './AdminBooksChartCompartive'
 
 function AdminRequestBooks() {
     const [books, setBooks] = useState([])
@@ -47,6 +49,14 @@ function AdminRequestBooks() {
                     ))}
                 </ul>
             </div>
+
+        <div>
+            <AdminBooksChart/>
+        </div><br /><br />
+
+        <div>
+            <AdminBooksChartComparative/>
+        </div>
 
     </div>
   )
