@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { deleteUser, getUsers } from '../Services/llamados'
 import AdminUsersChart from './AdminUsersChart'
+import "../Styles/AdminRequestUsers.css";
 
 function AdminRequestUsers() {
         const [users, setUsers] = useState([])
@@ -22,9 +23,11 @@ function AdminRequestUsers() {
             
         
   return (
-    <div>
+    <div className='containerAllRequestUsers'>
         
-        <div> <h3>Users</h3> </div>
+        <div className='titleUsersRequest'>
+            <h3 className='titleUsersRequest'>Users</h3> 
+        </div>
         
             <div className='containerAdminUsers'>
                 <ul className='AdminUlUsers'>
@@ -45,7 +48,7 @@ function AdminRequestUsers() {
                 </ul>
             </div>
 
-            <div>
+            <div className='containerChartUsers'>
                 <AdminUsersChart/>
             </div>
     </div>

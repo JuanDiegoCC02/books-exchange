@@ -6,7 +6,7 @@ const AdminUsersChart = () => {
         const [chartData, setChartData] = useState({
           
             series: [{
-                name: "Users Log", data: [] }],
+                name: "Users Log", data: [],}],
             options: {
               chart: {
                 height: 350,
@@ -19,16 +19,17 @@ const AdminUsersChart = () => {
                 enabled: false
               },
               stroke: {
-                curve: 'straight'
+                curve: 'straight',
+                colors: ['#f0fd3aff'], 
               },
               title: {
-                text: 'Users Log Chart for month',
-                align: 'left',
-                style: {color: "black", fonSize: "15px"},
+                text: 'Users Log Chart for Month',
+                align: 'center',
+                style: {color: "white", fonSize: "15px"},
               },
               grid: {
                 row: {
-                  colors: ['#f3f3f3', 'transparent'], 
+                  colors: ['#3d3d3dff', 'transparent'], 
                   opacity: 0.5
                 },
               },
@@ -72,7 +73,7 @@ const AdminUsersChart = () => {
 
         return (
         <div>
-          <h3 style={{ color: "black" }}>Users Log Chart</h3>
+          <h3 style={{ color: "White" }}>Users Log Chart</h3>
           <ReactApexChart
             options={chartData.options}
             series={chartData.series}

@@ -8,8 +8,10 @@ import "../styles/AdminCard.css"
 function AdminCard() {
     const [activeChange, setActiveChange]= useState("users")
   return (
-    <div>
-        <div><h3>Administration</h3></div>
+    <div className='containerAdminAllCard'>
+        <div className='AdminCardTItleContainer'>
+          <h3 className='AdminCardTitle'>Administration</h3>
+          </div>
 
        
            <nav className='NavAdminSelect'>
