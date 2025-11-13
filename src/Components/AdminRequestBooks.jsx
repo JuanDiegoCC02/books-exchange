@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { deleteBooks, getBooks } from '../Services/llamadosBooks'
 import AdminBooksChart from './AdminBooksChart'
 import AdminBooksChartComparative from './AdminBooksChartCompartive'
+import "../Styles/AdminRequestBooks.css";
 
 function AdminRequestBooks() {
     const [books, setBooks] = useState([])
@@ -22,10 +23,12 @@ function AdminRequestBooks() {
     }
 
   return (
-    <div>
-        <div><h5>Books</h5></div>
+    <div className='containerAllRequestBooks'>
+        <div className='titleBooksRequest'>
+            <h5 className='titleBooksRequest'>Books</h5>
+        </div>
 
-            <div className='containerBookInfoAdmin'>
+            <div className='containerAdminBooks'>
                 <ul className='AdminUlBooks'>
                     {books.map(book => (
                         <li className='AdminLiBooks' key={book.id}>
@@ -40,7 +43,7 @@ function AdminRequestBooks() {
                             <span className='infoAdminBook'> {book.statusChanged ? "True" : "False"} </span><br />
                             <span className='infoAdminBook'> {book.bookCreateDate}</span><br />
                           
-                            <div><br />
+                            <div className='contBtnDeleteAdmin'><br />
                                 <button className='btnDeleteAdminBook' 
                                 onClick={()=> bookDelete(book.id)}>delete</button>
                             </div>
@@ -50,11 +53,11 @@ function AdminRequestBooks() {
                 </ul>
             </div>
 
-        <div>
+        <div className='containerBooksChart'>
             <AdminBooksChart/>
         </div><br /><br />
 
-        <div>
+        <div className='containerComparativeBooksChart'>
             <AdminBooksChartComparative/>
         </div>
 

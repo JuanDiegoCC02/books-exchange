@@ -12,13 +12,15 @@ const AdminBooksChart = () => {
         height: 350,
         zoom: { enabled: false },
         toolbar: { show: false },
+      foreColor: "#fff782ff",      // Dorado suave
+        
       },
       dataLabels: { enabled: false },
       markers: { size: 3 },
          stroke: {
       curve: "straight", 
       width: 3,        
-      colors: ["#2E93fA"], 
+      colors: ["#e6fa2eff"], 
       
     },
       title: { text: "Books Publication Timeline", align: "left" },
@@ -30,13 +32,28 @@ const AdminBooksChart = () => {
           opacityFrom: 0.5,
           opacityTo: 0,
           stops: [0, 90, 100],
+         colorStops: [
+          {
+            offset: 0,
+            color: "#fbff00ff",    
+            opacity: 0.4,
+          },
+          {
+            offset: 100,
+            color: "#fff9c6ff",    
+            opacity: 0,
+          },
+        ],
+          
         },
       },
       yaxis: {
         labels: {
           formatter: (val) => val.toFixed(0),
+            style: { colors: "#e7ff10ff" }
         },
         title: { text: "Books" },
+        
       },
       xaxis: {
         type: "datetime",

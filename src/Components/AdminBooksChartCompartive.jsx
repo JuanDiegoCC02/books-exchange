@@ -11,11 +11,11 @@ const AdminBooksChartComparative = () => {
         width: 380,
       },
       labels: ["Available Books", "Exchanged Books"], 
-      colors: ["#1e5c54ff", "#f1ff27ff"], 
+      colors: ["#065753ff", "#f1ff27ff"], 
       legend: {
         position: "bottom",
         labels: {
-          colors: "#333",
+          colors: "#f3ff4dff",
         },
       },
       title: {
@@ -23,7 +23,7 @@ const AdminBooksChartComparative = () => {
         align: "center",
         style: {
           fontSize: "18px",
-          color: "#333",
+          color: "#f2ff7eff",
         },
       },
       responsive: [
