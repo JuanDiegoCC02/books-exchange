@@ -34,11 +34,11 @@ function AdminRequestUsers() {
                     {users.map(user => (
                         <li className='AdminLiUsers' key={user.id}>
                             <h5 className='UsernameAdminPage'> {user.nombre} </h5>
-                            <span className='infoUserAdminPage'> {user.nombre} </span><br />
-                            <span className='infoUserAdminPage'> {user.email} </span><br />
-                            <span className='infoUserAdminPage'> {user.location} </span><br />
-                            <span className='infoUserAdminPage'> {user.typeUser} </span><br />
-                            <span className='infoUserAdminPage'> {user.userCreateDate} </span><br />
+                            <span className='infoUserAdminPage'>Name: {user.nombre} </span><br />
+                            <span className='infoUserAdminPage'>Email: {user.email} </span><br />
+                            <span className='infoUserAdminPage'>Location:  {user.location} </span><br />
+                            <span className='infoUserAdminPage'>TypeUser: {user.typeUser} </span><br />
+                            <span className='infoUserAdminPage'>Creation Date: {user.userCreateDate} </span><br />
 
                             <div><br />
                                 <button onClick={()=> userDelete(user.id)}>delete</button>

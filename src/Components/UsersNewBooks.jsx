@@ -13,7 +13,7 @@ function UsersNewBooks() {
     const [selectedUser, setSelectedUser] = useState(null)
 
    
-   //Const from Favorites
+   //Const for Favorites
    const handleBookFavorite = async (id,index)=> {
     const updatedBooks = [...books]
     updatedBooks[index].statusFavorites = !updatedBooks[index].statusFavorites
@@ -21,12 +21,14 @@ function UsersNewBooks() {
         {"statusFavorites": updatedBooks[index].statusFavorites}, id)
         setBooks(updatedBooks)
 }
+// Const for Exchange
 const handleBookChanged = async (id, index)=> {
   const updatedBooks = [...books]
   updatedBooks[index].statusChanged = !updatedBooks[index].statusChanged
   await updateBooks(
     {"statusChanged": updatedBooks[index].statusChanged}, id)
     setBooks(updatedBooks)
+   
 } 
 
   function delet(id) {
@@ -36,19 +38,20 @@ const handleBookChanged = async (id, index)=> {
    
 
 
-    useEffect(() => {
+    useEffect(() => { 
         async function list() {
             const datos = await llamadosBooks.getBooks("books")
             setBooks(datos)
-        }
+          
+          }
         list()
     }, [reload])
 
-    const filteredBooks = books.filter((libro) =>
+   const filteredBooks = books.filter((libro) =>
     libro.namebook.toLowerCase().includes(search.toLowerCase()) ||
     libro.authorbook.toLowerCase().includes(search.toLowerCase()) ||
     libro.categbook.toLowerCase().includes(search.toLowerCase())
-    )
+  );
 
   return (
     <div>
@@ -104,18 +107,22 @@ const handleBookChanged = async (id, index)=> {
                  </div>
 
                   <div><br /><br />
-               
+                   {/* show text exchanged */}
+                   <label className='lbFavorites' htmlFor="btnCheckboxChanged" >
+                    {libro.statusChanged ? 'Interchanged' : 'Aviable'}
+                   </label><br /><br />
                   {libro.correoUsuario === presentUserEmail && (
                      <>
                       <label className='lbFavorites' htmlFor="">Exchange Completed</label><br />
                       <div className='btnChanged'>
                       <input 
-                      id='btnCheckboxChanged'
-                      className='btnCheckboxChanged' type="checkbox" 
-                      checked={libro.statusChanged}
-                      onChange={()=> handleBookChanged(libro.id, index)}
-                        />
-                        <label htmlFor="" className='lblCheckboxChanged'></label>
+                        id={`btnCheckboxChanged`} 
+                        className='btnCheckboxChanged'
+                        type="checkbox" 
+                        checked={libro.statusChanged}
+                        onChange={()=> handleBookChanged(libro.id, index)}
+                      />
+                      <label htmlFor={`btnCheckboxChanged`} className='lblCheckboxChanged'></label>
                       </div>
                         
                     </>

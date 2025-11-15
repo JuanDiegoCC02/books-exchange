@@ -3,10 +3,13 @@ import { deleteBooks, getBooks } from '../Services/llamadosBooks'
 import AdminBooksChart from './AdminBooksChart'
 import AdminBooksChartComparative from './AdminBooksChartCompartive'
 import "../Styles/AdminRequestBooks.css";
+import BookProfileExtend from './BookProfileExtend';
 
 function AdminRequestBooks() {
     const [books, setBooks] = useState([])
     const [reload, setReload] = useState(false)
+    const [selectedUser, setSelectedUser] = useState(null);
+
 
     useEffect (()=> {
         async function list() {
@@ -32,16 +35,16 @@ function AdminRequestBooks() {
                 <ul className='AdminUlBooks'>
                     {books.map(book => (
                         <li className='AdminLiBooks' key={book.id}>
-                            <h5 className='titleBookAdmin'> {book.namebook} </h5>
-                            <span className='infoAdminBook'> {book.usuario} </span><br />
-                            <span className='infoAdminBook'> {book.correoUsuario} </span><br />
-                            <span className='infoAdminBook'> {book.namebook} </span><br />
-                            <span className='infoAdminBook'> {book.authorbook} </span><br />
-                            <span className='infoAdminBook'> {book.categbook} </span><br />
-                            <span className='infoAdminBook'> {book.infobook} </span><br />
-                            <span className='infoAdminBook'> {book.statusFront ? "True" : "False"} </span><br />
-                            <span className='infoAdminBook'> {book.statusChanged ? "True" : "False"} </span><br />
-                            <span className='infoAdminBook'> {book.bookCreateDate}</span><br />
+                            <h5 className='titleBookAdmin'><a onClick={()=> setSelectedUser(book.usuario)}> {book.namebook} </a></h5>
+                            <span className='infoAdminBook'>Username: {book.usuario} </span><br />
+                            <span className='infoAdminBook'>Email: {book.correoUsuario} </span><br />
+                            <span className='infoAdminBook'>Book Name: {book.namebook} </span><br />
+                            <span className='infoAdminBook'>Author: {book.authorbook} </span><br />
+                            <span className='infoAdminBook'>Category: {book.categbook} </span><br />
+                            <span className='infoAdminBook'>Information: {book.infobook} </span><br />
+                            <span className='infoAdminBook'>State Home: {book.statusFront ? "True" : "False"} </span><br />
+                            <span className='infoAdminBook'>State Changed: {book.statusChanged ? "True" : "False"} </span><br />
+                            <span className='infoAdminBook'>Creation Date: {book.bookCreateDate}</span><br />
                           
                             <div className='contBtnDeleteAdmin'><br />
                                 <button className='btnDeleteAdminBook' 
@@ -51,6 +54,14 @@ function AdminRequestBooks() {
                         </li>
                     ))}
                 </ul>
+            </div>  
+
+            <div>
+                {selectedUser && (
+                <BookProfileExtend
+                 usuario={selectedUser}
+                 onClose={() => setSelectedUser(null)}
+                  />)}
             </div>
 
         <div className='containerBooksChart'>

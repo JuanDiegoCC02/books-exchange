@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import '../Styles/SavedStyle.css'
+import '../Styles/NewBooks.css'
 import llamadosBooks, {updateBooks, deleteBooks } from '../Services/llamadosBooks'
 import BookProfileExtend from './BookProfileExtend'
 
 
 function AdminNewBooks() {
+    const presentUserEmail = localStorage.getItem("correoUsuario")
     const [mostrar, setMostrar] = useState(false)
     const [books, setBooks] = useState([])
     const [editName, setEditName] = useState("")
@@ -32,6 +33,15 @@ function AdminNewBooks() {
             {"statusFavorites": updatedBooks[index].statusFavorites}, id)
             setBooks(updatedBooks)
     }
+    
+    // **Const para Intercambio 
+    const handleBookChanged = async (id, index)=> {
+      const updatedBooks = [...books]
+      updatedBooks[index].statusChanged = !updatedBooks[index].statusChanged
+      await updateBooks(
+        {"statusChanged": updatedBooks[index].statusChanged}, id)
+        setBooks(updatedBooks)
+    } 
 
     function newName(e) {
         setEditName(e.target.value)
@@ -64,10 +74,6 @@ function AdminNewBooks() {
     }
 
    
-
-
-
-
     useEffect(() => {
         async function list() {
             const datos = await llamadosBooks.getBooks("books")
@@ -83,71 +89,93 @@ function AdminNewBooks() {
     )
 
     return (
-        <div>
-            <div>
+ <div>
+      <div>
 
-            <div className='TitleNewsBooks'><h2 className='titleNewBk'>New Books</h2> </div>
-                <div className='AllContainer'><br />
+      <div className='TitleNewsBooks'><h2 className='titleNewBk'>New Books</h2> </div>
+          <div className='AllContainer'><br />
                     
-                    <div className='searchAllDiv'>
-                        <input className='barraSearch' onChange={(e)=> setSearch(e.target.value)} type="search" name="buscador" id="barraSearch" /> 
-                        <input className='BTNEnviar' type="button" value="Search" />
-                    </div><br />
+              <div className='searchAllDiv'>
+                <input className='barraSearch' onChange={(e)=> setSearch(e.target.value)} type="search" name="buscador" id="barraSearch" /> 
+                <input className='BTNEnviar' type="button" value="Search" />
+              </div><br />
 
-                    <ul className='UlBook'>
-                    {filteredBooks.map((libro, index) =>
+                 <ul className='UlBook'>
+                  {filteredBooks.map((libro, index) =>
 
-                            <li key={libro.id} className='LiBook'>
-                                <div className='containerImg'>
-                                <img className='BookImg'onClick={()=> setSelectedUser(libro.usuario)} src={libro.img} alt="BookImg" />
-                                </div>
-                                <div className='BookContent'>  
-                                <strong  className='BookInfo'>Name</strong> {libro.namebook} <br /><br /><br />
-                                <strong className='BookInfo'>Author</strong> {libro.authorbook} <br /><br /><br />
-                                <strong className='BookInfo'>Category</strong> {libro.categbook} <br /><br /><br />
-                                <strong className='BookInfo'>Information</strong> {libro.infobook} <br /><br /><br />
-                                <strong className='BookInfo'>Username</strong> <a onClick={()=> setSelectedUser(libro.usuario)}>{libro.usuario}</a><br />
-                                <strong className='BookInfo'>Email</strong> {libro.correoUsuario} <br /><br /><br />
-                                </div>
+                      <li key={libro.id} className='LiBook'>
+                         <div className='containerImg'>
+                             <img className='BookImg'onClick={()=> setSelectedUser(libro.usuario)} src={libro.img} alt="BookImg" />
+                         </div>
+
+                         <div className='BookContent'>  
+                             <strong  className='BookInfo'>Name</strong> {libro.namebook} <br /><br /><br />
+                             <strong className='BookInfo'>Author</strong> {libro.authorbook} <br /><br /><br />
+                             <strong className='BookInfo'>Category</strong> {libro.categbook} <br /><br /><br />
+                             <strong className='BookInfo'>Information</strong> {libro.infobook} <br /><br /><br />
+                              <strong className='BookInfo'>Username</strong> <a onClick={()=> setSelectedUser(libro.usuario)}>{libro.usuario}</a><br />
+                              <strong className='BookInfo'>Email</strong> {libro.correoUsuario} <br /><br /><br />
+                         </div>
                                 
-                                <div className='containerOptUptdates'>
-                                    <label className='lbHome' htmlFor="">Home</label><br />
-                                    <input className='inpChangeState'
-                                        type="checkbox"
-                                        name="StateChange"
-                                        id="StateChange"
-                                        checked={libro.statusFront}
-                                        onChange={() => handleBookCheck(libro.id,index)}
-                                    /> <br />
-                                    <label className='lbFavorites' htmlFor="">Favorites</label>
-                                    <div className='btn'>
-                                      <input className='btnCheckbox'
-                                        type="checkbox"
-                                        name=""
-                                        id="btnCheckbox"
-                                        checked={libro.statusFavorites}
+                         <div className='containerOptUptdates'>
+                               <label className='lbHome' htmlFor="">Home</label><br />
+                              <input className='inpChangeState'
+                                type="checkbox"
+                                name="StateChange"
+                                id="StateChange"
+                                checked={libro.statusFront}
+                                onChange={() => handleBookCheck(libro.id,index)}
+                              /> <br />
 
-                                        onChange={() =>handleBookFavorite(libro.id,index)}
+                                <label className='lbFavorites' htmlFor="">Favorites</label>
+                                 <div className='btn'>
+                                  <input className='btnCheckbox'
+                                     type="checkbox"
+                                     name=""
+                                     id="btnCheckbox"
+                                     checked={libro.statusFavorites}
+                                     onChange={() =>handleBookFavorite(libro.id,index)}
                                     /> 
                                      <label htmlFor="btnChecbox" className='lblCheckbox'></label>
-                                    </div><br />
+                                 </div><br />
 
-                                    <div className='buttons-row'>
+                                 <div className='buttons-row'>
                                     <button className='btnDelete' onClick={e => delet(libro.id)}>Delete</button>
                                     <button className='btnEdit' onClick={() => setMostrar(!mostrar)}>Edit</button> <br />
-                                    </div>
+                                </div>
                                     {mostrar &&
-                                        <>
-                                        <div className='edit-fields'>
-                                            <input className='spaceEdit' onChange={newName} type="text" placeholder='Name' /> <br />
-                                            <input className='spaceEdit' onChange={newAuthor} type="text" placeholder='Author' /><br />
-                                            <input className='spaceEdit' onChange={newCateg} type="text" placeholder='Category' /><br />
-                                            <input className='spaceEdit' onChange={newInfo} type="text" placeholder='Information' /><br />    
-                                            <button className='confirmEdit' onClick={() => edit(libro.id)} >Complete</button>
-                                        </div>
-                                        </>
+                                     <>
+                                     <div className='edit-fields'>
+                                       <input className='spaceEdit' onChange={newName} type="text" placeholder='Name' /> <br />
+                                       <input className='spaceEdit' onChange={newAuthor} type="text" placeholder='Author' /><br />
+                                       <input className='spaceEdit' onChange={newCateg} type="text" placeholder='Category' /><br />
+                                       <input className='spaceEdit' onChange={newInfo} type="text" placeholder='Information' /><br />    
+                                       <button className='confirmEdit' onClick={() => edit(libro.id)} >Complete</button>
+                                     </div>
+                                    </>
                                     }
-                        
+
+                 <div><br /><br />
+                   {/* show text exchanged */}
+                      <label className='lbFavorites' htmlFor="btnCheckboxChanged" >
+                         {libro.statusChanged ? 'Interchanged' : 'Aviable'}
+                      </label><br />
+                  {libro.correoUsuario === presentUserEmail && (
+                     <>
+                    
+                      <div className='btnChanged'>
+                      <input 
+                      id='btnCheckboxChanged'
+                      className='btnCheckboxChanged' type="checkbox" 
+                      checked={libro.statusChanged}
+                      onChange={()=> handleBookChanged(libro.id, index)}
+                        />
+                        <label htmlFor="btnCheckboxChanged" className='lblCheckboxChanged'></label> {/* Asocia el label con el checkbox */}
+                      </div>
+                    </>
+                   )}
+                  </div>
+                                
                                 </div>
                             </li>
                         )}
