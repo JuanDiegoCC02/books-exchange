@@ -47,7 +47,7 @@ function ComponentProfile() {
   return (
     <div className='containerAllProfile'>
         <div className='containerTitleProfile'>
-            <h4 className='ContainerTitleProfile'>Profile</h4>
+            <h4 className='TitleProfile'>Profile</h4>
         </div>
         
         <div className='containerInfoProfile'>

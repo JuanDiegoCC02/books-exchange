@@ -1,33 +1,33 @@
-/* === CONTENEDOR PRINCIPAL === */
+
 .containerAllProfile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(145deg, #1c1a17, #2b241e);
+    background: linear-gradient(145deg, #000000 0%, #381701f1 50%, #000000 100%);
   min-height: 100vh;
   padding: 3rem 1rem;
   color: #f5e6c5; /* tono cálido crema */
   font-family: 'Poppins', sans-serif;
 }
 
-/* === TÍTULO PRINCIPAL === */
+/*Title Styles*/
 .containerTitleProfile {
   margin-bottom: 2.5rem;
   text-align: center;
 }
-
-.ContainerTitleProfile {
+.TitleProfile {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #ffcc66; /* dorado cálido */
-  border-bottom: 3px solid #a4753d;
+  color: #f8e640; 
+  border-bottom: 3px solid #6d6969;
   display: inline-block;
   padding-bottom: 0.4rem;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255, 204, 102, 0.3);
+  text-shadow: 0 0 10px rgba(218, 196, 72, 0.781);
 }
 
-/* === CONTENEDOR DE INFORMACIÓN === */
+/* containerInfo Styles*/
 .containerInfoProfile {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -41,13 +41,12 @@
   max-width: 800px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .containerInfoProfile:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 28px rgba(255, 204, 102, 0.15);
 }
 
-/* === BLOQUES DE INFORMACIÓN === */
+/* CardInformation Styles */
 .containerDataUserProfile {
   text-align: center;
   background: linear-gradient(145deg, #2e2720, #3a3128);
@@ -57,24 +56,23 @@
   box-shadow: inset 0 0 10px rgba(255, 204, 102, 0.1);
   transition: all 0.3s ease;
 }
-
 .containerDataUserProfile:hover {
   background: linear-gradient(145deg, #3c332a, #4a3e32);
   transform: translateY(-3px);
   box-shadow: 0 5px 12px rgba(255, 204, 102, 0.2);
 }
 
-/* === TEXTOS DE LOS DATOS === */
+
 .dataUser {
   display: block;
-  color: #ffcc66; /* dorado */
+  color: #ffcc66; 
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-shadow: 0 0 5px rgba(255, 204, 102, 0.2);
 }
 
-/* === SECCIÓN DE LIBROS === */
+/*BooksData Styles*/
 .containerBooksProfile {
   margin-top: 2.5rem;
   text-align: center;
@@ -100,14 +98,14 @@
   text-shadow: 0 0 8px rgba(255, 204, 102, 0.3);
 }
 
-/* === ESTADO DE CARGA === */
+
 .loading {
   text-align: center;
   font-size: 1.2rem;
   color: #d8c79c;
 }
 
-/* === RESPONSIVIDAD === */
+/* responsividad */
 @media (max-width: 768px) {
   .ContainerTitleProfile {
     font-size: 1.8rem;

@@ -56,12 +56,12 @@ function AdminNewBooks() {
         setEditInfo(e.target.value)
     }
 
-    //Funcion Delete
+    //funtion Delete
     function delet(id) {
         deleteBooks(id)
         setReload(!reload)
     }
-    //Funcion Edit
+    //funtion Edit
     function edit(id) {
         const bookEdit = {
             "namebook": editName,

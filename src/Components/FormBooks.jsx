@@ -107,17 +107,18 @@ useEffect (()=>{
 
         <div>
                 <input className='BTNPost' type="button" value="Post" onClick={post} />
-        </div> <br />
+        </div> 
       
+<div>
+        {ErrorCampos &&
+            <CompleteInfoModal ErrorCV={"Almost done, please complete all fields in the form!"}/>
+            }
+        </div><br />
 
 </div>
             
 
-<div>
-        {ErrorCampos &&
-            <CompleteInfoModal ErrorCV={"Complete Information"}/>
-            }
-        </div><br />
+        
            
 
     </div>
