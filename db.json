@@ -28,13 +28,11 @@
       "typeUser": "User"
     },
     {
-      "id": "525f",
-      "nombre": "Bob",
-      "email": "bob44@gmail.com",
-      "password": "1234",
-      "location": "Chepe AK7",
-      "userCreateDate": "2025-11-30T16:57:15.883Z",
-      "typeUser": "User"
+      "nombre": "test",
+      "email": "test",
+      "location": "test",
+      "typeUser": "User",
+      "id": "525f"
     }
   ],
   "books": [

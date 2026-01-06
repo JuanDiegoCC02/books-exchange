@@ -61,22 +61,9 @@ export{postUsers}
 //////////////LLAMADO UPDATE/////////////
 
 
-async function updateUsers(nombre,apellido,edad,id) 
+async function updateUsers(userData, id) 
 {
     try {
-     
-        const userData = { 
-            nombre, 
-            apellido,
-            edad,
-            userCreateDate
-        
-        };
-
-
-        
-
-
         const response = await fetch("http://localhost:3000/users/"+id, {
             method: 'PUT',
             headers: {
@@ -85,7 +72,6 @@ async function updateUsers(nombre,apellido,edad,id)
             body: JSON.stringify(userData)
         });
 
-     
         return await response.json();
     } catch (error) {
         console.error('Error update user:', error);
