@@ -16,7 +16,7 @@ function AdminNewBooks() {
     const [reload, setReload] = useState(false)
     const [selectedUser, setSelectedUser] = useState(null);
 
-    //Const para Home
+    //Const handle for Home
     const handleBookCheck = async (id, index) => {
         const updatedBooks = [...books]
         updatedBooks[index].statusFront = !updatedBooks[index].statusFront
@@ -25,7 +25,7 @@ function AdminNewBooks() {
         setBooks(updatedBooks)
     }
 
-    //Const para Favortitos
+    //Const for Favortitos
     const handleBookFavorite = async (id,index)=> {
         const updatedBooks = [...books]
         updatedBooks[index].statusFavorites = !updatedBooks[index].statusFavorites
@@ -34,7 +34,7 @@ function AdminNewBooks() {
             setBooks(updatedBooks)
     }
     
-    // **Const para Intercambio 
+    // **Const for Intercambio 
     const handleBookChanged = async (id, index)=> {
       const updatedBooks = [...books]
       updatedBooks[index].statusChanged = !updatedBooks[index].statusChanged
@@ -82,10 +82,10 @@ function AdminNewBooks() {
         list()
     }, [reload])
 
-    const filteredBooks= books.filter((libro) =>
-    libro.namebook.toLowerCase().includes(search.toLocaleLowerCase())||
-    libro.authorbook.toLocaleLowerCase().includes(search.toLowerCase()) ||
-    libro.categbook.toLowerCase().includes(search.toLowerCase())
+    const filteredBooks= books.filter((book) =>
+    book.namebook.toLowerCase().includes(search.toLocaleLowerCase())||
+    book.authorbook.toLocaleLowerCase().includes(search.toLowerCase()) ||
+    book.categbook.toLowerCase().includes(search.toLowerCase())
     )
 
     return (
@@ -101,20 +101,20 @@ function AdminNewBooks() {
               </div><br />
 
                  <ul className='UlBook'>
-                  {filteredBooks.map((libro, index) =>
+                  {filteredBooks.map((book, index) =>
 
-                      <li key={libro.id} className='LiBook'>
+                      <li key={book.id} className='LiBook'>
                          <div className='containerImg'>
-                             <img className='BookImg'onClick={()=> setSelectedUser(libro.usuario)} src={libro.img} alt="BookImg" />
+                             <img className='BookImg'onClick={()=> setSelectedUser(book.usuario)} src={book.img} alt="BookImg" />
                          </div>
 
                          <div className='BookContent'>  
-                             <strong  className='BookInfo'>Name</strong> {libro.namebook} <br /><br /><br />
-                             <strong className='BookInfo'>Author</strong> {libro.authorbook} <br /><br /><br />
-                             <strong className='BookInfo'>Category</strong> {libro.categbook} <br /><br /><br />
-                             <strong className='BookInfo'>Information</strong> {libro.infobook} <br /><br /><br />
-                              <strong className='BookInfo'>Username</strong> <a onClick={()=> setSelectedUser(libro.usuario)}>{libro.usuario}</a><br />
-                              <strong className='BookInfo'>Email</strong> {libro.correoUsuario} <br /><br /><br />
+                             <strong  className='BookInfo'>Name</strong> {book.namebook} <br /><br /><br />
+                             <strong className='BookInfo'>Author</strong> {book.authorbook} <br /><br /><br />
+                             <strong className='BookInfo'>Category</strong> {book.categbook} <br /><br /><br />
+                             <strong className='BookInfo'>Information</strong> {book.infobook} <br /><br /><br />
+                              <strong className='BookInfo'>Username</strong> <a onClick={()=> setSelectedUser(book.usuario)}>{book.usuario}</a><br />
+                              <strong className='BookInfo'>Email</strong> {book.correoUsuario} <br /><br /><br />
                          </div>
                                 
                          <div className='containerOptUptdates'>
@@ -123,8 +123,8 @@ function AdminNewBooks() {
                                 type="checkbox"
                                 name="StateChange"
                                 id="StateChange"
-                                checked={libro.statusFront}
-                                onChange={() => handleBookCheck(libro.id,index)}
+                                checked={book.statusFront}
+                                onChange={() => handleBookCheck(book.id,index)}
                               /> <br />
 
                                 <label className='lbFavorites' htmlFor="">Favorites</label>
@@ -133,48 +133,52 @@ function AdminNewBooks() {
                                      type="checkbox"
                                      name=""
                                      id="btnCheckbox"
-                                     checked={libro.statusFavorites}
-                                     onChange={() =>handleBookFavorite(libro.id,index)}
+                                     checked={book.statusFavorites}
+                                     onChange={() =>handleBookFavorite(book.id,index)}
                                     /> 
                                      <label htmlFor="btnChecbox" className='lblCheckbox'></label>
                                  </div><br />
 
+
+                                  <div>
+                                {/* show text exchanged */}
+                                    <label className='lbFavorites' htmlFor="btnCheckboxChanged" >
+                                        {book.statusChanged ? 'Interchanged' : 'Aviable'}
+                                    </label><br />
+                                    {book.correoUsuario === presentUserEmail && (
+                                    <>
+                                    
+                                    <div className='btnChanged'>
+                                    <input 
+                                    id='btnCheckboxChanged'
+                                    className='btnCheckboxChanged' type="checkbox" 
+                                    checked={book.statusChanged}
+                                    onChange={()=> handleBookChanged(book.id, index)}
+                                        />
+                                        <label htmlFor="btnCheckboxChanged" className='lblCheckboxChanged'></label> {/* Asocia el label con el checkbox */}
+                                    </div>
+                                    </>
+                                )}
+                  </div>
+
+
                                  <div className='buttons-row'>
-                                    <button className='btnDelete' onClick={e => delet(libro.id)}>Delete</button>
+                                    <button className='btnDelete' onClick={e => delet(book.id)}>Delete</button>
                                     <button className='btnEdit' onClick={() => setMostrar(!mostrar)}>Edit</button> <br />
                                 </div>
                                     {mostrar &&
                                      <>
-                                     <div className='edit-fields'>
+                                     <div className='edit-fields'><br /><br /><br />
                                        <input className='spaceEdit' onChange={newName} type="text" placeholder='Name' /> <br />
                                        <input className='spaceEdit' onChange={newAuthor} type="text" placeholder='Author' /><br />
                                        <input className='spaceEdit' onChange={newCateg} type="text" placeholder='Category' /><br />
                                        <input className='spaceEdit' onChange={newInfo} type="text" placeholder='Information' /><br />    
-                                       <button className='confirmEdit' onClick={() => edit(libro.id)} >Complete</button>
+                                       <button className='confirmEdit' onClick={() => edit(book.id)} >Complete</button>
                                      </div>
                                     </>
                                     }
 
-                 <div><br /><br />
-                   {/* show text exchanged */}
-                      <label className='lbFavorites' htmlFor="btnCheckboxChanged" >
-                         {libro.statusChanged ? 'Interchanged' : 'Aviable'}
-                      </label><br />
-                  {libro.correoUsuario === presentUserEmail && (
-                     <>
-                    
-                      <div className='btnChanged'>
-                      <input 
-                      id='btnCheckboxChanged'
-                      className='btnCheckboxChanged' type="checkbox" 
-                      checked={libro.statusChanged}
-                      onChange={()=> handleBookChanged(libro.id, index)}
-                        />
-                        <label htmlFor="btnCheckboxChanged" className='lblCheckboxChanged'></label> {/* Asocia el label con el checkbox */}
-                      </div>
-                    </>
-                   )}
-                  </div>
+               
                                 
                                 </div>
                             </li>
