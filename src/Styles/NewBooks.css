@@ -250,14 +250,6 @@ right: 40%;
 }
 
 
-.edit-fields{
-  position: absolute;
-  display: grid;
-  margin: 17%;
-  margin-left: 0px;
-
-}
-
 
 /*btn Checkbox book changed*/
 .btnCheckboxChanged{

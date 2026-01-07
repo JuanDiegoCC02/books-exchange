@@ -90,7 +90,7 @@ function AdminRequestUsers() {
                             <div><br />
                                 <button className='btnDeleteUser' onClick={()=> userDelete(user.id)}>delete</button>
                                 <button className='btnEditUser' onClick={()=> startEdit(user)}>
-                                    {editingId === user.id? 'Cancel' : 'edit'} 
+                                    {editingId === user.id? 'cancel' : 'edit'} 
                                 </button>
                             </div>
                             {editingId === user.id && 
@@ -100,7 +100,7 @@ function AdminRequestUsers() {
                                 <input className='inpEditUser' type="text" onChange={newEmail}  placeholder='Email' value={editEmail} />
                                 <input className='inpEditUser' type="text" onChange={newLocation} placeholder='Location' value={editLocation} />
                                 <input className='inpEditUser' type="text" onChange={newTypeUser} placeholder='Type User' value={editTypeUser} />
-                                <button className='btnSaveEditUser' onClick={()=> edit(user.id)}>Save</button>
+                                <button className='btnSaveEdit' onClick={()=> edit(user.id)}>Save</button>
                             </div>
                             </>
                             }

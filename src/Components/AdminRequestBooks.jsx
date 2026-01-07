@@ -9,7 +9,7 @@ function AdminRequestBooks() {
     const [books, setBooks] = useState([])
     const [reload, setReload] = useState(false)
     const [selectedUser, setSelectedUser] = useState(null);
-    const [show, setShow] = useState(false)
+    const [bookId, setBookId]= useState(null)
     const [editName, setEditName] = useState("")
     const [editAuthor, setEditAuthor] = useState("")
     const [editCategory, setEditCategory] = useState("")
@@ -35,7 +35,7 @@ function AdminRequestBooks() {
         setEditInfo(e.target.value)
     }
    
-    /*funtion edit correct */
+    /* edit correct */
     async function edit(id) {
         const bookEdit ={
             "namebook" : editName,
@@ -46,6 +46,19 @@ function AdminRequestBooks() {
         await updateBooks(bookEdit, id)
 
         setReload(!reload)
+    }
+
+    const startEdit = (book)=>{
+        if (bookId === book.id) {
+            setBookId(null)
+        } else {
+            setBookId(book.id) 
+            setEditName(book.namebook)
+            setEditAuthor(book.authorbook)
+            setEditCategory(book.categbook)
+            setEditInfo(book.infobook)
+        }
+        
     }
 
     /*Funtion delete correct */
@@ -100,16 +113,18 @@ function AdminRequestBooks() {
                             <div className='contBtnDeleteAdmin'><br />
                                 <button className='btnDeleteAdminBook' 
                                 onClick={()=> bookDelete(book.id)}>delete</button>
-                                <button className='btnDeleteAdminBook' onClick={() =>setShow(!show)}>edit</button><br />
+                                <button className='btnDeleteAdminBook' onClick={() =>startEdit(book)}>
+                                    {bookId === book.id? 'cancel' : 'edit'}
+                                </button><br />
                             </div>
-                            {show &&
+                            {bookId === book.id &&
                             <>
                              <div className=''>
-                                <input className='spaceEdit' onChange={newName} type="text" placeholder='Name' />
-                                <input className='spaceEdit' onChange={newAuthor} type="text" placeholder='Author' />
-                                <input className='spaceEdit' onChange={newCategory} type="text" placeholder='Category' />
-                                <input className='spaceEdit' onChange={newInfo} type="text" placeholder='Information' />
-                                <button className='confirmEdit' onClick={() => edit(book.id)}>Save</button>
+                                <input className='inpEditBook' onChange={newName} type="text" placeholder='Name' />
+                                <input className='inpEditBook' onChange={newAuthor} type="text" placeholder='Author' />
+                                <input className='inpEditBook' onChange={newCategory} type="text" placeholder='Category' />
+                                <input className='inpEditBook' onChange={newInfo} type="text" placeholder='Information' />
+                                <button className='btnSaveEdit' onClick={() => edit(book.id)}>Save</button>
                             </div>
                             </>
                             }

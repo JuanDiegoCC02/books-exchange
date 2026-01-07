@@ -7,6 +7,7 @@ import BookProfileExtend from './BookProfileExtend'
 function AdminNewBooks() {
     const presentUserEmail = localStorage.getItem("correoUsuario")
     const [mostrar, setMostrar] = useState(false)
+    const [bookId, setBookId] = useState(null)
     const [books, setBooks] = useState([])
     const [editName, setEditName] = useState("")
     const [editAuthor, setEditAuthor] = useState("")
@@ -56,21 +57,34 @@ function AdminNewBooks() {
         setEditInfo(e.target.value)
     }
 
-    //funtion Delete
-    function delet(id) {
-        deleteBooks(id)
+    //funtion Delete conrrect
+    async function delet(id) {
+        await deleteBooks(id)
         setReload(!reload)
     }
+
     //funtion Edit
-    function edit(id) {
-        const bookEdit = {
+    async function edit(id) {
+       const bookEdit = {
             "namebook": editName,
             "authorbook": editAuthor,
             "categbook": editCateg,
             "infobook": editInfo
-        }
-        updateBooks(bookEdit, id)
+        } 
+     await updateBooks(bookEdit, id)
         setReload(!reload);
+    }
+
+    const startEdit = (book)=>{
+        if (bookId === book.id) {
+            setBookId(null)
+        } else {
+            setBookId(book.id)
+            setEditName(book.namebook)
+            setEditAuthor(book.authorbook)
+            setEditCateg(book.categbook)
+            setEditInfo(book.infobook)
+        }
     }
 
    
@@ -164,16 +178,18 @@ function AdminNewBooks() {
 
                                  <div className='buttons-row'>
                                     <button className='btnDelete' onClick={e => delet(book.id)}>Delete</button>
-                                    <button className='btnEdit' onClick={() => setMostrar(!mostrar)}>Edit</button> <br />
+                                    <button className='btnEdit' onClick={() => startEdit(book)}>
+                                        {bookId === book.id? 'Cancel' : 'Edit'}
+                                    </button> <br />
                                 </div>
-                                    {mostrar &&
+                                    {bookId === book.id &&
                                      <>
-                                     <div className='edit-fields'><br /><br /><br />
+                                     <div>
                                        <input className='spaceEdit' onChange={newName} type="text" placeholder='Name' /> <br />
                                        <input className='spaceEdit' onChange={newAuthor} type="text" placeholder='Author' /><br />
                                        <input className='spaceEdit' onChange={newCateg} type="text" placeholder='Category' /><br />
                                        <input className='spaceEdit' onChange={newInfo} type="text" placeholder='Information' /><br />    
-                                       <button className='confirmEdit' onClick={() => edit(book.id)} >Complete</button>
+                                       <button className='confirmEdit' onClick={() => edit(book.id)} >Save</button>
                                      </div>
                                     </>
                                     }
