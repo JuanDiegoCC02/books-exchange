@@ -67,13 +67,13 @@ function FormLogIn() {
     </div>
     <div className='FormContainerLogIn'>
         <div className='inpLogIn'>
-            <label htmlFor="">Username</label><br />
-            <input className='inputText' value={Username} onChange={usrname} type="text" />
+            <label className='lbLogIn' htmlFor="">Username</label><br />
+            <input className='inputLogIn' value={Username} onChange={usrname} type="text" />
         </div>
 
         <div className='inpLogIn'>
-            <label htmlFor="">Password</label><br />
-            <input className='inputText' value={Password} onChange={password} type="password" name=""/>
+            <label className='lbLogIn' htmlFor="">Password</label><br />
+            <input className='inputLogIn' value={Password} onChange={password} type="password" name=""/>
         </div><br />
 
         <div>

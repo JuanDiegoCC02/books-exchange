@@ -5,30 +5,29 @@
 
 }
 .TituloLogIn {
-  width: 95%;
+  width: 55%;
   text-align: center;
   font-size: 38px;
-  border: 6px, #f1f07f;
+  border: 5px, #fffd74;
   font-weight: bold;
-  color: #FAF3E0;
+  color: #000000;
   padding: 18px;
-  background: linear-gradient(145deg, #000000e3 0%, #4e3008e8 50%, #000000e3 100%);
+  background: linear-gradient(115deg, #000000 0%, #aa840870 50%, #000000 100%);
   border-style:  double;
   border-radius: 25px 25px 0 0;
   letter-spacing: 2px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 3px 3px 10px rgb(0, 0, 0);
   box-shadow:  0px 8px 20px rgba(0,0,0,0.8);
 }
 .FormContainerLogIn{
-    width: 55%;
+    width: 35%;
     font-size: 19px;
-    color: #FAF3E0;
-    border-style: groove;
-    margin: 35px auto;
+    border-style: solid;
+    margin: 0 auto;
     padding: 55px;
-    border-width: 6px;
-    border-color: #020000;
-    background: linear-gradient(145deg, #000000 0%, #3e1f0a 50%, #000000 100%);
+    border-width: 3px;
+    border-color: #cfcc17;
+    background: #0e0e0e;
     justify-content: center;
     box-shadow: 5px 5px 15px rgba(49, 1, 1, 0.774);
 
@@ -39,9 +38,24 @@
     align-items: center;
     padding: 5px;
 }
+.lbLogIn{
+    color: #f1f07f;
+    font-size: 21px;
+}
+
+.inputLogIn{
+  background-color: #fbffd5e8;
+    border: rgb(0, 0, 0);
+    border-radius: 5px;
+    color: black;
+    height: 25px;
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+}
 .BTNLogIn{
      font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 17px;
     color: #f7ff88;
     background-color: rgb(3, 2, 2);
     border-color: rgb(245, 253, 136);
@@ -53,12 +67,12 @@
     flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
     justify-content: center;              
     align-items: center;                            /* verticalmente */
-    width: 15%;                        /* Hace que se ajuste al ancho de la pantalla */
+    width: 25%;                        /* Hace que se ajuste al ancho de la pantalla */
                       /* Hace que se ajuste al ancho de la pantalla */
   
 }
 .BTNLogIn:hover{
-     color: rgba(255, 253, 124, 0.897);
+     color: rgba(251, 255, 0, 0.897);
     border-color: rgb(248, 250, 135);
     background-color: rgb(48, 30, 30);
 }   
@@ -66,8 +80,8 @@
            
     text-align: center;                                            
     font-family: monospace;
-    color: rgb(102, 59, 10);
-    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
 }
 .LinkRegister{
 color: rgb(62, 63, 63);
