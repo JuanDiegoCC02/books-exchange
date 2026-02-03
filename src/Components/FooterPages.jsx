@@ -31,7 +31,7 @@ function FooterPages() {
           
           
         <div className='ContainerTextFooter'>
-          <h5 className='TextFooter'>©Shared Exchanges <br /> Design JD</h5>
+          <h5 className='TextFooter'>©Shared Reading <br /> Design JD</h5>
         </div>
 
         </footer>
