@@ -1,33 +1,41 @@
-
-
-
-/* ---- Título ---- */
+/* --- container all --- */
 .containerTitleContacUs {
   width: 100%;
   text-align: center;
   margin-bottom: 45px;
 }
 
+.containerDIContacUs {
+  border: 3px double #e6e7a0;
+  box-shadow: 6px 6px 18px rgb(0, 0, 0),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.945);
+  padding: 5%;
+  margin: 1%;
+}
+
 .titleContacUs {
   padding: 18px 32px;
+  margin: 0 auto;
   font-size: 42px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #fdf5d1;
-  background: linear-gradient(145deg, #3e1f0a 0%, #4b470dfa 50%, #3e1f0a 100%);
-  border: 6px groove #383b01;
-  border-radius: 12px;
- text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
-  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.85),
-              inset 3px 3px 14px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(115deg, #000000 0%, #aa840870 50%, #000000 100%);
+  border: 5px double #fffd74;
+  border-radius: 25px 25px 0 0;
+  text-shadow: 3px 3px 8px rgb(255, 249, 171);
+  box-shadow: 6px 6px 18px rgb(0, 0, 0),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.945);
+  width: 85%;
+  max-width: 900px;
+  color: #000000;
+  box-sizing: border-box;
 }
 
-/* ---- Contenedor descripción general ---- */
 .fullDescripContainer {
-  background-color: #291d05;
-  width: 90%;
+  background-color: #0e0e0e;
+  width: 100%;
   margin: 0 auto;
-  padding: 5% 0;
+  padding: 1% 0;
 }
 
 .ContainerDataPag {
@@ -48,9 +56,10 @@
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 5% auto;
+  width: 90%;
+  max-width: 800px;
+  box-sizing: border-box;
 }
-
-
 
 .InfoTYPag {
   padding: 20px 25px;
@@ -64,45 +73,53 @@
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 7% auto;
+  width: fit-content;
+  max-width: 90%;
+  transition: transform 0.2s ease;
 }
 
-/* ---- Contenedor principal ---- */
+.InfoTYPag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(255, 215, 154, 0.623);
+}
+
+/* ---grid 1 column--- */
 .ContainerContactUs {
   width: 85%;
-  max-width: 1100px;
+  max-width: 800px; 
   margin: 40px auto;
   padding: 40px;
-  background: linear-gradient(135deg, #4b1f06 0%, #2d1b0d 100%);
-  border: 3px solid #393838;
+  background-color: #0e0e0e;
+  border: 3px double #e6e7a0;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   color: #FAF3E0;
+  box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr; /* Forzamos exactamente 1 columna siempre */
   gap: 25px;
 }
 
-/* ---- Tarjetas de datos ---- */
 .ContainerData {
   padding: 25px;
   background: #0d0d0d;
   border: 2px solid #d4b15c;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(248, 217, 170, 0.35);
+  box-shadow: 0 4px 12px rgba(248, 217, 170, 0.322);
   color: #f8eebd;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .ContainerData:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 18px rgba(248, 217, 170, 0.55);
+  box-shadow: 0 10px 18px rgba(255, 248, 154, 0.61);
 }
 
-/* ---- Subtítulos dentro de las tarjetas ---- */
+/* --- texts  --- */
 .titleHrContacUs,
 .titleTelefContacUs,
 .titleEmailContacUs {
@@ -115,11 +132,31 @@
   padding-bottom: 5px;
 }
 
-/* ---- Textos específicos ---- */
 .HrContacUs,
 .telfContacUs,
 .emailContacUs {
   margin: 6px 0;
   font-size: 1rem;
   color: #fdf5d1;
+}
+
+/* ---responsive-- */
+@media (max-width: 768px) {
+  .titleContacUs {
+    font-size: 24px; /* Tamaño de fuente más cómodo para móvil */
+    width: 95%;
+    padding: 15px 10px;
+  }
+
+  .ContainerContactUs {
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .DescriptionContacUs {
+    padding: 20px;
+    width: 95%;
+    font-size: 0.95rem;
+  }
 }
