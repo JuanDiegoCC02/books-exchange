@@ -68,23 +68,23 @@ function FormRegister() {
 
      <div className='FormContainer'>
         <div className='inpRegist'>
-            <label htmlFor="">Username</label><br />
-            <input className='inputText' value={Username} onChange={username} type="text" />
+            <label className='lbRegister' htmlFor="">Username</label><br />
+            <input className='inputRegister' value={Username} onChange={username} type="text" />
         </div>
 
         <div className='inpRegist'>
-            <label htmlFor="">Email</label><br />
-            <input className='inputText' type="email" onChange={email} name="Email" id="Email" />
+            <label className='lbRegister' htmlFor="">Email</label><br />
+            <input className='inputRegister' type="email" onChange={email} name="Email" id="Email" />
         </div>
 
         <div className='inpRegist'>
-            <label htmlFor="">Password</label><br />
-            <input className='inputText' type="password" onChange={password} name="Password" id="Password" />
+            <label className='lbRegister' htmlFor="">Password</label><br />
+            <input className='inputRegister' type="password" onChange={password} name="Password" id="Password" />
         </div>
         
         <div className='inpRegist'>
-            <label htmlFor="">Location</label><br />
-            <input className='inputText' value={Location} onChange={location} type="text" />
+            <label className='lbRegister' htmlFor="">Location</label><br />
+            <input className='inputRegister' value={Location} onChange={location} type="text" />
         </div><br />
         
         <div className='inpCheckboxTC'>
@@ -126,7 +126,7 @@ function FormRegister() {
 <div className='ContainerLinkLogIn'>
     <p>Are you already registered?<br /> <Link className='LinkLogIn' to= '/LogIn'>Log In</Link></p>
 </div>
-<br /><br />
+
 </div>
   )
 }

@@ -20,23 +20,40 @@
   box-shadow:  0px 8px 20px rgba(0,0,0,0.8);
 }
 
+.lbRegister{
+    color: #f1f07f;
+    font-size: 21px;
+}
+
+
+.inputRegister{
+  background-color: #fbffd5e8;
+    border: rgb(0, 0, 0);
+    border-radius: 5px;
+    color: black;
+    height: 25px;
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+}
+
+
 .FormContainer{
-    width: 60%;
-    color: #FAF3E0;
-    border-style: groove;
+    width: 35%;
     font-size: 19px;
-    margin: 35px auto;
-    padding: 45px;
-    border-width: 6px;
-    border-color: #020000;
-     background: linear-gradient(145deg, #000000 0%, #3e1f0a 50%, #000000 100%);
+    border-style: solid;
+    margin: 0 auto;
+    padding: 55px;
+    border-width: 3px;
+    border-color: #cfcc17;
+    background: #0e0e0e;
     justify-content: center;
     box-shadow: 5px 5px 15px rgba(49, 1, 1, 0.774);
-
+    color: #f1f07f;
 }
 .BTNRegister{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
+      font-size: 17px;
     color: #f7ff88;
     background-color: rgb(3, 2, 2);
     border-color: rgb(245, 253, 136);
@@ -48,21 +65,21 @@
     flex-wrap: wrap;                /* Wrap: ayuda al ajuste de elementos en múltiples líneas */
     justify-content: center;              
     align-items: center;                            /* verticalmente */
-    width: 15%;                        /* Hace que se ajuste al ancho de la pantalla */
+    width: 25%;                        /* Hace que se ajuste al ancho de la pantalla */
   
 }
 .BTNRegister:hover{
-    color: rgba(255, 253, 124, 0.897);
+      color: rgba(251, 255, 0, 0.897);
     border-color: rgb(248, 250, 135);
-    background-color: rgb(54, 38, 38);
+    background-color: rgb(48, 30, 30);
     
 }   
 .ContainerLinkLogIn{
            
-    text-align: center;                                            
+   text-align: center;                                            
     font-family: monospace;
-    color: rgb(102, 59, 10);
-    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
 }
 .LinkLogIn{
 color: rgb(62, 63, 63);
@@ -74,16 +91,7 @@ color: rgb(62, 63, 63);
     
     padding: 9px;
 }
-.inputText{
-    background-color: #e8f5b191;
-    border: rgb(0, 0, 0);
-    border-radius: 5px;
-    color: black;
-    height: 25px;
-    width: 35%;
-    text-align: center;
-    margin: 5px;
-}
+
 .inpCheckboxTC{
     display: flex;
     flex-direction: column;
