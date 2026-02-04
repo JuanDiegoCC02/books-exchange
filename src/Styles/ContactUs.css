@@ -1,8 +1,7 @@
 /* --- container all --- */
 .containerTitleContacUs {
-  width: 100%;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 
 .containerDIContacUs {
@@ -33,13 +32,13 @@
 
 .fullDescripContainer {
   background-color: #0e0e0e;
-  width: 100%;
+  width: 67%;
   margin: 0 auto;
   padding: 1% 0;
 }
 
 .ContainerDataPag {
-  width: 85%;
+  width: 79%;
   margin: 0 auto 30px auto;
   text-align: center;
 }
@@ -59,6 +58,10 @@
   width: 90%;
   max-width: 800px;
   box-sizing: border-box;
+}
+.DescriptionContacUs:hover{
+   transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(255, 215, 154, 0.623);
 }
 
 .InfoTYPag {
@@ -91,7 +94,7 @@
   padding: 40px;
   background-color: #0e0e0e;
   border: 3px double #e6e7a0;
-  border-radius: 14px;
+  border-radius: 3px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   color: #FAF3E0;
   box-sizing: border-box;

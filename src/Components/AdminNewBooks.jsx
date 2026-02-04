@@ -6,7 +6,6 @@ import BookProfileExtend from './BookProfileExtend'
 
 function AdminNewBooks() {
     const presentUserEmail = localStorage.getItem("correoUsuario")
-    const [mostrar, setMostrar] = useState(false)
     const [bookId, setBookId] = useState(null)
     const [books, setBooks] = useState([])
     const [editName, setEditName] = useState("")
@@ -110,8 +109,8 @@ function AdminNewBooks() {
           <div className='AllContainer'><br />
                     
               <div className='searchAllDiv'>
-                <input className='barraSearch' onChange={(e)=> setSearch(e.target.value)} type="search" name="buscador" id="barraSearch" /> 
-                <input className='BTNEnviar' type="button" value="Search" />
+                <input className='barraSearch' onChange={(e)=> setSearch(e.target.value)} type="search" name="buscador" placeholder='Book title & book category' id="barraSearch" /> 
+                <input className='BTNSearch' type="button" value="Search" />
               </div><br />
 
                  <ul className='UlBook'>
@@ -123,7 +122,7 @@ function AdminNewBooks() {
                          </div>
 
                          <div className='BookContent'>  
-                             <strong  className='BookInfo'>Name</strong> {book.namebook} <br /><br /><br />
+                             <strong  className='BookInfo'>Title</strong> {book.namebook} <br /><br /><br />
                              <strong className='BookInfo'>Author</strong> {book.authorbook} <br /><br /><br />
                              <strong className='BookInfo'>Category</strong> {book.categbook} <br /><br /><br />
                              <strong className='BookInfo'>Information</strong> {book.infobook} <br /><br /><br />
