@@ -45,11 +45,14 @@ function ComponentProfile() {
         return <p>loagding user</p>
     }
   return (
-    <div className='containerAllProfile'>
-        <div className='containerTitleProfile'>
-            <h4 className='TitleProfile'>Profile</h4>
-        </div>
+    <div>
+     <div className='containerTitleProfile'>
+       <h4 className='TitleProfile'>Profile</h4>
+     </div>
         
+
+    <div className='containerAllProfile'>
+      
         <div className='containerInfoProfile'>
             <div className='containerDataUserProfile'><strong className='dataUser'>Username</strong><br />{user.nombre} </div>
             <div className='containerDataUserProfile'><strong className='dataUser'>Email</strong><br />{user.email} </div>
@@ -57,6 +60,7 @@ function ComponentProfile() {
         </div>
 
         <div className='containerBooksProfile'><strong className='BookInfoProfile'>Exchanged Books</strong><br />{books.length} </div>
+    </div>
     </div>
   )
 }

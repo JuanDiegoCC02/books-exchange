@@ -1,72 +1,81 @@
+/*Title Styles*/
+.containerTitleProfile {
+ width: 100%;
+  text-align: center;
+  margin: 21px auto 45px auto;
+}
+.TitleProfile {
+   width: 75%;
+  padding: 18px 32px;
+  margin: 0 auto;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000000;
+  background: linear-gradient(115deg, #000000 0%, #aa840870 50%, #000000 100%);
+  border: 5px double #fffd74;
+  border-radius: 25px 25px 0 0;
+  box-sizing: border-box;
+  text-shadow: 3px 3px 8px rgb(255, 249, 171);
+  box-shadow: 6px 6px 18px rgb(0, 0, 0),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.945);
+}
 
 .containerAllProfile {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-    background: linear-gradient(145deg, #000000 0%, #381701f1 50%, #000000 100%);
-  min-height: 100vh;
-  padding: 3rem 1rem;
-  color: #f5e6c5; /* tono cálido crema */
-  font-family: 'Poppins', sans-serif;
+   margin: 0 auto;
+  padding: 20px;
+  background: #000000;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 2%;
 }
 
-/*Title Styles*/
-.containerTitleProfile {
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-.TitleProfile {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f8e640; 
-  border-bottom: 3px solid #6d6969;
-  display: inline-block;
-  padding-bottom: 0.4rem;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(218, 196, 72, 0.781);
-}
 
 /* containerInfo Styles*/
 .containerInfoProfile {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
-  background: rgba(35, 30, 25, 0.9);
+  color: #e0b64f;
+  background: rgba(12, 12, 12, 0.774);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 204, 102, 0.15);
   border-radius: 15px;
   padding: 2rem;
-  width: 90%;
-  max-width: 800px;
+  width: 91%;
+  max-width: 900px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .containerInfoProfile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(255, 204, 102, 0.15);
+  box-shadow: 0 12px 28px rgba(255, 204, 102, 0.274);
 }
 
 /* CardInformation Styles */
 .containerDataUserProfile {
+  font-size: 1.2rem;
   text-align: center;
-  background: linear-gradient(145deg, #2e2720, #3a3128);
-  border-radius: 12px;
+  background: linear-gradient(145deg, #111111, #111111);
   padding: 1.2rem 1.5rem;
-  border: 1px solid rgba(255, 204, 102, 0.15);
+  border: 3px double #fffd74; 
   box-shadow: inset 0 0 10px rgba(255, 204, 102, 0.1);
   transition: all 0.3s ease;
 }
 .containerDataUserProfile:hover {
-  background: linear-gradient(145deg, #3c332a, #4a3e32);
+  background: linear-gradient(145deg, #000000, #222222);
   transform: translateY(-3px);
-  box-shadow: 0 5px 12px rgba(255, 204, 102, 0.2);
+  box-shadow: 0 5px 12px rgba(209, 255, 3, 0.596);
 }
 
 
 .dataUser {
   display: block;
   color: #ffcc66; 
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-shadow: 0 0 5px rgba(255, 204, 102, 0.2);
@@ -74,27 +83,30 @@
 
 /*BooksData Styles*/
 .containerBooksProfile {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
-  background: linear-gradient(145deg, #2a241e, #3b3229);
-  border-radius: 15px;
+  font-size: 1.5rem;
+  color: gold ;
+  background: linear-gradient(145deg, #111111, #111111);
   padding: 1.5rem 2rem;
-  width: 90%;
+  width: 50%;
   max-width: 600px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 204, 102, 0.2);
+  border: 3px double #fffd74; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .containerBooksProfile:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(255, 204, 102, 0.15);
+  background: linear-gradient(145deg, #000000, #222222);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(229, 255, 0, 0.479);
 }
 
 .BookInfoProfile {
   color: #e0b64f;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-shadow: 0 0 8px rgba(255, 204, 102, 0.3);
 }
 
@@ -105,7 +117,7 @@
   color: #d8c79c;
 }
 
-/* responsividad */
+/* responsive */
 @media (max-width: 768px) {
   .ContainerTitleProfile {
     font-size: 1.8rem;
