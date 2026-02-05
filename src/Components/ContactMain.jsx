@@ -5,7 +5,6 @@ function ContactMain() {
   return (
     <div>
 
-<main>
     <div className='containerTitleContacUs'>
         <h1 className='titleContacUs'>Contact Us</h1>
     </div>
@@ -42,12 +41,7 @@ function ContactMain() {
 </div><br />
    
     </div>
-
-    
     </div>
-
-
-</main>
 
     </div>
   )

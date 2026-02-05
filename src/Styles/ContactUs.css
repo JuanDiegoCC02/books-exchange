@@ -24,15 +24,15 @@
   text-shadow: 3px 3px 8px rgb(255, 249, 171);
   box-shadow: 6px 6px 18px rgb(0, 0, 0),
               inset 3px 3px 14px rgba(0, 0, 0, 0.945);
-  width: 85%;
-  max-width: 900px;
+  width: 80%;
+  max-width: 1000px;
   color: #000000;
   box-sizing: border-box;
 }
 
 .fullDescripContainer {
   background-color: #0e0e0e;
-  width: 67%;
+  width: 72%;
   margin: 0 auto;
   padding: 1% 0;
 }

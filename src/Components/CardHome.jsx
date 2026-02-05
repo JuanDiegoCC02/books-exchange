@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
-import '../Styles/CardFront.css'
-import llamadosBooks, { updateBooks }  from '../Services/llamadosBooks'
+import '../Styles/CardHome.css'
+import llamadosBooks from '../Services/llamadosBooks'
 
 
 function CardHome() {

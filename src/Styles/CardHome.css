@@ -1,43 +1,47 @@
 .containerTitleHome{
-     width: 100%;
+  width: 100%;
   text-align: center;
-  margin: 50px auto 35px auto;
+  margin: 21px auto 45px auto;
 }
 .TitleHome{
-  display: block;
+  width: 75%;
+  margin: 0 auto;
   padding: 18px 32px;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #fdf5d1;
-  background: linear-gradient(145deg, #3e1f0a 0%, #4b470dfa 50%, #3e1f0a 100%);
-  border: 6px groove #383b01;
-  border-radius: 14px;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
-  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.85),
-              inset 3px 3px 14px rgba(0, 0, 0, 0.6);
+  color: #000000;
+  background: linear-gradient(115deg, #000000 0%, #aa840870 50%, #000000 100%);
+  border: 5px double #fffd74;
+  border-radius: 25px 25px 0 0;
+  box-sizing: border-box;
+  text-shadow: 3px 3px 8px rgb(255, 249, 171);
+  box-shadow: 6px 6px 18px rgb(0, 0, 0),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.945);
 }
 
 .containerDescPagWeb{
   width: 88%;
   text-align: center;
-  margin: 50px auto 35px auto;
+  margin: 21px auto 21px auto;
 }
 .DescPagWeb{
+  width: 81%;
+  margin: 0 auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 30px;
-    background: #0d0d0d;
-   border: 5px groove #cccf01;
+  padding: 20px;
+  background: #0d0d0d;
+  border: 5px double #e6e7a0;
   box-shadow: 4px 4px 12px rgba(248, 217, 170, 0.45);
-  color: #ffee98;
+  color: #e6e7a0;
   font-size: 14px;
   line-height: 1.6;
   border-radius: 7px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
 }
 .DescPagWeb:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.55);
 }
 
@@ -46,14 +50,15 @@
 
 /* Contenedor general del Home */
 .AllContainerHome {
-  width: 90%;
+  width: 71%;
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
-  background: #3a1904;   
+  background: #000000;   
   border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   border: 4px solid #000000;
+  margin-top: 25px;
 }
 
 /* Lista de libros en columna */
@@ -74,17 +79,19 @@ display: flex;
   flex-direction: row;            /* imagen a la izquierda, contenido a la derecha */
   align-items: center;
   align-items: center;
-  width: 60%;
+  width: 90%;
   max-width: 700px;
-  background: linear-gradient(145deg, #000000 0%, #3e1f0a 50%, #000000 100%);
-  border: 6px double rgb(230, 255, 89);
+  background: #000000;
+  border: 5px double #e6e7a0;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgb(0, 0, 0);
+   overflow: hidden;
+  text-shadow: 3px 3px 8px rgb(24, 24, 24);
+    box-shadow: 0 4px 15px rgba(252, 255, 87, 0.61),
+              inset 3px 3px 14px rgb(53, 53, 53);
   padding: 10px;
-  gap: 10px;    
-  color: rgb(238, 220, 220);    
-  font-size:120%; 
+  gap: 25px;    
+  color: rgb(255, 246, 124);   
+  font-size:110%; 
   font-family: 'Times New Roman', Times, serif;  
 }
 
@@ -100,9 +107,9 @@ display: flex;
   padding: 15px;
   object-fit: cover;              
   border-radius: 8px;
-  background-color: black;
-  border: groove, 5px, rgba(0, 0, 0, 0.973); 
-  box-shadow: 0 2px 6px 2px rgb(236, 255, 66);
+   background-color: rgb(0, 0, 0);
+  border: double, 3px, rgba(243, 255, 140, 0.973); 
+  box-shadow: 0 2px 6px 2px rgb(243, 255, 140);
 }
 
 
@@ -118,8 +125,6 @@ display: flex;
 .BookInfoHome {
   display: block;
   font-weight: bold;
-
-  color: #333;
   margin: 5px 0 2px 0;
 }
 
