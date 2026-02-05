@@ -11,11 +11,9 @@ function NavPages() {
     <div>
 
       <div className='containerHeader'>
-
         <h1 className='titleHeader'>Shared Reading</h1>
+      </div>
 
-
-        <div>
           <div className='containerLinksHdr'>
             {
               !localStorage.getItem("typeUser")&&(
@@ -51,17 +49,7 @@ function NavPages() {
           <NavLink className='LinksHeader' to='/'> Home </NavLink>
 
          
-         
-          
-       
-          </div>
-
-
-        </div>
-
-      </div>
-
-   {  localStorage.getItem ("typeUser") &&
+          {  localStorage.getItem ("typeUser") &&
           <div className='containerOptions'>
             <button className='btnOptions' onClick={() => setOptions(!options)}> <img src={UserConfg} alt="" width={25} height={25}/> </button>
             {options && 
@@ -72,6 +60,11 @@ function NavPages() {
       
           </div>
           }
+
+
+      </div>
+
+  
     </div>
   )
 }

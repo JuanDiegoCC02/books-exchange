@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 function ComponentCloseSS() {
@@ -11,9 +11,9 @@ function ComponentCloseSS() {
   return (
     <div>
 
-        <div className='containerCloseProfile'>
-          <a className='BtnProfile' href="/profile">Profile</a>
-        </div>
+      <div className='containerCloseProfile'>
+        <NavLink className='BtnProfile' to="/profile">Profile</NavLink>    
+     </div>
 
 
         
