@@ -25,12 +25,13 @@ function CardHome() {
           
         </div>
         
-        <div className='containerDescPagWeb'>
+      
+        <div>
+        <div className='AllContainerHome'>
+            <div className='containerDescPagWeb'>
           <p className='DescPagWeb'>A book-sharing website where we help you reuse that book you've already read, while also focusing on promoting reading and fostering social interaction.</p>          
         </div>
 
-        <div>
-        <div className='AllContainerHome'>
         <ul className='UlHome'>
         {books
         .filter((libro)=> libro.statusFront===true)
