@@ -1,35 +1,42 @@
-/* ======== CARD ADMIN PRINCIPAL ======== */
+/* ======== Card Admin All ======== */
 .containerAdminAllCard {
-  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  background: linear-gradient(145deg, #222222, #222222);
   color: #f5d97a; /* dorado suave */
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(255, 217, 0, 0.08);
-  width: 90%;
+  width: 77%;
   max-width: 1000px;
   margin: 3rem auto;
   transition: all 0.3s ease;
   border: 1px solid rgba(212, 163, 56, 0.3);
 }
 
-/* ======== TITULO ======== */
+/* ======== title ======== */
 .AdminCardTItleContainer {
+width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(212, 163, 56, 0.4);
+  margin: 21px auto 45px auto;
 }
 
 .AdminCardTitle {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #d4a338; /* dorado más vivo */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(255, 199, 44, 0.3);
+  width: 95%;
+  padding: 18px 32px;
+  margin: 0 auto;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000000;
+  background: linear-gradient(115deg, #000000 0%, #aa840870 50%, #000000 100%);
+  border: 5px double #fffd74;
+  border-radius: 25px 25px 0 0;
+  box-sizing: border-box;
+  text-shadow: 3px 3px 8px rgb(255, 249, 171);
+  box-shadow: 6px 6px 18px rgb(0, 0, 0),
+              inset 3px 3px 14px rgba(0, 0, 0, 0.945);
 }
 
-/* ======== NAV SELECCIÓN ======== */
+/* ======== nav select ======== */
 .NavAdminSelect {
   display: flex;
   justify-content: center;
@@ -49,8 +56,8 @@
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #f5d97a;
-  background: linear-gradient(145deg, #3b2f23, #1f1a14);
+  color: #ffda62;
+  background: linear-gradient(145deg, #0f0f0f, #1f1a14);
   border: 1px solid rgba(212, 163, 56, 0.3);
   padding: 10px 25px;
   border-radius: 10px;
@@ -59,20 +66,21 @@
 }
 
 .UlAdminSelect li:hover {
-  background: linear-gradient(145deg, #4d3c2c, #2e241a);
-  color: #ffdf6c;
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(145deg, #111111, #242424);
+  color: #cccccc;
+  box-shadow: 0 0 12px rgba(88, 88, 88, 0.616);
   transform: translateY(-3px);
 }
 
+/* cuestion */ 
 .active-change {
-  background: linear-gradient(145deg, #d4a338, #b3862b);
-  color: #000;
+  background: linear-gradient(145deg, #111111, #242424);
+  color: #cccccc;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
 
-/* ======== ANIMACIÓN SUAVE ======== */
+/* ======== soft animation ======== */
 @keyframes glowPulse {
   0% {
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
@@ -89,7 +97,7 @@
   animation: glowPulse 2s infinite ease-in-out;
 }
 
-/* ======== RESPONSIVO ======== */
+/* ======== responsive ======== */
 @media (max-width: 768px) {
   .containerAdminAllCard {
     padding: 1.5rem;

@@ -72,7 +72,7 @@ function AdminRequestUsers() {
   return (
     <div className='containerAllRequestUsers'>
         
-        <div className='titleUsersRequest'>
+        <div className='titleUsersRequestContainer'>
             <h3 className='titleUsersRequest'>Users</h3> 
         </div>
         

@@ -20,7 +20,7 @@ const AdminUsersChart = () => {
               },
               stroke: {
                 curve: 'straight',
-                colors: ['#f0fd3aff'], 
+                colors: ['rgb(243, 255, 68)'], 
               },
               title: {
                 text: 'Users Log Chart for Month',
@@ -29,7 +29,7 @@ const AdminUsersChart = () => {
               },
               grid: {
                 row: {
-                  colors: ['#3d3d3dff', 'transparent'], 
+                  colors: ['rgb(121, 121, 121)', 'transparent'], 
                   opacity: 0.5
                 },
               },
