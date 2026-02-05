@@ -10,14 +10,25 @@ function MyBooksCard() {
   const [reload, setReload]=useState(false)
   
   
-  const handleBookFavorite = async (id,index)=> {
-    const updatedBooks = [...books]
-    updatedBooks[index].statusFavorites = !updatedBooks[index].statusFavorites
-    console.log("Estado actualizado:", updatedBooks);
-    await updateBooks(
-        {"statusFavorites": updatedBooks[index].statusFavorites}, id)
-        setBooks(updatedBooks)
+  const handleBookFavorite = async (id)=> {
+    const updatedBooks = books.map(book => {
+      if (book.id === id) {
+        return {...book, statusFavorites: !book.statusFavorites}        
+      }
+      return book;
+    })
+  const  bookToUpdate = updatedBooks.find (book => book.id === id);
+  console.log ("book update", bookToUpdate);
+  try {
+    await updateBooks({"statusFavorites" : bookToUpdate.statusFavorites}, id)
+    setBooks(updatedBooks)
+  } catch (error) {
+    console.error("failed to update book")
+  }
 }
+
+
+
 
   useEffect (()=>{
     async function list() {
@@ -56,9 +67,9 @@ function MyBooksCard() {
                      name="StateFavorite"
                      id="btnCheckbox" 
                      checked={libro.statusFavorites}
-                     onChange={()=>handleBookFavorite(libro.id,index)}
+                     onChange={()=>handleBookFavorite(libro.id)}
                      /> 
-                      <label htmlFor="btnChecbox" className='lblCheckbox'></label>
+                      <label htmlFor="btnCheckbox" className='lblCheckbox'></label>
 
                      </div><br />
               </li>

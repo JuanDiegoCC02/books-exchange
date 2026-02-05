@@ -153,14 +153,12 @@ function AdminNewBooks() {
                                  </div><br />
 
 
-                                  <div>
-                                {/* show text exchanged */}
-                                    <label className='lbFavorites' htmlFor="btnCheckboxChanged" >
-                                        {book.statusChanged ? 'Interchanged' : 'Aviable'}
-                                    </label><br />
+                                  <div className='containerConfgAviable'>      
+                                    <label className='textAviable' htmlFor="btnCheckboxChanged" >
+                                        {book.statusChanged ? 'Not Available' : 'Available'}
+                                    </label>
                                     {book.correoUsuario === presentUserEmail && (
                                     <>
-                                    
                                     <div className='btnChanged'>
                                     <input 
                                     id='btnCheckboxChanged'
@@ -172,7 +170,7 @@ function AdminNewBooks() {
                                     </div>
                                     </>
                                 )}
-                  </div>
+                              </div>
 
 
                                  <div className='buttons-row'>

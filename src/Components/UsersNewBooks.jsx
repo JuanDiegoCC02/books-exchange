@@ -61,8 +61,8 @@ const handleBookChanged = async (id, index)=> {
     </div>
         <div className='AllContainer'><br />
           <div className='searchAllDiv'>
-             <input className='barraSearch' type="search" name="buscador" id="barraSearch" onChange={(e) => setSearch(e.target.value)} />  
-             <input className='BTNEnviar' type="button" value="Search" />
+             <input className='barraSearch' type="search" name="buscador" id="barraSearch" placeholder='Book title & book category' onChange={(e) => setSearch(e.target.value)} />  
+             <input className='BTNSearch' type="button" value="Search" />
          </div><br />
 
                <ul className='UlBook'>
@@ -108,7 +108,7 @@ const handleBookChanged = async (id, index)=> {
 
                   <div><br /><br />
                    {/* show text exchanged */}
-                   <label className='lbFavorites' htmlFor="btnCheckboxChanged" >
+                   <label className='textAviable' htmlFor="btnCheckboxChanged" >
                     {libro.statusChanged ? 'Interchanged' : 'Aviable'}
                    </label><br /><br />
                   {libro.correoUsuario === presentUserEmail && (
