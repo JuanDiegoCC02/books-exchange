@@ -28,9 +28,9 @@
       "typeUser": "User"
     },
     {
-      "nombre": "test",
-      "email": "test",
-      "location": "test",
+      "nombre": "test1",
+      "email": "test2",
+      "location": "test3",
       "typeUser": "User",
       "id": "525f"
     }

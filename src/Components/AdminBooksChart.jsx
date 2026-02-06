@@ -12,7 +12,7 @@ const AdminBooksChart = () => {
         height: 350,
         zoom: { enabled: false },
         toolbar: { show: false },
-      foreColor: "#fff782ff",      // Dorado suave
+      foreColor: "rgb(255, 255, 255)",     
         
       },
       dataLabels: { enabled: false },
@@ -20,7 +20,7 @@ const AdminBooksChart = () => {
          stroke: {
       curve: "straight", 
       width: 3,        
-      colors: ["#e6fa2eff"], 
+      colors: ["rgb(243, 255, 68)"], 
       
     },
       title: { text: "Books Publication Timeline", align: "left" },

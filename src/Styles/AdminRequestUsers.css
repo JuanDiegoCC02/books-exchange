@@ -78,7 +78,7 @@
 .UsernameAdminPage {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ffc525;
+  color: #ffda74;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid rgb(255, 235, 124);
   padding-bottom: 4px;
@@ -90,22 +90,79 @@
   line-height: 1.5;
 }
 
-/* ===== BOTÓN ELIMINAR ===== */
-.AdminLiUsers button {
-  margin-top: 0.6rem;
-  padding: 6px 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: #3a2c17;
-  color: #f5e9c9;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+
+.containerEditUser{
+  gap: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
-.AdminLiUsers button:hover {
-  background-color: #d4a338;
-  color: #000;
+.inpEditUser{
+   background-color: #fff3b7;
+  border: 2px solid rgb(251, 255, 0);
+  border-radius: 2px;
+}
+.inpEditUser:hover{
+  background-color: #fbffe7;
+  border: 2px solid rgb(255, 255, 255)
+
+}
+
+.btnDeleteUser{
+  margin: 5px;
+  font-size: 12px;
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ;
+  background: #9e1010;
+  border: 1px solid #eeff00;
+  color: #fff;
+  transition: background 0.2s, color 0.3s;
+}
+.btnDeleteUser:hover{
+  background: #e00707;
+  border-color: rgba(255, 0, 0, 0.801);
+}
+
+.btnEditUser{
+  margin: 5px;
+  font-size: 12px;
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ;
+  background: #158f52c5;
+  border: 1px solid #ffe600;
+  color: #fff;
+  transition: background 0.2s, color 0.3s;
+}
+.btnEditUser:hover{
+  background: #00b377d2;
+  border-color: rgba(0, 180, 126, 0.801);
+}
+
+.btnSaveEdit{
+   margin: 5px;
+  font-size: 12px;
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ;
+  background: #158f52c5;
+  border: 2px solid #41aa87dc;
+  color: #fff;
+  transition: background 0.2s, color 0.3s;
+}
+.btnSaveEdit:hover{
+  background: #005c3dd2;
+  border-color: rgba(16, 180, 117, 0.932);
 }
 
 /* ===== CONTENEDOR DEL GRÁFICO ===== */

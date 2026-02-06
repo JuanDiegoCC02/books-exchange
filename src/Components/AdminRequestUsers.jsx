@@ -18,7 +18,7 @@ function AdminRequestUsers() {
             } else {
                 setEditingId(user.id)
                 setEditName(user.nombre)
-                setEditEmail(user.location)
+                setEditEmail(user.email)
                 setEditLocation(user.location)
                 setEditTypeUser(user.typeUser)
             }

@@ -81,7 +81,7 @@ function AdminRequestBooks() {
 
   return (
     <div className='containerAllRequestBooks'>
-        <div className='titleBooksRequest'>
+        <div className='titleBooksRequestContainer'>
             <h5 className='titleBooksRequest'>Books</h5>
         </div>
 
@@ -110,20 +110,20 @@ function AdminRequestBooks() {
                                 onChange={() => handleBookHome (book.id,index)} /> <br />
                             </div>
 
-                            <div className='contBtnDeleteAdmin'><br />
+                            <div className='contBtnsAdminBook'><br />
                                 <button className='btnDeleteAdminBook' 
                                 onClick={()=> bookDelete(book.id)}>delete</button>
-                                <button className='btnDeleteAdminBook' onClick={() =>startEdit(book)}>
+                                <button className='btnEditAdminBook' onClick={() =>startEdit(book)}>
                                     {bookId === book.id? 'cancel' : 'edit'}
                                 </button><br />
                             </div>
                             {bookId === book.id &&
                             <>
-                             <div className=''>
-                                <input className='inpEditBook' onChange={newName} type="text" placeholder='Name' />
-                                <input className='inpEditBook' onChange={newAuthor} type="text" placeholder='Author' />
-                                <input className='inpEditBook' onChange={newCategory} type="text" placeholder='Category' />
-                                <input className='inpEditBook' onChange={newInfo} type="text" placeholder='Information' />
+                             <div className='containerInputsEdit'>
+                                <input className='inpEditBook' onChange={newName} type="text" placeholder='Name' value={editName} />
+                                <input className='inpEditBook' onChange={newAuthor} type="text" placeholder='Author' value={editAuthor} />
+                                <input className='inpEditBook' onChange={newCategory} type="text" placeholder='Category' value={editCategory} />
+                                <input className='inpEditBook' onChange={newInfo} type="text" placeholder='Information' value={editInfo} />
                                 <button className='btnSaveEdit' onClick={() => edit(book.id)}>Save</button>
                             </div>
                             </>

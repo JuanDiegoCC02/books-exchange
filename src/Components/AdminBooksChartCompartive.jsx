@@ -11,7 +11,7 @@ const AdminBooksChartComparative = () => {
         width: 380,
       },
       labels: ["Available Books", "Exchanged Books"], 
-      colors: ["#065753ff", "#f1ff27ff"], 
+      colors: ["rgb(243, 255, 72)", "rgb(0, 153, 89)"], 
       legend: {
         position: "bottom",
         labels: {
@@ -22,8 +22,8 @@ const AdminBooksChartComparative = () => {
         text: "Book Exchange Status",
         align: "center",
         style: {
-          fontSize: "18px",
-          color: "#f2ff7eff",
+          fontSize: "15px",
+          color: "rgb(255, 255, 255)",
         },
       },
       responsive: [
