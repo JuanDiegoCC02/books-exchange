@@ -48,9 +48,9 @@ function BookProfileExtend({ usuario, onClose }) {
         <button className="close-btnProfile" onClick={onClose}>✖</button>
         <h3 className="title-profileExtend">User Profile</h3>
         <div className="containerInfoCreatorProfile">
-          <p><strong className="InfoCreator">Username:</strong> {user.nombre}</p>
-          <p><strong className="InfoCreator">Email:</strong> {user.email}</p>
-          <p><strong className="InfoCreator">Location:</strong> {user.location}</p>
+          <p><strong className="InfoCreator">Username</strong> <br />{user.nombre}</p>
+          <p><strong className="InfoCreator">Email</strong> <br />{user.email}</p>
+          <p><strong className="InfoCreator">Location</strong> <br />{user.location}</p>
         </div>
 
         <div className="books-sectionExtendProfile">
